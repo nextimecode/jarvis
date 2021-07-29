@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { ChakraProvider, extendTheme } from "@chakra-ui/react"
+import { ChakraProvider, extendTheme, ThemeConfig } from "@chakra-ui/react"
 
 const colors = {
   primary: {
@@ -10,7 +10,12 @@ const colors = {
   },
 }
 
-const theme = extendTheme({ colors })
+const config : ThemeConfig = {
+  initialColorMode: "dark",
+  useSystemColorMode: false,
+}
+
+const theme = extendTheme({ colors, config })
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
