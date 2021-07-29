@@ -1,6 +1,8 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ChakraProvider, extendTheme, ThemeConfig } from "@chakra-ui/react"
+import { mode } from "@chakra-ui/theme-tools"
+import { Dict } from '@chakra-ui/utils'
 
 const colors = {
   primary: {
@@ -15,7 +17,18 @@ const config : ThemeConfig = {
   useSystemColorMode: false,
 }
 
-const theme = extendTheme({ colors, config })
+const styles = {
+  global: (props: Dict<any>) => ({
+    body: {
+      fontFamily: "body",
+      color: mode("#17171B", "whiteAlpha.900")(props),
+      bg: mode("white", "#17171B")(props),
+      lineHeight: "base",
+    },
+  }),
+}
+
+const theme = extendTheme({ colors, config, styles })
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
