@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <NextButton>Primary</NextButton>
+        <NextButton>{'<Faça um orçamento gratuito/>'}</NextButton>
         <NextButton bg="primary-light">Primary Light</NextButton>
         <NextButton bg="white">White</NextButton>
         <NextButton bg="dark">Dark</NextButton>
