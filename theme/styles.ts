@@ -1,7 +1,7 @@
 import { mode } from "@chakra-ui/theme-tools"
 import { Dict } from '@chakra-ui/utils'
 
-const Styles = {
+const styles = {
   global: (props: Dict<any>) => ({
     body: {
       fontFamily: "body",
@@ -12,4 +12,4 @@ const Styles = {
   }),
 }
 
-export default Styles
+export default styles

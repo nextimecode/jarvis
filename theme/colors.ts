@@ -1,9 +1,7 @@
-const Colors = {
-  primary: {
-    light: '#85d7ff',
-    DEFAULT: '#4882F8',
-    dark: '#2D426D',
-  },
+const colors = {
+  primary: '#4882F8',
+  'primary-light': '#85d7ff',
+  'primary-dark': '#2D426D',
 }
 
-export default Colors
+export default colors

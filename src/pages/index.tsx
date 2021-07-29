@@ -1,5 +1,8 @@
+
+import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import NextButton from '../components/atoms/nextButton'
 
 export default function Home() {
   return (
@@ -11,7 +14,10 @@ export default function Home() {
       </Head>
 
       <main>
-        
+        <NextButton>Primary</NextButton>
+        <NextButton bg="primary-light">Primary Light</NextButton>
+        <NextButton bg="white">White</NextButton>
+        <NextButton bg="dark">Dark</NextButton>
       </main>
 
       <footer>
