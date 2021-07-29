@@ -2,11 +2,17 @@
   "name": "jarvis",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    } 
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.5",
