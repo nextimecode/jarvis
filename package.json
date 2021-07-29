@@ -5,15 +5,14 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
+    "mdev": "next dev -H 192.168.0.6",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-    }
+    "lint": "eslint --fix .",
+    "stylelint": "stylelint ./src/**/*.scss",
+    "commit": "git-cz",
+    "prepare": "husky install",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.5",
@@ -28,11 +27,26 @@
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "@types/react": "17.0.15",
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "7.31.0",
     "eslint-config-next": "11.0.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-standard": "^4.0.1",
     "husky": "^7.0.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-config-standard-scss": "~1.1.0",
+    "stylelint-scss": "^3.19.0",
     "typescript": "4.3.5"
   },
   "config": {
