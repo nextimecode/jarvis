@@ -10,8 +10,7 @@
     "start": "next start",
     "lint": "eslint --fix .",
     "stylelint": "stylelint ./src/**/*.scss",
-    "commit": "git-cz",
-    "pre-commit": "lint-staged",
+    "commit": "cz",
     "prepare": "husky install",
     "postinstall": "husky install"
   },
