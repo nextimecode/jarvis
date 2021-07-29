@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>NeXTIME</title>
+        <title>NeXTIME 23</title>
         <meta name="description" content="Site da empresa NeXTIME" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
