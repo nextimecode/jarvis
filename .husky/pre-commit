@@ -1,4 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn lint && exec < /dev/tty && npx --no-install git-cz --hook || true
+yarn pre-commit
+# exec < /dev/tty && npx --no-install git-cz --hook || true
