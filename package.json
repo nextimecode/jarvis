@@ -9,8 +9,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --fix .",
-    "stylelint": "stylelint ./src/**/*.scss",
+    "precommit": "yarn lint",
     "commit": "cz",
+    "prepush": "git fetch && git pull origin main && git merge origin main && yarn precommit && yarn && yarn build",
+    "go": "yarn prepush && yarn dev",
     "prepare": "husky install",
     "postinstall": "husky install"
   },
