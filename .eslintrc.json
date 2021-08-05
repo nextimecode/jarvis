@@ -37,8 +37,6 @@
     "@typescript-eslint/explicit-function-return-type": "off",
     "react/jsx-props-no-spreading": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off"
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }
