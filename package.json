@@ -11,7 +11,7 @@
     "lint": "eslint --fix .",
     "precommit": "yarn lint",
     "commit": "cz",
-    "prepush": "git fetch && git pull origin main && git merge origin main && yarn precommit && yarn && yarn build",
+    "prepush": "git diff HEAD --quiet && git fetch && git pull origin main && git merge origin main && yarn precommit && yarn && yarn build",
     "go": "yarn prepush && yarn dev",
     "prepare": "husky install",
     "postinstall": "husky install"
