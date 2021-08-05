@@ -1,9 +1,11 @@
 import React from 'react'
 
-type Props = {
-  label: string
+type NextExampleProps = {
+  item: string
 }
 
-const Example = ({ label }: Props) => <h1 className="h1">{label}</h1>
+const Example = ({ item }: NextExampleProps) => {
+  <div>{item}</div>
+}
 
 export default Example

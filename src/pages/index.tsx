@@ -8,14 +8,13 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>NeXTIME 23</title>
+        <title>NeXTIME</title>
         <meta name="description" content="Site da empresa NeXTIME" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <NextButton>{'<Faça um orçamento gratuito/>'}</NextButton>
-        {/* <NextButton bg="primary-light">Primary Light</NextButton> */}
         <NextButton>White</NextButton>
         <NextButton bg="primary-dark">Dark</NextButton>
       </main>
