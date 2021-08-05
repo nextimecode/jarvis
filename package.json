@@ -9,8 +9,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --fix .",
-    "stylelint": "stylelint ./src/**/*.scss",
-    "commit": "git-cz",
+    "precommit": "yarn lint",
+    "commit": "cz",
+    "prepush": "git diff HEAD --quiet && git fetch && git pull origin main && yarn precommit && yarn && yarn build",
+    "go": "yarn prepush && yarn dev",
     "prepare": "husky install",
     "postinstall": "husky install"
   },
@@ -19,21 +21,23 @@
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "framer-motion": "^4",
-    "next": "11.0.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "next": "^11.0.1",
+    "prettier": "^2.3.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.0",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
-    "@types/react": "17.0.15",
+    "@types/react": "^17.0.15",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.28.0",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "commitizen": "^4.2.4",
-    "cz-conventional-changelog": "3.3.0",
-    "eslint": "7.31.0",
-    "eslint-config-next": "11.0.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.31.0",
+    "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
@@ -44,11 +48,8 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^7.0.1",
-    "stylelint": "^13.13.1",
-    "stylelint-config-recommended-scss": "^4.2.0",
-    "stylelint-config-standard-scss": "~1.1.0",
-    "stylelint-scss": "^3.19.0",
-    "typescript": "4.3.5"
+    "lint-staged": "^11.1.1",
+    "typescript": "^4.3.5"
   },
   "config": {
     "commitizen": {
