@@ -23,7 +23,6 @@ export default function Home() {
       <footer>
         <Image src="/images/logos/logo_nextime.svg" alt="NeXTIME Logo" width={146} height={45} />
       </footer>
-      <NextHome />
     </div>
   )
 }
