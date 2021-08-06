@@ -1,7 +1,7 @@
 import React from 'react'
 
 type NextHomeProps = {
-  item: string
+  item: 'oi' | 'teste'
 }
 
 const NextHome = ({ item }: NextHomeProps) => {

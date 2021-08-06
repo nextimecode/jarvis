@@ -3,6 +3,7 @@ import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import NextButton from '../components/atoms/nextButton'
+import NextHome from '../components/templates/nextHome'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <footer>
         <Image src="/images/logos/logo_nextime.svg" alt="NeXTIME Logo" width={146} height={45} />
       </footer>
+      <NextHome />
     </div>
   )
 }
