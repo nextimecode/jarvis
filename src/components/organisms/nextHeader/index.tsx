@@ -1,10 +1,10 @@
 import React from 'react'
+import Image from 'next/image'
 import {
   Box,
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
   Icon,
@@ -13,7 +13,6 @@ import {
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure
 } from '@chakra-ui/react'
 import {
@@ -66,41 +65,29 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Inspiration',
-    children: [
-      {
-        label: 'Explore Design Work',
-        subLabel: 'Trending Design to inspire you',
-        href: '#'
-      },
-      {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
-        href: '#'
-      }
-    ]
+    label: 'Home'
   },
   {
-    label: 'Find Work',
+    label: 'Quem somos',
+    href: '#'
+  },
+  {
+    label: 'Portfólio',
     children: [
       {
-        label: 'Job Board',
+        label: 'Tattoo Pop',
         subLabel: 'Find your dream design job',
         href: '#'
       },
       {
-        label: 'Freelance Projects',
+        label: 'Optar',
         subLabel: 'An exclusive list for contract work',
         href: '#'
       }
     ]
   },
   {
-    label: 'Learn Design',
-    href: '#'
-  },
-  {
-    label: 'Hire Designers',
+    label: 'Orçamento',
     href: '#'
   }
 ]
@@ -244,13 +231,7 @@ const NextHeader = () => {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}>
-            Logo
-          </Text>
-
+          <Image src="/images/logos/logo_nextime.svg" alt="NeXTIME Logo" width={146} height={45} />
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
           </Flex>
@@ -261,26 +242,9 @@ const NextHeader = () => {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
-          <Button
-            as={'a'}
-            fontSize={'sm'}
-            fontWeight={400}
-            variant={'link'}
-            href={'#'}>
-            Sign In
-          </Button>
-          <Button
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={'white'}
-            bg={'pink.400'}
-            href={'#'}
-            _hover={{
-              bg: 'pink.300'
-            }}>
-            Sign Up
-          </Button>
+          <Link>
+            <Image src="/images/icons/instagram.svg" alt="NeXTIME Logo" width={24} height={22} />
+          </Link>
         </Stack>
       </Flex>
 
