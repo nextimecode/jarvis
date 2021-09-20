@@ -2,6 +2,7 @@ import Head from 'next/head'
 import React, { PropsWithChildren } from 'react'
 import NextHeader from '../../organisms/nextHeader'
 import NextFooter from '../../organisms/nextFooter'
+import NextHero from '../../organisms/nextHero'
 
 type Props = {
   title?: string
@@ -22,6 +23,8 @@ const NextLayout = ({
       </Head>
 
       <NextHeader />
+
+      <NextHero />
 
       <main>
         {children}
