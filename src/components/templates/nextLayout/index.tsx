@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React, { PropsWithChildren } from 'react'
-import Image from 'next/image'
 import NextHeader from '../../organisms/nextHeader'
+import NextFooter from '../../organisms/nextFooter'
 
 type Props = {
   title?: string
@@ -27,9 +27,7 @@ const NextLayout = ({
         {children}
       </main>
 
-      <footer>
-        <Image src="/images/logos/logo_nextime.svg" alt="NeXTIME Logo" width={146} height={45} />
-      </footer>
+      <NextFooter />
     </div>
   )
 }
