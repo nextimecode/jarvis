@@ -21,6 +21,7 @@ Os nossos projetos são desenvolvidos com:
 - [Chakra-ui](https://chakra-ui.com/)
 - [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 - [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
+- [Ajuda para classificar no AtomicDesign](https://uxdesign.cc/grouping-components-in-atomic-design-systems-4d6e2095ea45)
 - [NodeJS](https://nodejs.org/pt-br/)
 - [Git](https://git-scm.com/)
 - [Github](https://github.com/)
@@ -55,14 +56,14 @@ Principais:
 - feat: um commit do tipo feat introduz um novo recurso para a base de código, isso se correlaciona com o MINOR (Controle de versão semântica).
 - breaking: um commit do tipo breaking introduz uma alteração de API que irá quebrar o código, isso se correlaciona com o MAJOR (Controle de Versão Semântico).
 
-Outros: Todos iram adicionar ao PATCH: 
+Outros: Todos iram adicionar ao PATCH:
 
 - build: mudanças que afetam o sistema de build ou dependências externas (escopos de exemplo: gulp, broccoli, npm)
 - ci: Mudanças em nossos arquivos e scripts de configuração de CI (escopos de exemplo: Travis, Circle, BrowserStack, SauceLabs)
 - test: adicionar testes ausentes ou corrigir testes existentes
 - docs: Alterações apenas na documentação
 - perf: uma mudança de código que melhora o desempenho
-- refactor: uma alteração de código que não corrige um bug nem adiciona um recurso 
+- refactor: uma alteração de código que não corrige um bug nem adiciona um recurso
 - style: alterações que não afetam o significado do código (espaço em branco, formatação, ponto e vírgula ausente, etc)
 
 ## Iniciando um projeto NextJS na NeXTIME
@@ -149,11 +150,11 @@ Verifique a [documentação de deploy do Next.js](https://nextjs.org/docs/deploy
 
 ⚠️ É extremamente importante o conhecimento de [Git](https://git-scm.com/). ⚠️
 
-1. Depois que você baixou para sua máquina o projeto você provavelmente estará na branch main a qual é a principal e irá receber os arquivos que irão para produção. 
+1. Depois que você baixou para sua máquina o projeto você provavelmente estará na branch main a qual é a principal e irá receber os arquivos que irão para produção.
 
-🚨 NUNCA FAÇA PUSH PARA A MAIN 🚨 
+🚨 NUNCA FAÇA PUSH PARA A MAIN 🚨
 
-2. Crie sua feature, isso irá fazer uma copia da main e você poderá trabalhar tranquilamente. 
+2. Crie sua feature, isso irá fazer uma copia da main e você poderá trabalhar tranquilamente.
 
 ```
 $git checkout -b feature/nome_da_feature
@@ -203,18 +204,18 @@ $git push --set-upstream origin release/x.y.z
 9. Na página do Pull Request você deve:
 
 - Selecionar os revisores (reviewers), que devem ser o techlead do projeto e alguma outra águia.
-- Colocar quem trabalhou nessa release (assigners). 
+- Colocar quem trabalhou nessa release (assigners).
 - Selecionar o tipo de alterações foram feitas em (labels).
-- Criar um link da tarefa que está trabalhando do projeto com essa release em linked pull request. 
+- Criar um link da tarefa que está trabalhando do projeto com essa release em linked pull request.
 
-10. Caso as alterações sejam aceitas pelos revisores e todos os checklist do Merge Pull Request estiverem ok, você pode apertar o botão Merge Request para que o código que você fez vá para a main. 
+10. Caso as alterações sejam aceitas pelos revisores e todos os checklist do Merge Pull Request estiverem ok, você pode apertar o botão Merge Request para que o código que você fez vá para a main.
 
 🚨 Ná dúvida se deve ou não fazer esse Merge, procure alguém 🚨
 
 11. Quando o merge foi feito com a main vá até o code do projeto e edite a tag da branch main para ficar de acordo com a release. A tag agora deve ser **x.y.z**.
 
-Se você chegou até aqui é porque você fez seu primeiro deploy. 
+Se você chegou até aqui é porque você fez seu primeiro deploy.
 
-🎉 Parabéns. 
+🎉 Parabéns.
 
 Desenvolvido por [NeXTIME](https://github.com/nextimecode)
