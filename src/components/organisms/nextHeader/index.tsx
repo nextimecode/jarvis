@@ -215,7 +215,7 @@ const MobileNav = () => {
   )
 }
 
-const NextNavbar = () => {
+const NextHeader = () => {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
@@ -291,4 +291,4 @@ const NextNavbar = () => {
   )
 }
 
-export default NextNavbar
+export default NextHeader
