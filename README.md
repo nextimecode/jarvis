@@ -218,3 +218,5 @@ Se você chegou até aqui é porque você fez seu primeiro deploy.
 🎉 Parabéns. 
 
 Desenvolvido por [NeXTIME](https://github.com/nextimecode)
+
+[FIGMA](https://www.figma.com/file/8KoWK4zpkH5b0fqrKq69rr/Site-NeXTIME?node-id=1%3A10)
