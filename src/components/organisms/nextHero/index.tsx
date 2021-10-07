@@ -1,11 +1,17 @@
 import React from 'react'
-import Image from 'next/image'
 import {
   Container,
   Grid,
   GridItem,
-  Text
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Stack,
+  Text,
+  useBreakpointValue
 } from '@chakra-ui/react'
+import NextButton from '../../atoms/nextButton'
 
 type NextHeroProps = {
   bg?: undefined
@@ -16,26 +22,39 @@ const NextHero = ({
 }: NextHeroProps) => {
   return (
     <header>
-      <Container maxW="container.lg">
-        <Grid bg={bg} templateColumns="repeat(5, 1fr)" gap={4}>
-          <GridItem colSpan={2}>
-            <Image src="/images/code_hero.png" alt="NeXTIME Logo" width={462} height={482} />
-          </GridItem>
-          <GridItem colStart={4} colEnd={6}>
-            <Text fontSize={40}>
-              {'<h1>'}
-            </Text>
-            <Text fontSize={40}>
-              Faça a sua empresa ser vista algo aqui!
-            </Text>
-            <Text fontSize={40}>
-              Serviços
-            </Text>
-            <Text fontSize={40}>
-              {'<h1>'}
-            </Text>
-          </GridItem>
-        </Grid>
+      <Container maxW="container.xl">
+        <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
+          <Flex flex={1}>
+            <Image
+              alt={'Login Image'}
+              objectFit={'cover'}
+              src={
+                '/images/code_hero.png'
+              }
+            />
+          </Flex>
+          <Flex p={8} flex={1} align={'center'} justify={'center'}>
+            <Stack spacing={6} w={'full'} maxW={'lg'}>
+              <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+                <Text color={'primary-light'} as={'span'}>
+                  {'<h1>'}
+                </Text>
+                <Text color={'white'} as={'span'}>
+                Faça a sua empresa ser vista algo aqui!
+                </Text>
+                <Text color={'primary-light'} as={'span'}>
+                  {'<h1>'}
+                </Text>
+              </Heading>
+              <Text fontSize={{ base: 'md', lg: 'lg' }} color={'white'}>
+                Procuramos todo dia fazer algo que possa devolver as pessoas o seu bem mais precioso, o TEMPO. Acreditamos que pensando diferente conseguimos utilizar esse recurso finito de uma melhor forma.
+              </Text>
+              <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
+                <NextButton>{'<Faça um orçamento gratuito/>'}</NextButton>
+              </Stack>
+            </Stack>
+          </Flex>
+        </Stack>
       </Container>
     </header>
   )
