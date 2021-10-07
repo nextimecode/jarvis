@@ -1,15 +1,11 @@
 import React from 'react'
 import {
   Container,
-  Grid,
-  GridItem,
-  Button,
   Flex,
   Heading,
   Image,
   Stack,
-  Text,
-  useBreakpointValue
+  Text
 } from '@chakra-ui/react'
 import NextButton from '../../atoms/nextButton'
 
@@ -22,7 +18,7 @@ const NextHero = ({
 }: NextHeroProps) => {
   return (
     <header>
-      <Container maxW="container.xl">
+      <Container bg={bg} maxW="container.xl">
         <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
           <Flex flex={1}>
             <Image
