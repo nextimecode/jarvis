@@ -19,17 +19,8 @@ const NextHero = ({
   return (
     <header>
       <Container bg={bg} maxW="container.xl">
-        <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
-          <Flex flex={1}>
-            <Image
-              alt={'Login Image'}
-              objectFit={'cover'}
-              src={
-                '/images/code_hero.png'
-              }
-            />
-          </Flex>
-          <Flex p={8} flex={1} align={'center'} justify={'center'}>
+        <Stack minH={'80vh'} align={'center'} direction={{ base: 'column', md: 'row-reverse' }}>
+          <Flex flex={1} align={'center'} justify={'center'}>
             <Stack spacing={6} w={'full'} maxW={'lg'}>
               <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
                 <Text color={'primary-light'} as={'span'}>
@@ -49,6 +40,15 @@ const NextHero = ({
                 <NextButton>{'<Faça um orçamento gratuito/>'}</NextButton>
               </Stack>
             </Stack>
+          </Flex>
+          <Flex maxH={'420px'} flex={1}>
+            <Image
+              alt={'Login Image'}
+              objectFit={'contain'}
+              src={
+                '/images/code_hero.png'
+              }
+            />
           </Flex>
         </Stack>
       </Container>
