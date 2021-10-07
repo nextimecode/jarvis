@@ -212,14 +212,13 @@ const NextHeader = () => {
       borderStyle={'solid'}
       borderColor={useColorModeValue('gray.200', 'gray.700')}
     >
-      <Container>
+      <Container maxW="container.lg">
         <Flex
           color={useColorModeValue('gray.600', 'white')}
           minH={'70px'}
           align={'center'}>
           <Flex
-            flex={{ base: 1, md: 'auto' }}
-            ml={{ base: -2 }}
+            flex={{ base: 1 }}
             display={{ base: 'flex', md: 'none' }}>
             <IconButton
               onClick={onToggle}
@@ -230,15 +229,15 @@ const NextHeader = () => {
               aria-label={'Toggle Navigation'}
             />
           </Flex>
-          <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+          <Flex flex={{ base: 1 }} justify={{ base: 'center' }}>
             <Image src="/images/logos/logo_nextime.svg" alt="NeXTIME Logo" width={146} height={45} />
-            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-              <DesktopNav />
-            </Flex>
+          </Flex>
+          <Flex display={{ base: 'none', md: 'flex' }}>
+            <DesktopNav />
           </Flex>
 
           <Stack
-            flex={{ base: 1, md: 0 }}
+            flex={{ base: 1 }}
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
