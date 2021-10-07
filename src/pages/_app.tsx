@@ -1,4 +1,6 @@
 import React from 'react'
+import '@fontsource/rajdhani/400.css'
+import '@fontsource/open-sans/700.css'
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
 
