@@ -1,4 +1,5 @@
 import { NextFeatureProps } from '../../components/molecules/nextFeature'
+import { NextCallToActionProps } from '../../components/organisms/nextCallToAction'
 
 export const nextFeatureItems = [
   {
@@ -32,3 +33,11 @@ export const nextFeatureItems = [
     icon: ''
   }
 ] as unknown as Array<NextFeatureProps>
+
+export const nextCallToActionItems = [
+  {
+    title: 'Transformando ideias em apps de sucesso',
+    text: 'Oferecemos a solução completa para que você fique conectado com seus clientes a qualquer momento, desde a publicação do app até até a publicação.',
+    image: '/images/code_hero.png'
+  }
+] as unknown as Array<NextCallToActionProps>

@@ -1,13 +1,13 @@
 
 import React from 'react'
 import { NextFeatureProps } from '../../molecules/nextFeature'
-import NextCallToAction from '../../organisms/nextCallToAction'
+import NextCallToAction, { NextCallToActionProps } from '../../organisms/nextCallToAction'
 import NextFeatures from '../../organisms/nextFeatures'
 import NextHero from '../../organisms/nextHero'
 import NextLayout from '../nextLayout'
 
 export interface NextTemplateHomeProps {
-  items: Array<NextFeatureProps>
+  items: Array<NextFeatureProps | NextCallToActionProps>
 }
 
 const NextTemplateHome = ({

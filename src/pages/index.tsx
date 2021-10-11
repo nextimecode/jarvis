@@ -5,7 +5,9 @@ import { nextFeatureItems } from './data'
 
 const NextHome = () => {
   return (
-    <NextTemplateHome items={nextFeatureItems} />
+    <NextTemplateHome
+      items={nextFeatureItems}
+    />
   )
 }
 
