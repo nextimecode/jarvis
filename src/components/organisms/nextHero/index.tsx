@@ -41,7 +41,7 @@ const NextHero = ({
               </Stack>
             </Stack>
           </Flex>
-          <Flex maxH={'420px'} flex={1}>
+          <Flex maxH={'30rem'} flex={1}>
             <Image
               alt={'Login Image'}
               objectFit={'contain'}

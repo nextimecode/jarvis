@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React, { PropsWithChildren } from 'react'
 import NextHeader from '../../organisms/nextHeader'
 import NextFooter from '../../organisms/nextFooter'
-import NextHero from '../../organisms/nextHero'
+import { Container } from '@chakra-ui/react'
 
 type Props = {
   title?: string
@@ -15,7 +15,7 @@ const NextLayout = ({
   description = 'Site da empresa NeXTIME, temos como visão: otimizar o tempo através do desenvolvimento de novas tecnologias, produtos inovadores, soluções criativas e educação. Possibilitando aos indivíduos gastarem suas energias realizando os seus sonhos.'
 }: PropsWithChildren<Props>) => {
   return (
-    <div>
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -24,14 +24,14 @@ const NextLayout = ({
 
       <NextHeader />
 
-      <NextHero />
-
       <main>
-        {children}
+        <Container maxW="container.xl">
+          {children}
+        </Container>
       </main>
 
       <NextFooter />
-    </div>
+    </>
   )
 }
 
