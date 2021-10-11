@@ -2,7 +2,6 @@ import React from 'react'
 import {
   Container,
   Flex,
-  Heading,
   Image,
   Stack,
   Text
