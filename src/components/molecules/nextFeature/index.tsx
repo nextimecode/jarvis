@@ -5,7 +5,7 @@ import {
 } from '@chakra-ui/react'
 import React, { ReactElement } from 'react'
 
-export interface FeatureProps {
+export interface NextFeatureProps {
   title: string;
   text: string;
   icon: ReactElement;
@@ -15,7 +15,7 @@ const NextFeature = ({
   title,
   text,
   icon
-}: FeatureProps) => {
+}: NextFeatureProps) => {
   return (
     <Stack>
       <Flex
