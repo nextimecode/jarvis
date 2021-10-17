@@ -7,19 +7,22 @@ import NextHero from '../../organisms/nextHero'
 import NextLayout from '../nextLayout'
 
 export interface NextTemplateHomeProps {
-  items: Array<NextFeatureProps | NextCallToActionProps>
+  nextFeatureItems: Array<NextFeatureProps>
+  nextCallToActionItems: Array<NextCallToActionProps>
 }
 
 const NextTemplateHome = ({
-  items
+  nextFeatureItems,
+  nextCallToActionItems
 }: NextTemplateHomeProps) => {
   return (
     <NextLayout>
       <NextHero />
-      <NextFeatures items={items} />
+      <NextFeatures items={nextFeatureItems} />
       <NextCallToAction
-        title="Transformando ideias em apps de sucesso"
-        text="Oferecemos a solução completa para que você fique conectado com seus clientes a qualquer momento, desde a publicação do app até até a publicação." image="/images/code_hero.png"
+        title={nextCallToActionItems[0].title}
+        text={nextCallToActionItems[0].text}
+        image={nextCallToActionItems[0].image}
       />
     </NextLayout>
   )

@@ -38,6 +38,11 @@ export const nextCallToActionItems = [
   {
     title: 'Transformando ideias em apps de sucesso',
     text: 'Oferecemos a solução completa para que você fique conectado com seus clientes a qualquer momento, desde a publicação do app até até a publicação.',
-    image: '/images/code_hero.png'
+    image: '/images/home/code_hero.png'
+  },
+  {
+    title: 'Desenvolvimento de websites otimizados',
+    text: 'Contamos com especialistas no desenvolvimento de sistemas web utilizando as ferramentas mais modernas. Criamos páginas em AMP, que são otimizadas para um carregamento simplificado e quase instantâneo.',
+    image: '/images/home/tattoopop.png'
   }
 ] as unknown as Array<NextCallToActionProps>

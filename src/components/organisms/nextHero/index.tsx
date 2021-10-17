@@ -46,7 +46,7 @@ const NextHero = ({
               alt={'Login Image'}
               objectFit={'contain'}
               src={
-                '/images/code_hero.png'
+                '/images/home/code_hero.png'
               }
             />
           </Flex>

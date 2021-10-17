@@ -8,7 +8,7 @@ import React, { ReactElement } from 'react'
 export interface NextFeatureProps {
   title: string;
   text: string;
-  icon: ReactElement;
+  icon?: ReactElement;
 }
 
 const NextFeature = ({

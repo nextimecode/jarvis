@@ -8,7 +8,7 @@ import NextFeature, { NextFeatureProps } from '../../molecules/nextFeature'
 import { FaCloud } from 'react-icons/fa'
 
 export interface NextFeaturesProps {
-  items: Array<NextFeatureProps>;
+  items: Array<NextFeatureProps>
 }
 
 const NextFeatures = ({
