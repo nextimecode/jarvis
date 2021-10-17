@@ -2,11 +2,9 @@ import React from 'react'
 import {
   Box,
   SimpleGrid,
-  Icon,
   Container
 } from '@chakra-ui/react'
 import NextFeature, { NextFeatureProps } from '../../molecules/nextFeature'
-import { FaCloud } from 'react-icons/fa'
 
 export interface NextFeaturesProps {
   items: Array<NextFeatureProps>

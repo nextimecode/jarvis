@@ -27,7 +27,7 @@ const NextHero = ({
                   {'<h1>'}
                 </Text>
                 <Text color={'white'} as={'span'}>
-                Faça a sua empresa ser vista algo aqui!
+                Faça a sua empresa ser vista!
                 </Text>
                 <Text color={'primary-light'} as={'span'}>
                   {'<h1>'}
