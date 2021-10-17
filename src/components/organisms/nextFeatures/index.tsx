@@ -2,44 +2,36 @@ import React from 'react'
 import {
   Box,
   SimpleGrid,
-  Icon
+  Icon,
+  Container
 } from '@chakra-ui/react'
 import NextFeature, { NextFeatureProps } from '../../molecules/nextFeature'
 import { FaCloud } from 'react-icons/fa'
 
 export interface NextFeaturesProps {
   items: Array<NextFeatureProps>
+  numberGrid?: number
 }
 
 const NextFeatures = ({
-  items
+  items,
+  numberGrid = 3
 }: NextFeaturesProps) => {
   return (
-    <Box p={4}>
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
-        <NextFeature
-          icon={<Icon as={FaCloud} w={10} h={10} />}
-          title={items[0].title}
-          text={
-            'text'
-          }
-        />
-        <NextFeature
-          icon={<Icon as={FaCloud} w={10} h={10} />}
-          title={'Unlimited Donations'}
-          text={
-            'text'
-          }
-        />
-        <NextFeature
-          icon={<Icon as={FaCloud} w={10} h={10} />}
-          title={'Instant Delivery'}
-          text={
-            'text'
-          }
-        />
-      </SimpleGrid>
-    </Box>
+    <Container maxW="container.lg">
+      <Box p={4}>
+        <SimpleGrid columns={{ base: 1, md: numberGrid }} spacing={10}>
+          {items?.map((item, index) => (
+            <NextFeature
+              key={index}
+              title={item.title}
+              text={item.text}
+              image={item.image}
+            />
+          ))}
+        </SimpleGrid>
+      </Box>
+    </Container>
   )
 }
 

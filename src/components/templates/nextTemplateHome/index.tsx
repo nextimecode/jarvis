@@ -9,11 +9,13 @@ import NextLayout from '../nextLayout'
 export interface NextTemplateHomeProps {
   nextFeatureItems: Array<NextFeatureProps>
   nextCallToActionItems: Array<NextCallToActionProps>
+  nextTechnologyItems: Array<Record<string, unknown>>
 }
 
 const NextTemplateHome = ({
   nextFeatureItems,
-  nextCallToActionItems
+  nextCallToActionItems,
+  nextTechnologyItems
 }: NextTemplateHomeProps) => {
   return (
     <NextLayout>
@@ -29,6 +31,10 @@ const NextTemplateHome = ({
           directionMd={item.directionMd}
         />
       ))}
+      <NextFeatures
+        items={nextTechnologyItems}
+        numberGrid={6}
+      />
     </NextLayout>
   )
 }
