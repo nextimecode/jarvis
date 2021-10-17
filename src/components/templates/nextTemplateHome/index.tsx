@@ -5,6 +5,7 @@ import { NextFeatureProps } from '../../molecules/nextFeature'
 import NextCallToAction, { NextCallToActionProps } from '../../organisms/nextCallToAction'
 import NextFeatures from '../../organisms/nextFeatures'
 import NextHero from '../../organisms/nextHero'
+import NextTestimonials from '../../organisms/nextTestimonials'
 import NextLayout from '../nextLayout'
 
 export interface NextTemplateHomeProps {
@@ -46,6 +47,7 @@ const NextTemplateHome = ({
           O que os clientes falam
         </Heading>
       </Center>
+      <NextTestimonials />
     </NextLayout>
   )
 }
