@@ -19,11 +19,16 @@ const NextTemplateHome = ({
     <NextLayout>
       <NextHero />
       <NextFeatures items={nextFeatureItems} />
-      <NextCallToAction
-        title={nextCallToActionItems[0].title}
-        text={nextCallToActionItems[0].text}
-        image={nextCallToActionItems[0].image}
-      />
+      {nextCallToActionItems?.map((item, index) => (
+        <NextCallToAction
+          key={index}
+          title={item.title}
+          text={item.text}
+          image={item.image}
+          textButton={item.textButton}
+          directionMd={item.directionMd}
+        />
+      ))}
     </NextLayout>
   )
 }
