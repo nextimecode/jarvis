@@ -1,11 +1,7 @@
 import React from 'react'
 import {
-  Avatar,
-  Box,
   chakra,
-  Container,
   Flex,
-  Icon,
   SimpleGrid,
   Text,
   useColorModeValue
@@ -62,7 +58,7 @@ interface TestimonialCardProps {
 }
 
 function TestmonialCard(props: TestimonialCardProps) {
-  const { name, role, content, avatar, index } = props
+  const { name, role, content, index } = props
   return (
     <Flex
       boxShadow={'lg'}
