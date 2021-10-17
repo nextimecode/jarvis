@@ -1,4 +1,4 @@
-import { NextCallToActionProps } from '../../components/organisms/nextCallToAction'
+import { NextCallToActionProps } from '../src/components/organisms/nextCallToAction'
 
 const nextCallToActionItems = [
   {

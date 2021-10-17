@@ -1,4 +1,4 @@
-import { NextFeatureProps } from '../../components/molecules/nextFeature'
+import { NextFeatureProps } from '../src/components/molecules/nextFeature'
 
 const nextFeatureItems = [
   {
