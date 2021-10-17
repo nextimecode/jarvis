@@ -1,9 +1,11 @@
 
 import React from 'react'
 import NextTemplateHome from '../components/templates/nextTemplateHome'
-import nextFeatureItems from '../../data/nextFeatureItems'
-import nextCallToActionItems from '../../data/nextCallToActionItems'
-import nextTechnologyItems from '../../data/nextTechnologyItems'
+import {
+  nextFeatureItems,
+  nextCallToActionItems,
+  nextTechnologyItems
+} from '../data/home'
 
 const NextHome = () => {
   return (
