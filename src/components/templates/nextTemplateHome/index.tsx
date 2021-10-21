@@ -5,6 +5,7 @@ import { NextFeatureProps } from '../../molecules/nextFeature'
 import NextCallToAction, { NextCallToActionProps } from '../../organisms/nextCallToAction'
 import NextFeatures from '../../organisms/nextFeatures'
 import NextHero from '../../organisms/nextHero'
+import NextTeam from '../../organisms/nextTeam'
 import NextTestimonials from '../../organisms/nextTestimonials'
 import NextLayout from '../nextLayout'
 
@@ -12,12 +13,14 @@ export interface NextTemplateHomeProps {
   nextFeatureItems: Array<NextFeatureProps>
   nextCallToActionItems: Array<NextCallToActionProps>
   nextTechnologyItems: Array<Record<string, unknown>>
+  nextTeamItems: Array<Record<string, string>>
 }
 
 const NextTemplateHome = ({
   nextFeatureItems,
   nextCallToActionItems,
-  nextTechnologyItems
+  nextTechnologyItems,
+  nextTeamItems
 }: NextTemplateHomeProps) => {
   return (
     <NextLayout>
@@ -48,6 +51,12 @@ const NextTemplateHome = ({
         </Heading>
       </Center>
       <NextTestimonials />
+      <Center mt={20}>
+        <Heading>
+          Feito por Pessoas
+        </Heading>
+      </Center>
+      <NextTeam items={nextTeamItems}/>
     </NextLayout>
   )
 }

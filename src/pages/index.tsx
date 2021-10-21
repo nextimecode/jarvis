@@ -4,7 +4,8 @@ import NextTemplateHome from '../components/templates/nextTemplateHome'
 import {
   nextFeatureItems,
   nextCallToActionItems,
-  nextTechnologyItems
+  nextTechnologyItems,
+  nextTeamItems
 } from '../data/home'
 
 const NextHome = () => {
@@ -13,6 +14,7 @@ const NextHome = () => {
       nextFeatureItems={nextFeatureItems}
       nextCallToActionItems={nextCallToActionItems}
       nextTechnologyItems={nextTechnologyItems}
+      nextTeamItems={nextTeamItems}
     />
   )
 }
