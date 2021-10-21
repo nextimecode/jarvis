@@ -1,5 +1,5 @@
 
-import { Center, Heading } from '@chakra-ui/react'
+import { Box, Center, Heading } from '@chakra-ui/react'
 import React from 'react'
 import { NextFeatureProps } from '../../molecules/nextFeature'
 import NextCallToAction, { NextCallToActionProps } from '../../organisms/nextCallToAction'
@@ -56,7 +56,9 @@ const NextTemplateHome = ({
           Feito por Pessoas
         </Heading>
       </Center>
-      <NextTeam items={nextTeamItems}/>
+      <Box mb={20}>
+        <NextTeam items={nextTeamItems}/>
+      </Box>
     </NextLayout>
   )
 }

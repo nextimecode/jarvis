@@ -1,6 +1,7 @@
 import {
   Text,
-  Stack
+  Stack,
+  Box
 } from '@chakra-ui/react'
 import React from 'react'
 import Image from 'next/image'
@@ -19,21 +20,36 @@ const NextTeamCard = ({
   role,
   content,
   avatar,
-  width = 64,
-  height = 64
+  width = 86,
+  height = 86
 }: NextTeamCardProps) => {
   return (
-    <Stack>
-      <Image
-        alt={name}
-        src={avatar}
-        width={width}
-        height={height}
-      />
-      <Text fontWeight={600}>{name}</Text>
-      <Text color={'gray.600'}>{role}</Text>
-      <Text color={'gray.600'}>{content}</Text>
-    </Stack>
+    <Box
+      maxW={'241px'}
+      bg={'dark-gray'}
+      rounded={'md'}
+      borderColor="primary"
+      borderWidth="1px"
+      p={6}
+    >
+      <Stack
+        textAlign="left"
+      >
+        <Image
+          alt={name}
+          src={avatar}
+          width={width}
+          height={height}
+        />
+        <Text
+          fontSize="xl"
+          fontWeight={600}
+        >
+          {name}
+        </Text>
+        <Text color={'gray.200'}>{role}</Text>
+      </Stack>
+    </Box>
   )
 }
 

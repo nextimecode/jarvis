@@ -155,7 +155,7 @@ const nextTeamItems = [
     content:
       'I am so pleased with this product. EEZY is both attractive and highly adaptable. Without EEZY, we would have gone bankrupt by now. Thank you for creating this product!',
     avatar:
-      '/images/home/team/daniel.svg'
+      '/images/home/team/bruna.svg'
   }
 ]
 

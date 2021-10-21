@@ -20,7 +20,7 @@ const NextTeam = ({
       direction={'column'}
       width={'full'}>
       <SimpleGrid
-        columns={{ base: 1, xl: 2 }}
+        columns={{ base: 1, xl: 4 }}
         spacing={'20'}
         mt={16}
         mx={'auto'}>
