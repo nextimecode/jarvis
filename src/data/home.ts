@@ -127,7 +127,7 @@ const nextTechnologyItems = [
 const nextTeamItems = [
   {
     name: 'Pedro Duarte',
-    role: 'Chief Marketing Officer',
+    role: 'CEO (Chief Executive Officer)',
     content: 'Sabe o que eu adoro na minha vida? Eu sei qual é o meu PORQUÊ. Procuro me levantar todo dia para fazer alguma coisa que pode devolver às pessoas o seu bem mais precioso, o TEMPO. Acredito que pensando diferente conseguimos utilizar esse recurso finito de uma melhor forma. O mais interessante é que temos diferentes maneiras para conseguir devolver o tempo as pessoas e uma delas é utilizarmos a tecnologia. Por isso sou Bacharel em Ciência da Computação pela Universidade Federal de Ouro Preto — UFOP. Fui presidente da empresa júnior Voluta Soluções Digitais — UFOP. Presidente do Centro Acadêmico do Curso de Ciência da Computação — UFOP gestão 2013/14. Professor pelo programa PRONATEC e pela Let’s Code, escola de programação. Especialista AMP Cognizant/Google e desenvolvedor front-end na Toro Investimentos. Tenho muita sorte de ter trabalhado em lugares que me ajudaram e me ajudam nesse porquê.',
     avatar: '/images/home/team/daniel.svg',
     linkedin: 'https://www.linkedin.com/in/phdduarte/',
@@ -135,12 +135,12 @@ const nextTeamItems = [
     youtube: 'https://www.youtube.com/watch?v=-TqTAxrOxaM'
   },
   {
-    name: 'Daniel',
-    role: 'Entrepreneur',
-    content:
-      "I didn't even need training. We've used EEZY for the last five years. I have gotten at least 50 times the value from EEZY. I made back the purchase price in just 48 hours!",
-    avatar:
-      '/images/home/team/daniel.svg'
+    name: 'Daniel Rodrigues',
+    role: 'CPO (Chief Product Officer)',
+    content: "I didn't even need training. We've used EEZY for the last five years. I have gotten at least 50 times the value from EEZY. I made back the purchase price in just 48 hours!",
+    avatar: '/images/home/team/daniel.svg',
+    linkedin: 'https://www.linkedin.com/in/daniel-rodrigues-5a6007121/',
+    instagram: 'https://www.instagram.com/danielkeoma/'
   },
   {
     name: 'Priscilla',

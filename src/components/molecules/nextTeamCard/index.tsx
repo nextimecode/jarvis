@@ -1,3 +1,6 @@
+
+import React from 'react'
+import Link from 'next/link'
 import {
   Text,
   Stack,
@@ -13,7 +16,6 @@ import {
   Icon,
   Flex
 } from '@chakra-ui/react'
-import React from 'react'
 import Image from 'next/image'
 import {
   FaInstagram,
@@ -106,9 +108,33 @@ const NextTeamCard = ({
           </ModalBody>
           <ModalFooter>
             <Flex>
-              <Icon color="primary" as={FaLinkedinIn} w={8} h={8}/>
-              <Icon color="primary" as={FaInstagram} w={8} h={8}/>
-              <Icon color="primary" as={FaYoutube} w={8} h={8}/>
+              {linkedin && (
+                <Box p="4">
+                  <Link href={linkedin}>
+                    <a target="_blank" rel="noreferrer">
+                      <Icon color="primary" as={FaLinkedinIn} w={8} h={8}/>
+                    </a>
+                  </Link>
+                </Box>
+              )}
+              {instagram && (
+                <Box p="4">
+                  <Link href={instagram}>
+                    <a target="_blank" rel="noreferrer">
+                      <Icon color="primary" as={FaInstagram} w={8} h={8}/>
+                    </a>
+                  </Link>
+                </Box>
+              )}
+              {youtube && (
+                <Box p="4">
+                  <Link href={youtube}>
+                    <a target="_blank" rel="noreferrer">
+                      <Icon color="primary" as={FaYoutube} w={8} h={8}/>
+                    </a>
+                  </Link>
+                </Box>
+              )}
             </Flex>
           </ModalFooter>
         </ModalContent>
