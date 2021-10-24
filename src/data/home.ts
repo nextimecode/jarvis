@@ -126,12 +126,13 @@ const nextTechnologyItems = [
 
 const nextTeamItems = [
   {
-    name: 'Pedro',
+    name: 'Pedro Duarte',
     role: 'Chief Marketing Officer',
-    content:
-      'It really saves me time and effort. It is exactly what our business has been lacking. EEZY is the most valuable business resource we have EVER purchased. After using EEZY my business skyrocketed!',
-    avatar:
-      '/images/home/team/daniel.svg'
+    content: 'Sabe o que eu adoro na minha vida? Eu sei qual é o meu PORQUÊ. Procuro me levantar todo dia para fazer alguma coisa que pode devolver às pessoas o seu bem mais precioso, o TEMPO. Acredito que pensando diferente conseguimos utilizar esse recurso finito de uma melhor forma. O mais interessante é que temos diferentes maneiras para conseguir devolver o tempo as pessoas e uma delas é utilizarmos a tecnologia. Por isso sou Bacharel em Ciência da Computação pela Universidade Federal de Ouro Preto — UFOP. Fui presidente da empresa júnior Voluta Soluções Digitais — UFOP. Presidente do Centro Acadêmico do Curso de Ciência da Computação — UFOP gestão 2013/14. Professor pelo programa PRONATEC e pela Let’s Code, escola de programação. Especialista AMP Cognizant/Google e desenvolvedor front-end na Toro Investimentos. Tenho muita sorte de ter trabalhado em lugares que me ajudaram e me ajudam nesse porquê.',
+    avatar: '/images/home/team/daniel.svg',
+    linkedin: 'https://www.linkedin.com/in/phdduarte/',
+    instagram: 'https://www.instagram.com/phdduarte/',
+    youtube: 'https://www.youtube.com/watch?v=-TqTAxrOxaM'
   },
   {
     name: 'Daniel',

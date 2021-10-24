@@ -31,6 +31,9 @@ const NextTeam = ({
             role={item.role}
             avatar={item.avatar}
             content={item.content}
+            linkedin={item.linkedin}
+            instagram={item.instagram}
+            youtube={item.youtube}
           />
         ))}
       </SimpleGrid>

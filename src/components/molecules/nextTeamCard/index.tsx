@@ -1,10 +1,25 @@
 import {
   Text,
   Stack,
-  Box
+  Box,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  Icon,
+  Flex
 } from '@chakra-ui/react'
 import React from 'react'
 import Image from 'next/image'
+import {
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube
+} from 'react-icons/fa'
 
 export interface NextTeamCardProps {
   name: string
@@ -13,6 +28,9 @@ export interface NextTeamCardProps {
   avatar: string
   width?: number
   height?: number
+  linkedin?: string
+  instagram?: string
+  youtube?: string
 }
 
 const NextTeamCard = ({
@@ -20,36 +38,82 @@ const NextTeamCard = ({
   role,
   content,
   avatar,
+  linkedin,
+  instagram,
+  youtube,
   width = 86,
   height = 86
 }: NextTeamCardProps) => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
   return (
-    <Box
-      maxW={'241px'}
-      bg={'dark-gray'}
-      rounded={'md'}
-      borderColor="primary"
-      borderWidth="1px"
-      p={6}
-    >
-      <Stack
-        textAlign="left"
+    <>
+      <Box
+        maxW={'241px'}
+        bg={'dark-gray'}
+        rounded={'md'}
+        borderColor="primary"
+        borderWidth="1px"
+        p={6}
+        onClick={onOpen}
+        cursor={'pointer'}
       >
-        <Image
-          alt={name}
-          src={avatar}
-          width={width}
-          height={height}
-        />
-        <Text
-          fontSize="xl"
-          fontWeight={600}
+        <Stack
+          textAlign="left"
         >
-          {name}
-        </Text>
-        <Text color={'gray.200'}>{role}</Text>
-      </Stack>
-    </Box>
+          <Image
+            alt={name}
+            src={avatar}
+            width={width}
+            height={height}
+          />
+          <Text
+            fontSize="xl"
+            fontWeight={600}
+          >
+            {name}
+          </Text>
+          <Text color={'gray.200'}>{role}</Text>
+        </Stack>
+      </Box>
+      <Modal size={'xl'} onClose={onClose} isOpen={isOpen} isCentered>
+        <ModalOverlay />
+        <ModalContent bg='dark'>
+          <ModalHeader>
+            <Image
+              alt={name}
+              src={avatar}
+              width={width}
+              height={height}
+            />
+          </ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Text
+              fontSize="4xl"
+              fontWeight={600}
+              align={'center'}
+            >
+              {name}
+            </Text>
+            <Text
+              fontSize="lg"
+              align={'center'}
+              color={'primary-dark'}
+            >
+              {role}
+            </Text>
+            {content}
+          </ModalBody>
+          <ModalFooter>
+            <Flex>
+              <Icon color="primary" as={FaLinkedinIn} w={8} h={8}/>
+              <Icon color="primary" as={FaInstagram} w={8} h={8}/>
+              <Icon color="primary" as={FaYoutube} w={8} h={8}/>
+            </Flex>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
   )
 }
 
