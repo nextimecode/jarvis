@@ -9,11 +9,13 @@ import {
 } from '@chakra-ui/react'
 import NextButton from '../../atoms/nextButton'
 
-type NextHeroProps = {
-  bg?: undefined
+export type NextHeroProps = {
+  title: string,
+  bg?: string
 }
 
 const NextHero = ({
+  title,
   bg
 }: NextHeroProps) => {
   return (
@@ -27,7 +29,7 @@ const NextHero = ({
                   {'<h1>'}
                 </Text>
                 <Text color={'white'} as={'span'}>
-                Faça a sua empresa ser vista!
+                  {title}
                 </Text>
                 <Text color={'primary-light'} as={'span'}>
                   {'<h1>'}

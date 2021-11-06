@@ -4,12 +4,13 @@ import React from 'react'
 import { NextFeatureProps } from '../../molecules/nextFeature'
 import NextCallToAction, { NextCallToActionProps } from '../../organisms/nextCallToAction'
 import NextFeatures from '../../organisms/nextFeatures'
-import NextHero from '../../organisms/nextHero'
+import NextHero, { NextHeroProps } from '../../organisms/nextHero'
 import NextTeam from '../../organisms/nextTeam'
 import NextTestimonials from '../../organisms/nextTestimonials'
 import NextLayout from '../nextLayout'
 
-export interface NextTemplateHomeProps {
+export type NextTemplateHomeProps = {
+  nextHeroItem: NextHeroProps
   nextFeatureItems: Array<NextFeatureProps>
   nextCallToActionItems: Array<NextCallToActionProps>
   nextTechnologyItems: Array<Record<string, unknown>>
@@ -17,6 +18,7 @@ export interface NextTemplateHomeProps {
 }
 
 const NextTemplateHome = ({
+  nextHeroItem,
   nextFeatureItems,
   nextCallToActionItems,
   nextTechnologyItems,
@@ -24,7 +26,7 @@ const NextTemplateHome = ({
 }: NextTemplateHomeProps) => {
   return (
     <NextLayout>
-      <NextHero />
+      <NextHero title={nextHeroItem.title} />
       <NextFeatures items={nextFeatureItems} />
       {nextCallToActionItems?.map((item, index) => (
         <NextCallToAction

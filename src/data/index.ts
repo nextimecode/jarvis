@@ -1,7 +1,11 @@
 import { NextCallToActionProps } from '../components/organisms/nextCallToAction'
 import { NextFeatureProps } from '../components/molecules/nextFeature'
 
-const nextCallToActionItems = [
+export const nextHeroItem = {
+  title: 'Transforme suas ideias em negócios de sucesso'
+}
+
+export const nextCallToActionItems = [
   {
     title: 'Transformando ideias em apps de sucesso',
     text: 'Oferecemos a solução completa para que você fique conectado com seus clientes a qualquer momento, desde a publicação do app até até a publicação.',
@@ -22,7 +26,7 @@ const nextCallToActionItems = [
   }
 ] as unknown as Array<NextCallToActionProps>
 
-const nextFeatureItems = [
+export const nextFeatureItems = [
   {
     title: 'Tecnologia',
     text: 'Usamos o que há de melhor no mercado, entregando soluções modernas. Adicionamos tecnologias de inteligência Artificial e estratégias analíticas para o seu negócio.',
@@ -55,7 +59,7 @@ const nextFeatureItems = [
   }
 ] as unknown as Array<NextFeatureProps>
 
-const nextTechnologyItems = [
+export const nextTechnologyItems = [
   {
     title: 'Flutter',
     image: '/images/logos/flutter.svg',
@@ -124,7 +128,7 @@ const nextTechnologyItems = [
   }
 ]
 
-const nextTeamItems = [
+export const nextTeamItems = [
   {
     name: 'Pedro Duarte',
     role: 'CEO (Chief Executive Officer)',
@@ -158,11 +162,4 @@ const nextTeamItems = [
     avatar:
       '/images/home/team/bruna.svg'
   }
-]
-
-export {
-  nextTechnologyItems,
-  nextCallToActionItems,
-  nextFeatureItems,
-  nextTeamItems
-}
+] as unknown as Array<Record<string, string>>
