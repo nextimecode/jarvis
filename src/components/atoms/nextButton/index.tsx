@@ -2,19 +2,19 @@ import React, { PropsWithChildren } from 'react'
 import { Button } from '@chakra-ui/react'
 
 type Props = {
-  bg?: 'primary' | 'primary-dark' | 'white' | 'dark' | undefined
+  bg?: 'next-primary' | 'next-dark' | 'white' | 'dark' | undefined
   variant?: 'solid' | 'outline' | 'ghost' | 'link' | undefined
-  textColor?: 'primary' | 'primary-dark' | 'white' | 'dark' | undefined
+  textColor?: 'next-primary' | 'next-dark' | 'white' | 'dark' | undefined
 }
 
 const NextButton = ({
   bg,
   children,
   variant = 'solid',
-  textColor = 'primary'
+  textColor = 'next-primary'
 }: PropsWithChildren<Props>) => {
   if (variant === 'solid') {
-    bg = 'primary'
+    bg = 'next-primary'
     textColor = 'white'
   }
   return (

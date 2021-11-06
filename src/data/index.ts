@@ -2,25 +2,29 @@ import { NextCallToActionProps } from '../components/organisms/nextCallToAction'
 import { NextFeatureProps } from '../components/molecules/nextFeature'
 
 export const nextHeroItem = {
-  title: 'Transforme suas ideias em negócios de sucesso'
+  words: 'TECNOLOGIA | INOVAÇÃO | DESIGN | MARKETING',
+  title: 'Transforme suas ideias em negócios de sucesso',
+  text: 'Tenha nosso time ao seu lado para fazer seus planos virarem realidade. Foque onde precisa enquanto nossos especialistas cuidam de tudo para o seu negócio evoluir como você sempre quis.',
+  textButton: '<Quero revolucionar minha empresa/>'
 }
 
 export const nextCallToActionItems = [
   {
-    title: 'Transformando ideias em apps de sucesso',
-    text: 'Oferecemos a solução completa para que você fique conectado com seus clientes a qualquer momento, desde a publicação do app até até a publicação.',
+    title: 'Crie seu próprio app e multiplique suas vendas',
+    text: 'Na NeXTIME, temos a solução completa para você se conectar com quem mais importa: seus clientes. Faça todo mundo levar sua empresa na palma da mão e ter acesso ao melhor que você oferece com poucos cliques.',
     image: '/images/home/tattoo_pop.png',
-    textButton: '< Conheça nosso portfolio />',
+    textButton: '< Quero meu próprio app />',
     directionMd: 'row-reverse'
   },
   {
-    title: 'Desenvolvimento de websites otimizados',
-    text: 'Contamos com especialistas no desenvolvimento de sistemas web utilizando as ferramentas mais modernas. Criamos páginas em AMP, que são otimizadas para um carregamento simplificado e quase instantâneo.',
+    title: 'Tenha um site inovador e veja sua empresa decolar',
+    text: 'Conte com nossos especialistas NeXTIME para criar tudo utilizando as ferramentas mais modernas. Desenvolvemos páginas otimizadas que carregam em poucas frações de segundo e não te fazem perder clientes.',
+    textButton: '< Quero meu site mais moderno />',
     image: '/images/home/tattoo_pop.png'
   },
   {
-    title: 'Faça sua empresa ser vista nas redes sociais',
-    text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et. lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.',
+    title: 'Faça sua empresa ser vista e conquiste fãs para sua marca',
+    text: 'Tenha a ajuda dos experts NeXTIME para criar campanhas completas para sua marca. Esteja presente em todas as plataformas e redes sociais para ganhar uma legião de clientes.',
     image: '/images/home/instagram.png',
     directionMd: 'row-reverse'
   }

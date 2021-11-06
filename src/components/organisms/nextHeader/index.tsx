@@ -72,21 +72,21 @@ const NAV_ITEMS: Array<NavItem> = [
     label: 'Quem somos',
     href: '#'
   },
-  {
-    label: 'Portfólio',
-    children: [
-      {
-        label: 'Tattoo Pop',
-        subLabel: 'Find your dream design job',
-        href: '#'
-      },
-      {
-        label: 'Optar',
-        subLabel: 'An exclusive list for contract work',
-        href: '#'
-      }
-    ]
-  },
+  // {
+  //   label: 'Portfólio',
+  //   children: [
+  //     {
+  //       label: 'Tattoo Pop',
+  //       subLabel: 'Find your dream design job',
+  //       href: '#'
+  //     },
+  //     {
+  //       label: 'Optar',
+  //       subLabel: 'An exclusive list for contract work',
+  //       href: '#'
+  //     }
+  //   ]
+  // },
   {
     label: 'Orçamento',
     href: '#'

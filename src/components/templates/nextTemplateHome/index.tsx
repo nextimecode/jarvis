@@ -25,7 +25,12 @@ const NextTemplateHome = ({
 }: NextTemplateHomeProps) => {
   return (
     <NextLayout>
-      <NextHero title={nextHeroItem.title} />
+      <NextHero
+        words={nextHeroItem.words}
+        title={nextHeroItem.title}
+        text={nextHeroItem.text}
+        textButton={nextHeroItem.textButton}
+      />
       {nextCallToActionItems?.map((item, index) => (
         <NextCallToAction
           key={index}
@@ -38,19 +43,19 @@ const NextTemplateHome = ({
       ))}
       <Center mt={20}>
         <Heading>
-          Tecnologias de ponta
+          Usamos as melhores tecnologias do mercado
         </Heading>
       </Center>
       <NextFeatures
         items={nextTechnologyItems}
         numberGrid={6}
       />
-      <Center mt={20}>
+      {/* <Center mt={20}>
         <Heading>
           O que os clientes falam
         </Heading>
-      </Center>
-      <NextTestimonials />
+      </Center> */}
+      {/* <NextTestimonials /> */}
       <Center mt={20}>
         <Heading>
           Feito por Pessoas

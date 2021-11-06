@@ -51,9 +51,9 @@ const NextTeamCard = ({
     <>
       <Box
         maxW={'241px'}
-        bg={'dark-gray'}
+        bg={'next-dark-gray'}
         rounded={'md'}
-        borderColor="primary"
+        borderColor="next-primary"
         borderWidth="1px"
         p={6}
         onClick={onOpen}
@@ -112,7 +112,7 @@ const NextTeamCard = ({
                 <Box p="4">
                   <Link href={linkedin}>
                     <a target="_blank" rel="noreferrer">
-                      <Icon color="primary" as={FaLinkedinIn} w={8} h={8}/>
+                      <Icon color="next-primary" as={FaLinkedinIn} w={8} h={8}/>
                     </a>
                   </Link>
                 </Box>
@@ -121,7 +121,7 @@ const NextTeamCard = ({
                 <Box p="4">
                   <Link href={instagram}>
                     <a target="_blank" rel="noreferrer">
-                      <Icon color="primary" as={FaInstagram} w={8} h={8}/>
+                      <Icon color="next-primary" as={FaInstagram} w={8} h={8}/>
                     </a>
                   </Link>
                 </Box>
@@ -130,7 +130,7 @@ const NextTeamCard = ({
                 <Box p="4">
                   <Link href={youtube}>
                     <a target="_blank" rel="noreferrer">
-                      <Icon color="primary" as={FaYoutube} w={8} h={8}/>
+                      <Icon color="next-primary" as={FaYoutube} w={8} h={8}/>
                     </a>
                   </Link>
                 </Box>
