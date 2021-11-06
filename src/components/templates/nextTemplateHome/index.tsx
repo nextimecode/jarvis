@@ -19,7 +19,6 @@ export type NextTemplateHomeProps = {
 
 const NextTemplateHome = ({
   nextHeroItem,
-  nextFeatureItems,
   nextCallToActionItems,
   nextTechnologyItems,
   nextTeamItems
@@ -27,7 +26,6 @@ const NextTemplateHome = ({
   return (
     <NextLayout>
       <NextHero title={nextHeroItem.title} />
-      <NextFeatures items={nextFeatureItems} />
       {nextCallToActionItems?.map((item, index) => (
         <NextCallToAction
           key={index}

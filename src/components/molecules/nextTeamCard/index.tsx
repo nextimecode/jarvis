@@ -26,7 +26,7 @@ import {
 export interface NextTeamCardProps {
   name: string
   role: string
-  content: string
+  text: string
   avatar: string
   width?: number
   height?: number
@@ -38,7 +38,7 @@ export interface NextTeamCardProps {
 const NextTeamCard = ({
   name,
   role,
-  content,
+  text,
   avatar,
   linkedin,
   instagram,
@@ -104,7 +104,7 @@ const NextTeamCard = ({
             >
               {role}
             </Text>
-            {content}
+            {text}
           </ModalBody>
           <ModalFooter>
             <Flex>
