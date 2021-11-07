@@ -25,6 +25,7 @@ const NextTemplateHome = ({
         title={nextHeroItem.title}
         text={nextHeroItem.text}
         textButton={nextHeroItem.textButton}
+        url={nextCallToActionItems[0].url}
       />
       {nextCallToActionItems?.map((item, index) => (
         <NextCallToAction
@@ -34,6 +35,7 @@ const NextTemplateHome = ({
           image={item.image}
           textButton={item.textButton}
           directionMd={item.directionMd}
+          url={item.url}
         />
       ))}
       {/* <NextFolderTime /> */}

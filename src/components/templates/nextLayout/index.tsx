@@ -5,6 +5,7 @@ import NextFooter from '../../organisms/nextFooter'
 import { Box, Container } from '@chakra-ui/react'
 import NextWhatsIcon from '../../atoms/nextWhatsIcon'
 import Link from 'next/link'
+import { nextSocialNetwork } from '../../../data'
 
 type Props = {
   title?: string
@@ -41,7 +42,7 @@ const NextLayout = ({
         bottom="20px"
         right="20px"
       >
-        <Link href={'https://api.whatsapp.com/send?phone=5511972436305&text=Ol%C3%A1,%20NeXTIME!%0AGostaria%20de%20solicitar%20um%20orçamento.'}>
+        <Link href={nextSocialNetwork.whatsapp.url}>
           <a target="_blank" rel="noreferrer">
             <NextWhatsIcon />
           </a>

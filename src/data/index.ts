@@ -1,8 +1,24 @@
 import { NextCallToActionProps } from '../components/organisms/nextCallToAction'
 import { NextFeatureProps } from '../components/molecules/nextFeature'
+import { getRandom } from '../utils/getRandom'
+
+export const contacts = [
+  '553192711521',
+  '553189217467',
+  '447576885930',
+  '553799226492'
+]
+
+const number = getRandom(contacts)
+
+export const nextSocialNetwork = {
+  whatsapp: {
+    url: `https://api.whatsapp.com/send?phone=${number}&text=Ol%C3%A1,%20NeXTIME!%0AGostaria%20de%20solicitar%20um%20orçamento.`
+  }
+}
 
 export const nextHeroItem = {
-  words: 'TECNOLOGIA | INOVAÇÃO | DESIGN | MARKETING',
+  words: 'TECNOLOGIA | DESIGN | MARKETING',
   title: 'Transforme suas ideias em negócios de sucesso',
   text: 'Tenha nosso time ao seu lado para fazer seus planos virarem realidade. Foque onde precisa enquanto nossos especialistas cuidam de tudo para o seu negócio evoluir como você sempre quis.',
   textButton: '<Quero revolucionar minha empresa/>'
@@ -14,18 +30,22 @@ export const nextCallToActionItems = [
     text: 'Na NeXTIME, temos a solução completa para você se conectar com quem mais importa: seus clientes. Faça todo mundo levar sua empresa na palma da mão e ter acesso ao melhor que você oferece com poucos cliques.',
     image: '/images/home/tattoo_pop.png',
     textButton: '< Quero meu próprio app />',
+    url: `${nextSocialNetwork.whatsapp.url}`,
     directionMd: 'row-reverse'
   },
   {
     title: 'Tenha um site inovador e veja sua empresa decolar',
     text: 'Conte com nossos especialistas NeXTIME para criar tudo utilizando as ferramentas mais modernas. Desenvolvemos páginas otimizadas que carregam em poucas frações de segundo e não te fazem perder clientes.',
     textButton: '< Quero meu site mais moderno />',
+    url: `${nextSocialNetwork.whatsapp.url}`,
     image: '/images/home/optar.png'
   },
   {
     title: 'Faça sua empresa ser vista e conquiste fãs para sua marca',
     text: 'Tenha a ajuda dos experts NeXTIME para criar campanhas completas para sua marca. Esteja presente em todas as plataformas e redes sociais para ganhar uma legião de clientes.',
     image: '/images/home/instagram.png',
+    url: `${nextSocialNetwork.whatsapp.url}`,
+    textButton: '< Quero que minha empresa seja vista />',
     directionMd: 'row-reverse'
   }
 ] as unknown as Array<NextCallToActionProps>

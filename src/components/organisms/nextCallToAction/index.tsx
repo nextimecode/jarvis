@@ -7,6 +7,7 @@ import {
   Text
 } from '@chakra-ui/react'
 import NextButton from '../../atoms/nextButton'
+import Link from 'next/link'
 
 export interface NextCallToActionProps {
   bg?: string;
@@ -14,6 +15,7 @@ export interface NextCallToActionProps {
   text: string;
   textButton?: string;
   image: string;
+  url: string
   directionMd?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
   directionBase?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
 }
@@ -23,6 +25,7 @@ const NextCallToAction = ({
   title,
   text,
   image,
+  url,
   textButton = '< Faça um orçamento />',
   directionMd = 'row',
   directionBase = 'column'
@@ -32,14 +35,18 @@ const NextCallToAction = ({
       <Stack align={'center'} direction={{ base: directionBase, md: directionMd }}>
         <Flex flex={1} align={'center'} justify={'center'}>
           <Stack spacing={6} w={'full'} maxW={'lg'}>
-            <Text fontWeight={600} fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+            <Text lineHeight={1.33} fontWeight={600} fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
               {title}
             </Text>
             <Text fontSize={{ base: 'md', lg: 'lg' }} color={'white'}>
               {text}
             </Text>
             <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-              <NextButton variant="outline">{textButton}</NextButton>
+              <Link href={`${url}%0A${textButton}`}>
+                <a target="_blank" rel="noreferrer">
+                  <NextButton variant="outline">{textButton}</NextButton>
+                </a>
+              </Link>
             </Stack>
           </Stack>
         </Flex>

@@ -19,7 +19,15 @@ const NextButton = ({
   }
   return (
     <>
-      <Button bg={bg} textColor={textColor} borderColor="primary" variant={variant}>{ children }</Button>
+      <Button
+        bg={bg}
+        textColor={textColor}
+        borderColor="primary"
+        variant={variant}
+        height="45px"
+      >
+        { children }
+      </Button>
     </>
   )
 }

@@ -17,8 +17,8 @@
     "postinstall": "husky install"
   },
   "dependencies": {
-    "@chakra-ui/icons": "^1.0.15",
-    "@chakra-ui/react": "^1.6.5",
+    "@chakra-ui/icons": "^1.0.7",
+    "@chakra-ui/react": "^1.6.12",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@fontsource/open-sans": "^4.5.1",
