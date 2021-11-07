@@ -1,13 +1,8 @@
-
-import { Box, Center, Heading } from '@chakra-ui/react'
 import React from 'react'
 import { NextFeatureProps } from '../../molecules/nextFeature'
 import NextCallToAction, { NextCallToActionProps } from '../../organisms/nextCallToAction'
 import NextFeatures from '../../organisms/nextFeatures'
-import NextFolderTime from '../../organisms/nextFolderTime'
 import NextHero, { NextHeroProps } from '../../organisms/nextHero'
-import NextTeam from '../../organisms/nextTeam'
-import NextTestimonials from '../../organisms/nextTestimonials'
 import NextLayout from '../nextLayout'
 
 export type NextTemplateHomeProps = {
@@ -21,8 +16,7 @@ export type NextTemplateHomeProps = {
 const NextTemplateHome = ({
   nextHeroItem,
   nextCallToActionItems,
-  nextTechnologyItems,
-  nextTeamItems
+  nextTechnologyItems
 }: NextTemplateHomeProps) => {
   return (
     <NextLayout>

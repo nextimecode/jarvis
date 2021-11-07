@@ -1,27 +1,12 @@
 import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
 
 import {
   Box,
-  Container,
   Grid,
   GridItem,
-  Heading,
-  HStack,
-  Icon,
-  SimpleGrid,
-  Text
-} from '@chakra-ui/react'
+  Heading
 
-import {
-  FaInstagram,
-  FaLinkedinIn,
-  FaWhatsapp,
-  FaMailBulk,
-  FaFacebookF,
-  FaYoutube
-} from 'react-icons/fa'
+} from '@chakra-ui/react'
 
 type NextFolderTimeProps = {
   bg?: 'next-primary' | undefined
