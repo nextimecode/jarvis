@@ -2,7 +2,9 @@ import Head from 'next/head'
 import React, { PropsWithChildren } from 'react'
 import NextHeader from '../../organisms/nextHeader'
 import NextFooter from '../../organisms/nextFooter'
-import { Container } from '@chakra-ui/react'
+import { Box, Container } from '@chakra-ui/react'
+import NextWhatsIcon from '../../atoms/nextWhatsIcon'
+import Link from 'next/link'
 
 type Props = {
   title?: string
@@ -31,6 +33,20 @@ const NextLayout = ({
       </main>
 
       <NextFooter />
+      <Box
+        position="fixed"
+        width="60px"
+        height="60px"
+        zIndex={100}
+        bottom="20px"
+        right="20px"
+      >
+        <Link href={'https://api.whatsapp.com/send?phone=5511972436305&text=Ol%C3%A1,%20NeXTIME!%0AGostaria%20de%20solicitar%20um%20orçamento.'}>
+          <a target="_blank" rel="noreferrer">
+            <NextWhatsIcon />
+          </a>
+        </Link>
+      </Box>
     </>
   )
 }

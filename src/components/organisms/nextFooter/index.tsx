@@ -32,7 +32,7 @@ const NextFooter = ({
 }: NextFooterProps) => {
   return (
     <footer>
-      <Box bg={bg} pt={12}>
+      <Box bg={bg} pt={12} pb={12}>
         <Grid
           templateColumns="repeat(5, 2fr)"
         >
@@ -75,7 +75,7 @@ const NextFooter = ({
                   <Text>Marketing Digital</Text>
                   <Text>Inteligência Artificial</Text>
                 </SimpleGrid>
-                <HStack spacing={6} pt={3} pb={10}>
+                <HStack spacing={6} pt={3} pb={12}>
                   <Box pe={6} pt={2}>
                     <Image
                       src="/images/logos/nextime_logo_white.svg"

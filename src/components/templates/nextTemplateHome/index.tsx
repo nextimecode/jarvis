@@ -1,4 +1,8 @@
+import { Icon } from '@chakra-ui/react'
+import Link from 'next/link'
 import React from 'react'
+import { FaWhatsapp } from 'react-icons/fa'
+import NextWhatsIcon from '../../atoms/nextWhatsIcon'
 import { NextFeatureProps } from '../../molecules/nextFeature'
 import NextCallToAction, { NextCallToActionProps } from '../../organisms/nextCallToAction'
 import NextFeatures from '../../organisms/nextFeatures'

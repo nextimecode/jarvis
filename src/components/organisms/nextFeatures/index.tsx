@@ -18,7 +18,7 @@ const NextFeatures = ({
   numberGrid = 3
 }: NextFeaturesProps) => {
   return (
-    <Container maxW="container.lg" pb={[20, 32]}>
+    <Container maxW="container.lg" pb={[32, 32]}>
       <Center pb={12}>
         <Heading>
           Usamos as melhores tecnologias do mercado
