@@ -19,8 +19,8 @@ import {
   FaLinkedinIn,
   FaWhatsapp,
   FaMailBulk,
-  FaFacebookF,
-  FaYoutube
+  FaYoutube,
+  FaFacebookMessenger
 } from 'react-icons/fa'
 
 export type NextFooterProps = {
@@ -55,7 +55,7 @@ const NextFooter = ({
                   </Link>
                   <Link href={'https://m.me/102621504903865'}>
                     <a target="_blank" rel="noreferrer">
-                      <Icon color="white" _hover={{ color: 'next-dark' }} as={FaFacebookF} w={16} h={16}/>
+                      <Icon color="white" _hover={{ color: 'next-dark' }} as={FaFacebookMessenger} w={16} h={16}/>
                     </a>
                   </Link>
                   <Link href={'https://www.instagram.com/nextimetec/'}>

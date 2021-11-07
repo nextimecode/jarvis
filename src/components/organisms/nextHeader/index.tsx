@@ -250,7 +250,7 @@ const NextHeader = () => {
                   <Icon color="next-gray" _hover={{ color: 'white' }} as={FaInstagram} w={6} h={6}/>
                 </a>
               </NextJSLink>
-              <NextJSLink href={'https://m.me/102621504903865'}>
+              <NextJSLink href={'https://www.facebook.com/nextimetecnologia'}>
                 <a target="_blank" rel="noreferrer">
                   <Icon color="next-gray" _hover={{ color: 'white' }} as={FaFacebookF} w={6} h={6}/>
                 </a>

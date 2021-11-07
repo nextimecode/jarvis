@@ -10,7 +10,6 @@ export type NextTemplateHomeProps = {
   nextFeatureItems: Array<NextFeatureProps>
   nextCallToActionItems: Array<NextCallToActionProps>
   nextTechnologyItems: Array<Record<string, unknown>>
-  nextTeamItems: Array<Record<string, string>>
 }
 
 const NextTemplateHome = ({
