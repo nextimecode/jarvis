@@ -23,13 +23,13 @@ import {
   FaYoutube
 } from 'react-icons/fa'
 
-type NextButtonProps = {
+export type NextFooterProps = {
   bg?: 'next-primary' | undefined
 }
 
 const NextFooter = ({
   bg = 'next-primary'
-}: NextButtonProps) => {
+}: NextFooterProps) => {
   return (
     <footer>
       <Box bg={bg} pt={12}>

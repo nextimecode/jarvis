@@ -20,7 +20,7 @@ export const nextCallToActionItems = [
     title: 'Tenha um site inovador e veja sua empresa decolar',
     text: 'Conte com nossos especialistas NeXTIME para criar tudo utilizando as ferramentas mais modernas. Desenvolvemos páginas otimizadas que carregam em poucas frações de segundo e não te fazem perder clientes.',
     textButton: '< Quero meu site mais moderno />',
-    image: '/images/home/tattoo_pop.png'
+    image: '/images/home/optar.png'
   },
   {
     title: 'Faça sua empresa ser vista e conquiste fãs para sua marca',
@@ -65,67 +65,56 @@ export const nextFeatureItems = [
 
 export const nextTechnologyItems = [
   {
-    title: 'Flutter',
     image: '/images/logos/flutter.svg',
     width: 51,
     height: 64
   },
   {
-    title: 'Next JS',
     image: '/images/logos/nextjs.svg',
     width: 64,
     height: 64
   },
   {
-    title: 'Vercel',
     image: '/images/logos/vercel.svg',
     width: 64,
     height: 64
   },
   {
-    title: 'Node JS',
     image: '/images/logos/nodejs.svg',
     width: 64,
     height: 64
   },
   {
-    title: 'Nest JS',
     image: '/images/logos/nestjs.svg',
     width: 64,
     height: 64
   },
   {
-    title: 'Firebase',
     image: '/images/logos/firebase.svg',
     width: 64,
     height: 64
   },
   {
-    title: 'AMP',
     image: '/images/logos/amp.svg',
     width: 64,
     height: 64
   },
   {
-    title: 'Bootstrap',
     image: '/images/logos/bootstrap.svg',
     width: 64,
     height: 64
   },
   {
-    title: 'Tailwind',
     image: '/images/logos/tailwind.svg',
     width: 64,
     height: 64
   },
   {
-    title: 'Chakra UI',
     image: '/images/logos/chakra.svg',
     width: 64,
     height: 64
   },
   {
-    title: 'Stripe',
     image: '/images/logos/stripe.svg',
     width: 64,
     height: 64

@@ -4,6 +4,7 @@ import React from 'react'
 import { NextFeatureProps } from '../../molecules/nextFeature'
 import NextCallToAction, { NextCallToActionProps } from '../../organisms/nextCallToAction'
 import NextFeatures from '../../organisms/nextFeatures'
+import NextFolderTime from '../../organisms/nextFolderTime'
 import NextHero, { NextHeroProps } from '../../organisms/nextHero'
 import NextTeam from '../../organisms/nextTeam'
 import NextTestimonials from '../../organisms/nextTestimonials'
@@ -41,11 +42,7 @@ const NextTemplateHome = ({
           directionMd={item.directionMd}
         />
       ))}
-      <Center mt={20}>
-        <Heading>
-          Usamos as melhores tecnologias do mercado
-        </Heading>
-      </Center>
+      {/* <NextFolderTime /> */}
       <NextFeatures
         items={nextTechnologyItems}
         numberGrid={6}
@@ -56,14 +53,14 @@ const NextTemplateHome = ({
         </Heading>
       </Center> */}
       {/* <NextTestimonials /> */}
-      <Center mt={20}>
+      {/* <Center mt={20}>
         <Heading>
           Feito por Pessoas
         </Heading>
-      </Center>
-      <Box mb={20}>
+      </Center> */}
+      {/* <Box mb={20}>
         <NextTeam items={nextTeamItems}/>
-      </Box>
+      </Box> */}
     </NextLayout>
   )
 }
