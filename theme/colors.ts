@@ -5,7 +5,7 @@ const colors = {
   'next-dark': '#2D426D',
   'next-gray': '#BDBDBD',
   'next-dark-gray': '#2A2A2D',
-  dark: '#030618',
+  dark: '#17171B',
   blue: {
     200: '#4882F8',
     // ...
