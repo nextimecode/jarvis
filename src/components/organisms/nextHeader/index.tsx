@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import NextJSLink from 'next/link'
 import {
   Box,
   Flex,
@@ -14,7 +15,8 @@ import {
   PopoverContent,
   useColorModeValue,
   useDisclosure,
-  Container
+  Container,
+  HStack
 } from '@chakra-ui/react'
 import {
   HamburgerIcon,
@@ -22,6 +24,7 @@ import {
   ChevronDownIcon,
   ChevronRightIcon
 } from '@chakra-ui/icons'
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
@@ -241,9 +244,23 @@ const NextHeader = () => {
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
-            <Link>
-              <Image src="/images/icons/instagram.svg" alt="NeXTIME Logo" width={24} height={22} />
-            </Link>
+            <HStack spacing={6}>
+              <NextJSLink href={'https://www.instagram.com/nextimetec/'}>
+                <a target="_blank" rel="noreferrer">
+                  <Icon color="next-gray" _hover={{ color: 'white' }} as={FaInstagram} w={6} h={6}/>
+                </a>
+              </NextJSLink>
+              <NextJSLink href={'https://m.me/102621504903865'}>
+                <a target="_blank" rel="noreferrer">
+                  <Icon color="next-gray" _hover={{ color: 'white' }} as={FaFacebookF} w={6} h={6}/>
+                </a>
+              </NextJSLink>
+              <NextJSLink href={'https://www.linkedin.com/company/nextimetec/'}>
+                <a target="_blank" rel="noreferrer">
+                  <Icon color="next-gray" _hover={{ color: 'white' }} as={FaLinkedinIn} w={6} h={6}/>
+                </a>
+              </NextJSLink>
+            </HStack>
           </Stack>
         </Flex>
 
