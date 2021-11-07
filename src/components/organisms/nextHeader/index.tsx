@@ -25,6 +25,7 @@ import {
   ChevronRightIcon
 } from '@chakra-ui/icons'
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import { nextSocialNetwork } from '../../../data'
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
@@ -92,7 +93,7 @@ const NAV_ITEMS: Array<NavItem> = [
   // },
   {
     label: 'Orçamento',
-    href: '#'
+    href: nextSocialNetwork.whatsapp.url
   }
 ]
 
