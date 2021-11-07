@@ -244,7 +244,7 @@ const NextHeader = () => {
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
-            <HStack spacing={6}>
+            <HStack spacing={{ base: 3, md: 6 }}>
               <NextJSLink href={'https://www.instagram.com/nextimetec/'}>
                 <a target="_blank" rel="noreferrer">
                   <Icon color="next-gray" _hover={{ color: 'white' }} as={FaInstagram} w={6} h={6}/>

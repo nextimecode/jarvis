@@ -5,8 +5,8 @@ const styles = {
   global: (props: Dict<any>) => ({
     body: {
       fontFamily: 'body',
-      color: mode('#17171B', 'whiteAlpha.900')(props),
-      bg: mode('white', '#17171B')(props),
+      color: '#17171B',
+      bg: '#17171B',
       lineHeight: 'base'
     }
   })
