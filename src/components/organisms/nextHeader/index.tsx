@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import NextJSLink from 'next/link'
 import {
   Box,
   Flex,
@@ -13,7 +14,9 @@ import {
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
-  useDisclosure
+  useDisclosure,
+  Container,
+  HStack
 } from '@chakra-ui/react'
 import {
   HamburgerIcon,
@@ -21,6 +24,7 @@ import {
   ChevronDownIcon,
   ChevronRightIcon
 } from '@chakra-ui/icons'
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
@@ -67,25 +71,25 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Home'
   },
-  {
-    label: 'Quem somos',
-    href: '#'
-  },
-  {
-    label: 'Portfólio',
-    children: [
-      {
-        label: 'Tattoo Pop',
-        subLabel: 'Find your dream design job',
-        href: '#'
-      },
-      {
-        label: 'Optar',
-        subLabel: 'An exclusive list for contract work',
-        href: '#'
-      }
-    ]
-  },
+  // {
+  //   label: 'Quem somos',
+  //   href: '#'
+  // },
+  // {
+  //   label: 'Portfólio',
+  //   children: [
+  //     {
+  //       label: 'Tattoo Pop',
+  //       subLabel: 'Find your dream design job',
+  //       href: '#'
+  //     },
+  //     {
+  //       label: 'Optar',
+  //       subLabel: 'An exclusive list for contract work',
+  //       href: '#'
+  //     }
+  //   ]
+  // },
   {
     label: 'Orçamento',
     href: '#'
@@ -206,51 +210,64 @@ const NextHeader = () => {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
-    <Box>
-      <Flex
-        bg={useColorModeValue('white', 'gray.800')}
-        color={useColorModeValue('gray.600', 'white')}
-        minH={'60px'}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
-        borderBottom={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
-        align={'center'}>
+    <Box
+      borderBottom={1}
+      borderStyle={'solid'}
+      borderColor={useColorModeValue('gray.200', 'gray.700')}
+    >
+      <Container maxW="container.lg">
         <Flex
-          flex={{ base: 1, md: 'auto' }}
-          ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}>
-          <IconButton
-            onClick={onToggle}
-            icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-            }
-            variant={'ghost'}
-            aria-label={'Toggle Navigation'}
-          />
-        </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Image src="/images/logos/logo_nextime.svg" alt="NeXTIME Logo" width={146} height={45} />
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+          color={useColorModeValue('gray.600', 'white')}
+          minH={'70px'}
+          align={'center'}>
+          <Flex
+            flex={{ base: 1 }}
+            display={{ base: 'flex', md: 'none' }}>
+            <IconButton
+              onClick={onToggle}
+              icon={
+                isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+              }
+              variant={'ghost'}
+              aria-label={'Toggle Navigation'}
+            />
+          </Flex>
+          <Flex flex={{ base: 1 }} justify={{ base: 'center' }}>
+            <Image src="/images/logos/logo_nextime.svg" alt="NeXTIME Logo" width={146} height={45} />
+          </Flex>
+          <Flex display={{ base: 'none', md: 'flex' }}>
             <DesktopNav />
           </Flex>
+
+          <Stack
+            flex={{ base: 1 }}
+            justify={'flex-end'}
+            direction={'row'}
+            spacing={6}>
+            <HStack spacing={6}>
+              <NextJSLink href={'https://www.instagram.com/nextimetec/'}>
+                <a target="_blank" rel="noreferrer">
+                  <Icon color="next-gray" _hover={{ color: 'white' }} as={FaInstagram} w={6} h={6}/>
+                </a>
+              </NextJSLink>
+              <NextJSLink href={'https://www.facebook.com/nextimetecnologia'}>
+                <a target="_blank" rel="noreferrer">
+                  <Icon color="next-gray" _hover={{ color: 'white' }} as={FaFacebookF} w={6} h={6}/>
+                </a>
+              </NextJSLink>
+              <NextJSLink href={'https://www.linkedin.com/company/nextimetec/'}>
+                <a target="_blank" rel="noreferrer">
+                  <Icon color="next-gray" _hover={{ color: 'white' }} as={FaLinkedinIn} w={6} h={6}/>
+                </a>
+              </NextJSLink>
+            </HStack>
+          </Stack>
         </Flex>
 
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={'flex-end'}
-          direction={'row'}
-          spacing={6}>
-          <Link>
-            <Image src="/images/icons/instagram.svg" alt="NeXTIME Logo" width={24} height={22} />
-          </Link>
-        </Stack>
-      </Flex>
-
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
-      </Collapse>
+        <Collapse in={isOpen} animateOpacity>
+          <MobileNav />
+        </Collapse>
+      </Container>
     </Box>
   )
 }

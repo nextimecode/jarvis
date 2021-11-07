@@ -1,33 +1,75 @@
 import React from 'react'
-import Image from 'next/image'
+import Link from 'next/link'
 import {
-  Grid,
-  GridItem,
+  Container,
+  Flex,
+  Heading,
+  Image,
+  Stack,
   Text
 } from '@chakra-ui/react'
+import NextButton from '../../atoms/nextButton'
 
-type NextHeroProps = {
-  bg?: undefined
+export type NextHeroProps = {
+  words: string,
+  title: string,
+  text: string,
+  textButton: string,
+  bg?: string,
+  url: string
 }
 
 const NextHero = ({
-  bg
+  words,
+  title,
+  text,
+  textButton,
+  bg,
+  url
 }: NextHeroProps) => {
   return (
     <header>
-      <Grid bg={bg} templateColumns="repeat(5, 1fr)" gap={4}>
-        <GridItem colSpan={2}>
-          <Image src="/images/code_hero.png" alt="NeXTIME Logo" width={462} height={482} />
-        </GridItem>
-        <GridItem colStart={4} colEnd={6}>
-          <Text fontSize={40}>
-            Faça a sua empresa ser vista algo aqui!
-          </Text>
-          <Text fontSize={40}>
-            Serviços
-          </Text>
-        </GridItem>
-      </Grid>
+      <Container bg={bg} maxW="container.xl">
+        <Stack minH={'100vh'} maxH={'100vh'} align={'center'} direction={{ base: 'column', md: 'row-reverse' }}>
+          <Flex flex={1} align={'center'} justify={'center'}>
+            <Stack spacing={6} w={'full'} maxW={'lg'}>
+              <Text color={'next-gray'} textAlign={{ base: 'center', md: 'left' }}>
+                {words}
+              </Text>
+              <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+                <Text color={'next-light'} as={'span'}>
+                  {'<h1>'}
+                </Text>
+                <Text color={'white'} as={'span'}>
+                  {title}
+                </Text>
+                <Text color={'next-light'} as={'span'}>
+                  {'<h1>'}
+                </Text>
+              </Heading>
+              <Text fontSize={{ base: 'md', lg: 'lg' }} color={'white'}>
+                {text}
+              </Text>
+              <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
+                <Link href={`${url}%0A${textButton}`}>
+                  <a target="_blank" rel="noreferrer">
+                    <NextButton>{textButton}</NextButton>
+                  </a>
+                </Link>
+              </Stack>
+            </Stack>
+          </Flex>
+          <Flex maxH={'30rem'} flex={1}>
+            <Image
+              alt={'Login Image'}
+              objectFit={'contain'}
+              src={
+                '/images/home/code_hero.png'
+              }
+            />
+          </Flex>
+        </Stack>
+      </Container>
     </header>
   )
 }
