@@ -3,8 +3,7 @@ import {
   chakra,
   Flex,
   SimpleGrid,
-  Text,
-  useColorModeValue
+  Text
 } from '@chakra-ui/react'
 
 const testimonials = [
@@ -69,7 +68,7 @@ function TestmonialCard(props: TestimonialCardProps) {
       p={10}
       justifyContent={'space-between'}
       position={'relative'}
-      bg={useColorModeValue('white', 'gray.800')}
+      bg={'gray.800'}
       _after={{
         content: '""',
         position: 'absolute',
