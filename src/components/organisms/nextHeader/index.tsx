@@ -13,7 +13,6 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-  useColorModeValue,
   useDisclosure,
   Container,
   HStack
@@ -35,7 +34,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       display={'block'}
       p={2}
       rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+      _hover={{ bg: 'gray.900' }}>
       <Stack direction={'row'} align={'center'}>
         <Box>
           <Text
@@ -98,9 +97,9 @@ const NAV_ITEMS: Array<NavItem> = [
 ]
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue('gray.600', 'gray.200')
-  const linkHoverColor = useColorModeValue('gray.800', 'white')
-  const popoverContentBgColor = useColorModeValue('white', 'gray.800')
+  const linkColor = 'white'
+  const linkHoverColor = 'next-primary'
+  const popoverContentBgColor = 'gray.800'
 
   return (
     <Stack direction={'row'} spacing={4}>
@@ -160,7 +159,9 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         }}>
         <Text
           fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}>
+          color={'white'}
+          _hover={{ color: 'next-primary' }}
+        >
           {label}
         </Text>
         {children && (
@@ -180,7 +181,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           pl={4}
           borderLeft={1}
           borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.700')}
+          borderColor={'gray.700'}
           align={'start'}>
           {children &&
             children.map((child) => (
@@ -197,7 +198,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 const MobileNav = () => {
   return (
     <Stack
-      bg={useColorModeValue('white', 'gray.800')}
+      bg={'gray.800'}
       p={4}
       display={{ md: 'none' }}>
       {NAV_ITEMS.map((navItem) => (
@@ -214,11 +215,11 @@ const NextHeader = () => {
     <Box
       borderBottom={1}
       borderStyle={'solid'}
-      borderColor={useColorModeValue('gray.200', 'gray.700')}
+      borderColor={'gray.700'}
     >
       <Container maxW="container.lg">
         <Flex
-          color={useColorModeValue('gray.600', 'white')}
+          color={'gray.600'}
           minH={'70px'}
           align={'center'}>
           <Flex
@@ -248,17 +249,17 @@ const NextHeader = () => {
             <HStack spacing={{ base: 3, md: 6 }}>
               <NextJSLink href={'https://www.instagram.com/nextimetec/'}>
                 <a target="_blank" rel="noreferrer">
-                  <Icon color="next-gray" _hover={{ color: 'white' }} as={FaInstagram} w={6} h={6}/>
+                  <Icon color="next-gray" _hover={{ color: 'next-primary' }} as={FaInstagram} w={6} h={6}/>
                 </a>
               </NextJSLink>
               <NextJSLink href={'https://www.facebook.com/nextimetecnologia'}>
                 <a target="_blank" rel="noreferrer">
-                  <Icon color="next-gray" _hover={{ color: 'white' }} as={FaFacebookF} w={6} h={6}/>
+                  <Icon color="next-gray" _hover={{ color: 'next-primary' }} as={FaFacebookF} w={6} h={6}/>
                 </a>
               </NextJSLink>
               <NextJSLink href={'https://www.linkedin.com/company/nextimetec/'}>
                 <a target="_blank" rel="noreferrer">
-                  <Icon color="next-gray" _hover={{ color: 'white' }} as={FaLinkedinIn} w={6} h={6}/>
+                  <Icon color="next-gray" _hover={{ color: 'next-primary' }} as={FaLinkedinIn} w={6} h={6}/>
                 </a>
               </NextJSLink>
             </HStack>
