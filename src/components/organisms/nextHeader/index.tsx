@@ -71,10 +71,18 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Home'
   },
-  // {
-  //   label: 'Quem somos',
-  //   href: '#'
-  // },
+  {
+    label: 'Apps',
+    href: '#app'
+  },
+  {
+    label: 'WebSites',
+    href: '#site'
+  },
+  {
+    label: 'Marketing',
+    href: '#marketing'
+  },
   // {
   //   label: 'Portfólio',
   //   children: [

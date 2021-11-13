@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import {
+  Box,
   Container,
   Flex,
   Heading,
@@ -30,10 +31,10 @@ const NextHero = ({
   return (
     <header>
       <Container bg={bg} maxW="container.xl">
-        <Stack minH={'100vh'} maxH={'100vh'} align={'center'} direction={{ base: 'column', md: 'row-reverse' }}>
+        <Stack minH={'100vh'} align={'center'} direction={{ base: 'column', md: 'row-reverse' }}>
           <Flex flex={1} align={'center'} justify={'center'}>
             <Stack spacing={6} w={'full'} maxW={'lg'}>
-              <Text color={'next-gray'} textAlign={{ base: 'center', md: 'left' }}>
+              <Text pt={4} color={'next-gray'} textAlign={{ base: 'center', md: 'left' }}>
                 {words}
               </Text>
               <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
@@ -50,16 +51,16 @@ const NextHero = ({
               <Text fontSize={{ base: 'md', lg: 'lg' }} color={'white'}>
                 {text}
               </Text>
-              <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
+              <Stack display={{ base: 'none', md: 'block' }} direction={{ base: 'column', md: 'row' }} spacing={4}>
                 <Link href={`${url}%0A${textButton}`}>
                   <a target="_blank" rel="noreferrer">
-                    <NextButton>{textButton}</NextButton>
+                    <NextButton isFullWidth>{textButton}</NextButton>
                   </a>
                 </Link>
               </Stack>
             </Stack>
           </Flex>
-          <Flex maxH={'30rem'} flex={1}>
+          <Flex flex={1}>
             <Image
               alt={'Login Image'}
               objectFit={'contain'}
@@ -68,6 +69,13 @@ const NextHero = ({
               }
             />
           </Flex>
+          <Box display={{ base: 'block', md: 'none' }} pt={6} pb={12}>
+            <Link href={`${url}%0A${textButton}`}>
+              <a target="_blank" rel="noreferrer">
+                <NextButton isFullWidth>{textButton}</NextButton>
+              </a>
+            </Link>
+          </Box>
         </Stack>
       </Container>
     </header>

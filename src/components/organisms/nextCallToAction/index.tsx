@@ -1,37 +1,44 @@
 import React from 'react'
 import {
+  Box,
   Container,
   Flex,
-  Image,
   Stack,
   Text
 } from '@chakra-ui/react'
 import NextButton from '../../atoms/nextButton'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export interface NextCallToActionProps {
+  id?: string
   bg?: string;
   title: string;
   text: string;
   textButton?: string;
   image: string;
   url: string
+  width: string
+  height: string
   directionMd?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
   directionBase?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
 }
 
 const NextCallToAction = ({
+  id,
   bg,
   title,
   text,
   image,
   url,
+  width,
+  height,
   textButton = '< Faça um orçamento />',
   directionMd = 'row',
   directionBase = 'column'
 }: NextCallToActionProps) => {
   return (
-    <Container bg={bg} maxW="container.xl" pb={12} >
+    <Container id={id} bg={bg} maxW="container.xl" pb={12} >
       <Stack align={'center'} direction={{ base: directionBase, md: directionMd }}>
         <Flex flex={1} align={'center'} justify={'center'}>
           <Stack spacing={6} w={'full'} maxW={'lg'}>
@@ -41,22 +48,30 @@ const NextCallToAction = ({
             <Text fontSize={{ base: 'md', lg: 'lg' }} color={'white'}>
               {text}
             </Text>
-            <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
+            <Box display={{ base: 'none', md: 'block' }} spacing={4}>
               <Link href={`${url}%0A${textButton}`}>
                 <a target="_blank" rel="noreferrer">
-                  <NextButton variant="outline">{textButton}</NextButton>
+                  <NextButton isFullWidth variant="outline">{textButton}</NextButton>
                 </a>
               </Link>
-            </Stack>
+            </Box>
           </Stack>
         </Flex>
-        <Flex maxH={'30rem'} flex={1}>
+        <Flex py={2} maxW={'30rem'} flex={1}>
           <Image
             alt={title}
-            objectFit={'contain'}
             src={image}
+            width={width}
+            height={height}
           />
         </Flex>
+        <Box display={{ base: 'block', md: 'none' }} spacing={4}>
+          <Link href={`${url}%0A${textButton}`}>
+            <a target="_blank" rel="noreferrer">
+              <NextButton variant="outline">{textButton}</NextButton>
+            </a>
+          </Link>
+        </Box>
       </Stack>
     </Container>
   )
