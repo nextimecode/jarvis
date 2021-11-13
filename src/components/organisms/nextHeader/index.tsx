@@ -100,7 +100,7 @@ const NAV_ITEMS: Array<NavItem> = [
   // },
   {
     label: 'Orçamento',
-    href: nextSocialNetwork.whatsapp.url
+    href: nextSocialNetwork('553189217467').url
   }
 ]
 

@@ -1,19 +1,16 @@
 import { NextCallToActionProps } from '../components/organisms/nextCallToAction'
 import { NextFeatureProps } from '../components/molecules/nextFeature'
-import { getRandom } from '../utils/getRandom'
 
 export const contacts = [
-  '553192711521',
   '553189217467',
   '447576885930',
-  '553799226492'
+  '553799226492',
+  '553192711521'
 ]
 
-const number = getRandom(contacts)
-
-export const nextSocialNetwork = {
-  whatsapp: {
-    url: `https://api.whatsapp.com/send?phone=${number}&text=Ol%C3%A1,%20NeXTIME!%0AGostaria%20de%20solicitar%20um%20orçamento.`
+export const nextSocialNetwork = (numberPhone: string) => {
+  return {
+    url: `https://api.whatsapp.com/send?phone=${numberPhone}&text=Ol%C3%A1,%20NeXTIME!%0AGostaria%20de%20solicitar%20um%20orçamento.`
   }
 }
 
@@ -22,7 +19,7 @@ export const nextHeroItem = {
   title: 'Transforme suas ideias em negócios de sucesso',
   text: 'Tenha nosso time ao seu lado para fazer seus planos virarem realidade. Foque onde precisa enquanto nossos especialistas cuidam de tudo para o seu negócio evoluir como você sempre quis.',
   textButton: 'Quero revolucionar minha empresa',
-  url: `${nextSocialNetwork.whatsapp.url}`
+  url: `${nextSocialNetwork('553189217467').url}`
 }
 
 export const nextCallToActionItems = [
@@ -32,7 +29,7 @@ export const nextCallToActionItems = [
     text: 'Na NeXTIME, temos a solução completa para você se conectar com quem mais importa: seus clientes. Faça todo mundo levar sua empresa na palma da mão e ter acesso ao melhor que você oferece com poucos cliques.',
     image: '/images/home/tattoo_pop.png',
     textButton: 'Quero meu próprio app',
-    url: `${nextSocialNetwork.whatsapp.url}`,
+    url: `${nextSocialNetwork('447576885930').url}`,
     width: 600,
     height: 630,
     directionMd: 'row-reverse'
@@ -42,7 +39,7 @@ export const nextCallToActionItems = [
     title: 'Tenha um site inovador e veja sua empresa decolar',
     text: 'Conte com nossos especialistas NeXTIME para criar tudo utilizando as ferramentas mais modernas. Desenvolvemos páginas otimizadas que carregam em poucas frações de segundo e não te fazem perder clientes.',
     textButton: 'Quero meu site mais moderno',
-    url: `${nextSocialNetwork.whatsapp.url}`,
+    url: `${nextSocialNetwork('553799226492').url}`,
     width: 595,
     height: 528,
     image: '/images/home/optar.png'
@@ -52,7 +49,7 @@ export const nextCallToActionItems = [
     title: 'Faça sua empresa ser vista e conquiste fãs para sua marca',
     text: 'Tenha a ajuda dos experts NeXTIME para criar campanhas completas para sua marca. Esteja presente em todas as plataformas e redes sociais para ganhar uma legião de clientes.',
     image: '/images/home/instagram.png',
-    url: `${nextSocialNetwork.whatsapp.url}`,
+    url: `${nextSocialNetwork('553192711521').url}`,
     width: 504,
     height: 543,
     textButton: 'Quero que minha empresa seja vista',
