@@ -25,7 +25,7 @@ const NextTemplateHome = ({
         title={nextHeroItem.title}
         text={nextHeroItem.text}
         textButton={nextHeroItem.textButton}
-        url={nextCallToActionItems[0].url}
+        url={nextHeroItem.url}
       />
       {nextCallToActionItems?.map((item, index) => (
         <NextCallToAction
