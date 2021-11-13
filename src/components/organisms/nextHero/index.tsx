@@ -1,11 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   Box,
   Container,
   Flex,
   Heading,
-  Image,
   Stack,
   Text
 } from '@chakra-ui/react'
@@ -61,12 +61,18 @@ const NextHero = ({
             </Stack>
           </Flex>
           <Flex flex={1}>
-            <Image
+            {/* <Image
               alt={'Login Image'}
               objectFit={'contain'}
               src={
                 '/images/home/code_hero.png'
               }
+            /> */}
+            <Image
+              alt={'Login Image'}
+              src={'/images/home/code_hero.png'}
+              width={550}
+              height={550}
             />
           </Flex>
           <Box display={{ base: 'block', md: 'none' }} pt={6} pb={12}>
