@@ -27,16 +27,18 @@ export const nextHeroItem = {
 
 export const nextCallToActionItems = [
   {
+    id: 'app',
     title: 'Crie seu próprio app e multiplique suas vendas',
     text: 'Na NeXTIME, temos a solução completa para você se conectar com quem mais importa: seus clientes. Faça todo mundo levar sua empresa na palma da mão e ter acesso ao melhor que você oferece com poucos cliques.',
     image: '/images/home/tattoo_pop.png',
     textButton: 'Quero meu próprio app',
     url: `${nextSocialNetwork.whatsapp.url}`,
-    width: 602,
-    height: 644,
+    width: 600,
+    height: 630,
     directionMd: 'row-reverse'
   },
   {
+    id: 'site',
     title: 'Tenha um site inovador e veja sua empresa decolar',
     text: 'Conte com nossos especialistas NeXTIME para criar tudo utilizando as ferramentas mais modernas. Desenvolvemos páginas otimizadas que carregam em poucas frações de segundo e não te fazem perder clientes.',
     textButton: 'Quero meu site mais moderno',
@@ -46,6 +48,7 @@ export const nextCallToActionItems = [
     image: '/images/home/optar.png'
   },
   {
+    id: 'marketing',
     title: 'Faça sua empresa ser vista e conquiste fãs para sua marca',
     text: 'Tenha a ajuda dos experts NeXTIME para criar campanhas completas para sua marca. Esteja presente em todas as plataformas e redes sociais para ganhar uma legião de clientes.',
     image: '/images/home/instagram.png',

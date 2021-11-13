@@ -29,6 +29,7 @@ const NextTemplateHome = ({
       />
       {nextCallToActionItems?.map((item, index) => (
         <NextCallToAction
+          id={item.id}
           key={index}
           title={item.title}
           text={item.text}
