@@ -2,12 +2,12 @@ import React from 'react'
 import {
   Container,
   Flex,
-  Image,
   Stack,
   Text
 } from '@chakra-ui/react'
 import NextButton from '../../atoms/nextButton'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export interface NextCallToActionProps {
   bg?: string;
@@ -16,6 +16,8 @@ export interface NextCallToActionProps {
   textButton?: string;
   image: string;
   url: string
+  width: string
+  height: string
   directionMd?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
   directionBase?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
 }
@@ -26,6 +28,8 @@ const NextCallToAction = ({
   text,
   image,
   url,
+  width,
+  height,
   textButton = '< Faça um orçamento />',
   directionMd = 'row',
   directionBase = 'column'
@@ -53,8 +57,9 @@ const NextCallToAction = ({
         <Flex maxH={'30rem'} flex={1}>
           <Image
             alt={title}
-            objectFit={'contain'}
             src={image}
+            width={width}
+            height={height}
           />
         </Flex>
       </Stack>

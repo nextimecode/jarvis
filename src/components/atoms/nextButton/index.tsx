@@ -5,26 +5,34 @@ type Props = {
   bg?: 'next-primary' | 'next-dark' | 'white' | 'dark' | undefined
   variant?: 'solid' | 'outline' | 'ghost' | 'link' | undefined
   textColor?: 'next-primary' | 'next-dark' | 'white' | 'dark' | undefined
+  hover?: 'next-primary' | 'next-dark' | 'white' | 'dark' | undefined
 }
 
 const NextButton = ({
   bg,
   children,
   variant = 'solid',
-  textColor = 'next-primary'
+  textColor = 'next-primary',
+  hover = 'next-dark'
 }: PropsWithChildren<Props>) => {
   if (variant === 'solid') {
     bg = 'next-primary'
     textColor = 'white'
+    hover = 'next-dark'
   }
   return (
     <>
       <Button
         bg={bg}
         textColor={textColor}
-        borderColor="primary"
+        borderColor="next-primary"
         variant={variant}
         height="45px"
+        _hover={{
+          background: hover,
+          color: 'white',
+          borderColor: 'next-dark'
+        }}
       >
         { children }
       </Button>

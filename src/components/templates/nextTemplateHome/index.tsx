@@ -35,6 +35,8 @@ const NextTemplateHome = ({
           image={item.image}
           textButton={item.textButton}
           directionMd={item.directionMd}
+          width={item.width}
+          height={item.height}
           url={item.url}
         />
       ))}

@@ -21,7 +21,7 @@ export const nextHeroItem = {
   words: 'TECNOLOGIA | DESIGN | MARKETING',
   title: 'Transforme suas ideias em negócios de sucesso',
   text: 'Tenha nosso time ao seu lado para fazer seus planos virarem realidade. Foque onde precisa enquanto nossos especialistas cuidam de tudo para o seu negócio evoluir como você sempre quis.',
-  textButton: '<Quero revolucionar minha empresa/>',
+  textButton: 'Quero revolucionar minha empresa',
   url: `${nextSocialNetwork.whatsapp.url}`
 }
 
@@ -30,15 +30,19 @@ export const nextCallToActionItems = [
     title: 'Crie seu próprio app e multiplique suas vendas',
     text: 'Na NeXTIME, temos a solução completa para você se conectar com quem mais importa: seus clientes. Faça todo mundo levar sua empresa na palma da mão e ter acesso ao melhor que você oferece com poucos cliques.',
     image: '/images/home/tattoo_pop.png',
-    textButton: '< Quero meu próprio app />',
+    textButton: 'Quero meu próprio app',
     url: `${nextSocialNetwork.whatsapp.url}`,
+    width: 602,
+    height: 644,
     directionMd: 'row-reverse'
   },
   {
     title: 'Tenha um site inovador e veja sua empresa decolar',
     text: 'Conte com nossos especialistas NeXTIME para criar tudo utilizando as ferramentas mais modernas. Desenvolvemos páginas otimizadas que carregam em poucas frações de segundo e não te fazem perder clientes.',
-    textButton: '< Quero meu site mais moderno />',
+    textButton: 'Quero meu site mais moderno',
     url: `${nextSocialNetwork.whatsapp.url}`,
+    width: 595,
+    height: 528,
     image: '/images/home/optar.png'
   },
   {
@@ -46,7 +50,9 @@ export const nextCallToActionItems = [
     text: 'Tenha a ajuda dos experts NeXTIME para criar campanhas completas para sua marca. Esteja presente em todas as plataformas e redes sociais para ganhar uma legião de clientes.',
     image: '/images/home/instagram.png',
     url: `${nextSocialNetwork.whatsapp.url}`,
-    textButton: '< Quero que minha empresa seja vista />',
+    width: 504,
+    height: 543,
+    textButton: 'Quero que minha empresa seja vista',
     directionMd: 'row-reverse'
   }
 ] as unknown as Array<NextCallToActionProps>
@@ -146,7 +152,7 @@ export const nextTeamItems = [
   {
     name: 'Pedro Duarte',
     role: 'CEO (Chief Executive Officer)',
-    text: 'Sabe o que eu adoro na minha vida? Eu sei qual é o meu PORQUÊ. Procuro me levantar todo dia para fazer alguma coisa que pode devolver às pessoas o seu bem mais precioso, o TEMPO. Acredito que pensando diferente conseguimos utilizar esse recurso finito de uma melhor forma. O mais interessante é que temos diferentes maneiras para conseguir devolver o tempo as pessoas e uma delas é utilizarmos a tecnologia. Por isso sou Bacharel em Ciência da Computação pela Universidade Federal de Ouro Preto — UFOP. Fui presidente da empresa júnior Voluta Soluções Digitais — UFOP. Presidente do Centro Acadêmico do Curso de Ciência da Computação — UFOP gestão 2013/14. Professor pelo programa PRONATEC e pela Let’s Code, escola de programação. Especialista AMP Cognizant/Google e desenvolvedor front-end na Toro Investimentos. Tenho muita sorte de ter trabalhado em lugares que me ajudaram e me ajudam nesse porquê.',
+    text: 'Sabe o que eu adoro na minha vida? Eu sei qual é o meu PORQUÊ. Procuro me levantar todo dia para fazer alguma coisa que pode devolver às pessoas o seu bem precioso, o TEMPO. Acredito que pensando diferente conseguimos utilizar esse recurso finito de uma melhor forma. O mais interessante é que temos diferentes maneiras para conseguir devolver o tempo as pessoas e uma delas é utilizarmos a tecnologia. Por isso sou Bacharel em Ciência da Computação pela Universidade Federal de Ouro Preto — UFOP. Fui presidente da empresa júnior Voluta Soluções Digitais — UFOP. Presidente do Centro Acadêmico do Curso de Ciência da Computação — UFOP gestão 2013/14. Professor pelo programa PRONATEC e pela Let’s Code, escola de programação. Especialista AMP Cognizant/Google e desenvolvedor front-end na Toro Investimentos. Tenho muita sorte de ter trabalhado em lugares que me ajudaram e me ajudam nesse porquê.',
     avatar: '/images/home/team/daniel.svg',
     linkedin: 'https://www.linkedin.com/in/phdduarte/',
     instagram: 'https://www.instagram.com/phdduarte/',
