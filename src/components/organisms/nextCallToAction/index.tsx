@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  Box,
   Container,
   Flex,
   Stack,
@@ -47,16 +48,16 @@ const NextCallToAction = ({
             <Text fontSize={{ base: 'md', lg: 'lg' }} color={'white'}>
               {text}
             </Text>
-            <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
+            <Box display={{ base: 'none', md: 'block' }} spacing={4}>
               <Link href={`${url}%0A${textButton}`}>
                 <a target="_blank" rel="noreferrer">
-                  <NextButton variant="outline">{textButton}</NextButton>
+                  <NextButton isFullWidth variant="outline">{textButton}</NextButton>
                 </a>
               </Link>
-            </Stack>
+            </Box>
           </Stack>
         </Flex>
-        <Flex maxH={'30rem'} flex={1}>
+        <Flex py={2} maxW={'30rem'} flex={1}>
           <Image
             alt={title}
             src={image}
@@ -64,6 +65,13 @@ const NextCallToAction = ({
             height={height}
           />
         </Flex>
+        <Box display={{ base: 'block', md: 'none' }} spacing={4}>
+          <Link href={`${url}%0A${textButton}`}>
+            <a target="_blank" rel="noreferrer">
+              <NextButton variant="outline">{textButton}</NextButton>
+            </a>
+          </Link>
+        </Box>
       </Stack>
     </Container>
   )

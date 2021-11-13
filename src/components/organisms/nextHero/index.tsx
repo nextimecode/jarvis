@@ -34,7 +34,7 @@ const NextHero = ({
         <Stack minH={'100vh'} align={'center'} direction={{ base: 'column', md: 'row-reverse' }}>
           <Flex flex={1} align={'center'} justify={'center'}>
             <Stack spacing={6} w={'full'} maxW={'lg'}>
-              <Text color={'next-gray'} textAlign={{ base: 'center', md: 'left' }}>
+              <Text pt={4} color={'next-gray'} textAlign={{ base: 'center', md: 'left' }}>
                 {words}
               </Text>
               <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
@@ -54,7 +54,7 @@ const NextHero = ({
               <Stack display={{ base: 'none', md: 'block' }} direction={{ base: 'column', md: 'row' }} spacing={4}>
                 <Link href={`${url}%0A${textButton}`}>
                   <a target="_blank" rel="noreferrer">
-                    <NextButton>{textButton}</NextButton>
+                    <NextButton isFullWidth>{textButton}</NextButton>
                   </a>
                 </Link>
               </Stack>
@@ -72,7 +72,7 @@ const NextHero = ({
           <Box display={{ base: 'block', md: 'none' }} pt={6} pb={12}>
             <Link href={`${url}%0A${textButton}`}>
               <a target="_blank" rel="noreferrer">
-                <NextButton>{textButton}</NextButton>
+                <NextButton isFullWidth>{textButton}</NextButton>
               </a>
             </Link>
           </Box>
