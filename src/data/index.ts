@@ -9,6 +9,7 @@ export const contacts = [
 ]
 
 export const nextSocialNetwork = (numberPhone: string) => {
+  numberPhone = '553192711521'
   return {
     url: `https://api.whatsapp.com/send?phone=${numberPhone}&text=Ol%C3%A1,%20NeXTIME!%0AGostaria%20de%20solicitar%20um%20orçamento.`
   }
