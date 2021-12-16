@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { nextSocialNetwork } from '../../../data'
 
 import {
   Box,
@@ -48,7 +49,7 @@ const NextFooter = ({
                       <Icon color="white" _hover={{ color: 'next-dark' }} as={FaMailBulk} w={16} h={16}/>
                     </a>
                   </Link>
-                  <Link href={'https://api.whatsapp.com/send?phone=5511972436305&text=Ol%C3%A1,%20NeXTIME!%0AGostaria%20de%20solicitar%20um%20orçamento.'}>
+                  <Link href={nextSocialNetwork().url}>
                     <a target="_blank" rel="noreferrer">
                       <Icon color="white" _hover={{ color: 'next-dark' }} as={FaWhatsapp} w={16} h={16}/>
                     </a>

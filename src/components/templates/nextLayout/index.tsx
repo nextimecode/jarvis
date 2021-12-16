@@ -42,7 +42,7 @@ const NextLayout = ({
         bottom="20px"
         right="20px"
       >
-        <Link href={nextSocialNetwork('553189217467').url}>
+        <Link href={nextSocialNetwork().url}>
           <a target="_blank" rel="noreferrer">
             <NextWhatsIcon />
           </a>
