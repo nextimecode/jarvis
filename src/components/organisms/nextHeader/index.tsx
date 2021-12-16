@@ -100,7 +100,7 @@ const NAV_ITEMS: Array<NavItem> = [
   // },
   {
     label: 'Orçamento',
-    href: nextSocialNetwork('553192711521').url
+    href: nextSocialNetwork().url
   }
 ]
 
