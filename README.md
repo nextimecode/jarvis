@@ -19,7 +19,6 @@ Os nossos projetos são desenvolvidos com:
 - [React JS](https://reactjs.org/)
 - [Nextjs](https://nextjs.org/)
 - [Chakra-ui](https://chakra-ui.com/)
-- [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 - [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
 - [Ajuda para classificar no AtomicDesign](https://uxdesign.cc/grouping-components-in-atomic-design-systems-4d6e2095ea45)
 - [NodeJS](https://nodejs.org/pt-br/)
@@ -30,6 +29,8 @@ Os nossos projetos são desenvolvidos com:
 - [Husky](https://github.com/typicode/husky)
 - [Video instalando o commitlint, husky e o ](https://www.youtube.com/watch?v=erInHkjxkL8&t=474s)
 - [Clean Code with JS](https://medium.com/trainingcenter/c%C3%B3digo-limpo-vers%C3%A3o-javascript-80adecafdbec)
+- [Tutorial do git fluxo da Nextime](https://drive.google.com/file/d/1a44AWwM_JGLa0Z5-ECCT2sw4qisU9e_F/view?usp=sharing)
+- [Tutorial do fluxo de review da Nextime](https://drive.google.com/file/d/1HG_m-s8U1JZ-Wp_8Gk9t1lb2YtcHme4R/view?usp=sharing)
 
 
 ## Conventional commits
