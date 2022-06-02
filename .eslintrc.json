@@ -6,12 +6,12 @@
     "jest": true
   },
   "extends": [
-    "plugin:react/recommended",
+    "eslint:recommended",
     "standard",
     "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
-    "prettier/standard",
-    "prettier/react"
+    "plugin:prettier/recommended",
+    "next/core-web-vitals",
+    "next"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -37,6 +37,13 @@
     "@typescript-eslint/explicit-function-return-type": "off",
     "react/jsx-props-no-spreading": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/no-explicit-any": "off"
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+  },
+  "settings": {
+    "react": {
+        "version": "detect"
+    }
   }
 }

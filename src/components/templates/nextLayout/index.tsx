@@ -28,20 +28,11 @@ const NextLayout = ({
       <NextHeader />
 
       <main>
-        <Container maxW="container.xl">
-          {children}
-        </Container>
+        <Container maxW="container.xl">{children}</Container>
       </main>
 
       <NextFooter />
-      <Box
-        position="fixed"
-        width="60px"
-        height="60px"
-        zIndex={100}
-        bottom="20px"
-        right="20px"
-      >
+      <Box position="fixed" width="60px" height="60px" zIndex={100} bottom="20px" right="20px">
         <Link href={nextSocialNetwork().url}>
           <a target="_blank" rel="noreferrer">
             <NextWhatsIcon />

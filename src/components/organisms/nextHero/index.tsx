@@ -1,33 +1,19 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  Stack,
-  Text
-} from '@chakra-ui/react'
+import { Box, Container, Flex, Heading, Stack, Text } from '@chakra-ui/react'
 import NextButton from '../../atoms/nextButton'
 
 export type NextHeroProps = {
-  words: string,
-  title: string,
-  text: string,
-  textButton: string,
-  bg?: string,
+  words: string
+  title: string
+  text: string
+  textButton: string
+  bg?: string
   url: string
 }
 
-const NextHero = ({
-  words,
-  title,
-  text,
-  textButton,
-  bg,
-  url
-}: NextHeroProps) => {
+const NextHero = ({ words, title, text, textButton, bg, url }: NextHeroProps) => {
   return (
     <header>
       <Container bg={bg} maxW="container.xl">
@@ -51,23 +37,20 @@ const NextHero = ({
               <Text fontSize={{ base: 'md', lg: 'lg' }} color={'white'}>
                 {text}
               </Text>
-              <Stack display={{ base: 'none', md: 'block' }} direction={{ base: 'column', md: 'row' }} spacing={4}>
+              <Stack
+                display={{ base: 'none', md: 'block' }}
+                direction={{ base: 'column', md: 'row' }}
+                spacing={4}
+              >
                 <Link href={`${url}%0A${textButton}`}>
                   <a target="_blank" rel="noreferrer">
-                    <NextButton isFullWidth>{textButton}</NextButton>
+                    <NextButton>{textButton}</NextButton>
                   </a>
                 </Link>
               </Stack>
             </Stack>
           </Flex>
           <Flex flex={1}>
-            {/* <Image
-              alt={'Login Image'}
-              objectFit={'contain'}
-              src={
-                '/images/home/code_hero.png'
-              }
-            /> */}
             <Image
               alt={'Login Image'}
               src={'/images/home/code_hero.png'}
@@ -78,7 +61,7 @@ const NextHero = ({
           <Box display={{ base: 'block', md: 'none' }} pt={6} pb={12}>
             <Link href={`${url}%0A${textButton}`}>
               <a target="_blank" rel="noreferrer">
-                <NextButton isFullWidth>{textButton}</NextButton>
+                <NextButton>{textButton}</NextButton>
               </a>
             </Link>
           </Box>
