@@ -6,7 +6,6 @@ type Props = {
   variant?: 'solid' | 'outline' | 'ghost' | 'link' | undefined
   textColor?: 'next-primary' | 'next-dark' | 'white' | 'dark' | undefined
   hover?: 'next-primary' | 'next-dark' | 'white' | 'dark' | undefined
-  isFullWidth?: boolean
 }
 
 const NextButton = ({
@@ -14,8 +13,7 @@ const NextButton = ({
   children,
   variant = 'solid',
   textColor = 'next-primary',
-  hover = 'next-dark',
-  isFullWidth = false
+  hover = 'next-dark'
 }: PropsWithChildren<Props>) => {
   if (variant === 'solid') {
     bg = 'next-primary'
@@ -30,14 +28,13 @@ const NextButton = ({
         borderColor="next-primary"
         variant={variant}
         height="45px"
-        isFullWidth={isFullWidth}
         _hover={{
           background: hover,
           color: 'white',
           borderColor: 'next-dark'
         }}
       >
-        { children }
+        {children}
       </Button>
     </>
   )

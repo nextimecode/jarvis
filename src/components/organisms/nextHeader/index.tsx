@@ -17,12 +17,7 @@ import {
   Container,
   HStack
 } from '@chakra-ui/react'
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon
-} from '@chakra-ui/icons'
+import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import { nextSocialNetwork } from '../../../data'
 
@@ -34,13 +29,11 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       display={'block'}
       p={2}
       rounded={'md'}
-      _hover={{ bg: 'gray.900' }}>
+      _hover={{ bg: 'gray.900' }}
+    >
       <Stack direction={'row'} align={'center'}>
         <Box>
-          <Text
-            transition={'all .3s ease'}
-            _groupHover={{ color: 'pink.400' }}
-            fontWeight={500}>
+          <Text transition={'all .3s ease'} _groupHover={{ color: 'pink.400' }} fontWeight={500}>
             {label}
           </Text>
           <Text fontSize={'sm'}>{subLabel}</Text>
@@ -52,7 +45,8 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
           justify={'flex-end'}
           align={'center'}
-          flex={1}>
+          flex={1}
+        >
           <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
@@ -111,7 +105,7 @@ const DesktopNav = () => {
 
   return (
     <Stack direction={'row'} spacing={4}>
-      {NAV_ITEMS.map((navItem) => (
+      {NAV_ITEMS.map(navItem => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
@@ -124,7 +118,8 @@ const DesktopNav = () => {
                 _hover={{
                   textDecoration: 'none',
                   color: linkHoverColor
-                }}>
+                }}
+              >
                 {navItem.label}
               </Link>
             </PopoverTrigger>
@@ -136,9 +131,10 @@ const DesktopNav = () => {
                 bg={popoverContentBgColor}
                 p={4}
                 rounded={'xl'}
-                minW={'sm'}>
+                minW={'sm'}
+              >
                 <Stack>
-                  {navItem.children.map((child) => (
+                  {navItem.children.map(child => (
                     <DesktopSubNav key={child.label} {...child} />
                   ))}
                 </Stack>
@@ -164,12 +160,9 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         align={'center'}
         _hover={{
           textDecoration: 'none'
-        }}>
-        <Text
-          fontWeight={600}
-          color={'white'}
-          _hover={{ color: 'next-primary' }}
-        >
+        }}
+      >
+        <Text fontWeight={600} color={'white'} _hover={{ color: 'next-primary' }}>
           {label}
         </Text>
         {children && (
@@ -190,9 +183,10 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           borderLeft={1}
           borderStyle={'solid'}
           borderColor={'gray.700'}
-          align={'start'}>
+          align={'start'}
+        >
           {children &&
-            children.map((child) => (
+            children.map(child => (
               <Link key={child.label} py={2} href={child.href}>
                 {child.label}
               </Link>
@@ -205,11 +199,8 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 
 const MobileNav = () => {
   return (
-    <Stack
-      bg={'gray.800'}
-      p={4}
-      display={{ md: 'none' }}>
-      {NAV_ITEMS.map((navItem) => (
+    <Stack bg={'gray.800'} p={4} display={{ md: 'none' }}>
+      {NAV_ITEMS.map(navItem => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
     </Stack>
@@ -220,54 +211,62 @@ const NextHeader = () => {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
-    <Box
-      borderBottom={1}
-      borderStyle={'solid'}
-      borderColor={'gray.700'}
-    >
+    <Box borderBottom={1} borderStyle={'solid'} borderColor={'gray.700'}>
       <Container maxW="container.lg">
-        <Flex
-          color={'gray.600'}
-          minH={'70px'}
-          align={'center'}>
-          <Flex
-            flex={{ base: 1 }}
-            display={{ base: 'flex', md: 'none' }}>
+        <Flex color={'gray.600'} minH={'70px'} align={'center'}>
+          <Flex flex={{ base: 1 }} display={{ base: 'flex', md: 'none' }}>
             <IconButton
               onClick={onToggle}
-              icon={
-                isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-              }
+              icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
               variant={'ghost'}
               aria-label={'Toggle Navigation'}
             />
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center' }}>
-            <Image src="/images/logos/logo_nextime.svg" alt="NeXTIME Logo" width={146} height={45} />
+            <Image
+              src="/images/logos/logo_nextime.svg"
+              alt="NeXTIME Logo"
+              width={146}
+              height={45}
+            />
           </Flex>
           <Flex display={{ base: 'none', md: 'flex' }}>
             <DesktopNav />
           </Flex>
 
-          <Stack
-            flex={{ base: 1 }}
-            justify={'flex-end'}
-            direction={'row'}
-            spacing={6}>
+          <Stack flex={{ base: 1 }} justify={'flex-end'} direction={'row'} spacing={6}>
             <HStack spacing={{ base: 3, md: 6 }}>
               <NextJSLink href={'https://www.instagram.com/nextimetec/'}>
                 <a target="_blank" rel="noreferrer">
-                  <Icon color="next-gray" _hover={{ color: 'next-primary' }} as={FaInstagram} w={6} h={6}/>
+                  <Icon
+                    color="next-gray"
+                    _hover={{ color: 'next-primary' }}
+                    as={FaInstagram}
+                    w={6}
+                    h={6}
+                  />
                 </a>
               </NextJSLink>
               <NextJSLink href={'https://www.facebook.com/nextimetecnologia'}>
                 <a target="_blank" rel="noreferrer">
-                  <Icon color="next-gray" _hover={{ color: 'next-primary' }} as={FaFacebookF} w={6} h={6}/>
+                  <Icon
+                    color="next-gray"
+                    _hover={{ color: 'next-primary' }}
+                    as={FaFacebookF}
+                    w={6}
+                    h={6}
+                  />
                 </a>
               </NextJSLink>
               <NextJSLink href={'https://www.linkedin.com/company/nextimetec/'}>
                 <a target="_blank" rel="noreferrer">
-                  <Icon color="next-gray" _hover={{ color: 'next-primary' }} as={FaLinkedinIn} w={6} h={6}/>
+                  <Icon
+                    color="next-gray"
+                    _hover={{ color: 'next-primary' }}
+                    as={FaLinkedinIn}
+                    w={6}
+                    h={6}
+                  />
                 </a>
               </NextJSLink>
             </HStack>

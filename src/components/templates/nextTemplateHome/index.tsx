@@ -41,25 +41,7 @@ const NextTemplateHome = ({
           url={item.url}
         />
       ))}
-      {/* <NextFolderTime /> */}
-      <NextFeatures
-        items={nextTechnologyItems}
-        numberGrid={6}
-      />
-      {/* <Center mt={20}>
-        <Heading>
-          O que os clientes falam
-        </Heading>
-      </Center> */}
-      {/* <NextTestimonials /> */}
-      {/* <Center mt={20}>
-        <Heading>
-          Feito por Pessoas
-        </Heading>
-      </Center> */}
-      {/* <Box mb={20}>
-        <NextTeam items={nextTeamItems}/>
-      </Box> */}
+      <NextFeatures items={nextTechnologyItems} numberGrid={6} />
     </NextLayout>
   )
 }
