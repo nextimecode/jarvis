@@ -8,13 +8,21 @@ export type NextHeroProps = {
   words?: string
   title: string
   text: string
-  image?: string
+  image: string
   textButton: string
   bg?: string
   url: string
 }
 
-const NextHero = ({ words, title, text, textButton, bg, url, image }: NextHeroProps) => {
+const NextHero = ({
+  words,
+  title,
+  text,
+  textButton,
+  bg,
+  url,
+  image = '/images/home/code_hero.png'
+}: NextHeroProps) => {
   return (
     <header>
       <Container bg={bg} maxW="container.xl">
