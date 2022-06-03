@@ -8,7 +8,7 @@ export type NextHeroProps = {
   words?: string
   title: string
   text: string
-  image: string
+  image?: string
   textButton: string
   bg?: string
   url: string
