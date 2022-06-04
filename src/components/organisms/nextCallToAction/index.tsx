@@ -43,12 +43,12 @@ const NextCallToAction = ({
             >
               {title}
             </Text>
-            <Text fontSize={{ base: 'md', lg: 'lg' }} color={'white'}>
+            <Text fontSize={{ base: 'md', lg: 'lg' }} color={'white'} whiteSpace={'pre-wrap'}>
               {text}
             </Text>
             <Box display={{ base: 'none', md: 'block' }}>
-              <Link href={`${url}%0A${textButton}`}>
-                <a target="_blank" rel="noreferrer">
+              <Link href={url}>
+                <a rel="noreferrer">
                   <NextButton variant="outline">{textButton}</NextButton>
                 </a>
               </Link>
@@ -59,8 +59,8 @@ const NextCallToAction = ({
           <Image alt={title} src={image} width={width} height={height} />
         </Flex>
         <Box display={{ base: 'block', md: 'none' }}>
-          <Link href={`${url}%0A${textButton}`}>
-            <a target="_blank" rel="noreferrer">
+          <Link href={url}>
+            <a rel="noreferrer">
               <NextButton variant="outline">{textButton}</NextButton>
             </a>
           </Link>

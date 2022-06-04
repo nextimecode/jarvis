@@ -21,6 +21,7 @@ const NextTemplateHome = ({
   return (
     <NextLayout>
       <NextHero
+        image={nextHeroItem.image}
         words={nextHeroItem.words}
         title={nextHeroItem.title}
         text={nextHeroItem.text}
