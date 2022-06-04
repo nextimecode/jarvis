@@ -77,6 +77,10 @@ const NAV_ITEMS: Array<NavItem> = [
     label: 'Marketing',
     href: '#marketing'
   },
+  {
+    label: 'Mentoria',
+    href: '/mentor'
+  },
   // {
   //   label: 'Portfólio',
   //   children: [
