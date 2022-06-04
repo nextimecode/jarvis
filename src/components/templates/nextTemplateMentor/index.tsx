@@ -7,6 +7,7 @@ import NextHero, { NextHeroProps } from '../../organisms/nextHero'
 import NextLayout from '../nextLayout'
 import { FaLinkedin, FaInstagram } from 'react-icons/fa'
 import Link from 'next/link'
+import NextCallToActionWithAnnotation from 'components/organisms/nextCallToActionWithAnnotation'
 
 export type NextTemplateMentorProps = {
   nextHeroItem: NextHeroProps
@@ -23,7 +24,9 @@ const NextTemplateMentor = ({
 }: NextTemplateMentorProps) => {
   return (
     <NextLayout>
+      <NextCallToActionWithAnnotation />
       <NextHero
+        id="hero"
         words={nextHeroItem.words}
         title={nextHeroItem.title}
         text={nextHeroItem.text}
@@ -94,7 +97,7 @@ const NextTemplateMentor = ({
       <Center pt={16} pb={8}>
         <Heading>O que os mentorados estão dizendo</Heading>
       </Center>
-      <SimpleGrid columns={2} spacing={10}>
+      <SimpleGrid columns={2} spacing={10} pb={8}>
         <Box
           as="video"
           controls

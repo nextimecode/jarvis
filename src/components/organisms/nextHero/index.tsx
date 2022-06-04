@@ -5,6 +5,7 @@ import { Box, Container, Flex, Heading, Stack, Text } from '@chakra-ui/react'
 import NextButton from '../../atoms/nextButton'
 
 export type NextHeroProps = {
+  id?: string
   words?: string
   title: string
   text: string
@@ -15,6 +16,7 @@ export type NextHeroProps = {
 }
 
 const NextHero = ({
+  id,
   words,
   title,
   text,
@@ -25,7 +27,7 @@ const NextHero = ({
 }: NextHeroProps) => {
   return (
     <header>
-      <Container bg={bg} maxW="container.xl">
+      <Container id={id} bg={bg} maxW="container.xl">
         <Stack minH={'80vh'} align={'center'} direction={{ base: 'column', md: 'row-reverse' }}>
           <Flex flex={1} align={'center'} justify={'center'}>
             <Stack spacing={6} w={'full'} maxW={'lg'}>
