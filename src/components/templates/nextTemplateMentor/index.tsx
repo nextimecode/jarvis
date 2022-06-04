@@ -8,6 +8,7 @@ import NextLayout from '../nextLayout'
 import { FaLinkedin, FaInstagram } from 'react-icons/fa'
 import Link from 'next/link'
 import NextCallToActionWithAnnotation from 'components/organisms/nextCallToActionWithAnnotation'
+import NextThreeTierPricingHorizontal from 'components/organisms/nextThreeTierPricingHorizontal'
 
 export type NextTemplateMentorProps = {
   nextHeroItem: NextHeroProps
@@ -145,6 +146,9 @@ const NextTemplateMentor = ({
         items={nextTechnologyItems}
         numberGrid={6}
       />
+      <Box id={'investimento'}>
+        <NextThreeTierPricingHorizontal />
+      </Box>
     </NextLayout>
   )
 }

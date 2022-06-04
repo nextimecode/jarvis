@@ -42,7 +42,7 @@ export default function NextCallToActionWithAnnotation() {
                   bg: 'green.500'
                 }}
               >
-                Vamos começar
+                SIM! QUERO PARTICIPAR
               </Button>
             </Link>
             <Link href={'#hero'}>

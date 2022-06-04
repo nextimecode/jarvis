@@ -47,8 +47,8 @@ const NextHero = ({
                 direction={{ base: 'column', md: 'row' }}
                 spacing={4}
               >
-                <Link href={`${url}%0A${textButton}`}>
-                  <a target="_blank" rel="noreferrer">
+                <Link href={url}>
+                  <a rel="noreferrer">
                     <NextButton>{textButton}</NextButton>
                   </a>
                 </Link>
@@ -59,8 +59,8 @@ const NextHero = ({
             <Image alt={'Login Image'} src={image} width={550} height={550} />
           </Flex>
           <Box display={{ base: 'block', md: 'none' }} pt={6} pb={12}>
-            <Link href={`${url}%0A${textButton}`}>
-              <a target="_blank" rel="noreferrer">
+            <Link href={url}>
+              <a rel="noreferrer">
                 <NextButton>{textButton}</NextButton>
               </a>
             </Link>
