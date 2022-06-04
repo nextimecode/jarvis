@@ -9,8 +9,10 @@ import { FaLinkedin, FaInstagram } from 'react-icons/fa'
 import Link from 'next/link'
 import NextCallToActionWithAnnotation from 'components/organisms/nextCallToActionWithAnnotation'
 import NextThreeTierPricingHorizontal from 'components/organisms/nextThreeTierPricingHorizontal'
+import { NavItem } from 'components/organisms/nextHeader'
 
 export type NextTemplateMentorProps = {
+  navItems?: Array<NavItem>
   nextSocialNetwork: string
   nextHeroItem: NextHeroProps
   nextFeatureItems: Array<NextFeatureProps>
@@ -20,13 +22,14 @@ export type NextTemplateMentorProps = {
 }
 
 const NextTemplateMentor = ({
+  navItems,
   nextSocialNetwork,
   nextHeroItem,
   nextCallToActionItems,
   nextTechnologyItems
 }: NextTemplateMentorProps) => {
   return (
-    <NextLayout nextSocialNetwork={nextSocialNetwork}>
+    <NextLayout nextSocialNetwork={nextSocialNetwork} navItems={navItems}>
       <NextCallToActionWithAnnotation />
       <NextHero
         id="hero"

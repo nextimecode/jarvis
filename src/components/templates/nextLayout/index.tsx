@@ -1,18 +1,20 @@
 import Head from 'next/head'
 import React, { PropsWithChildren } from 'react'
-import NextHeader from '../../organisms/nextHeader'
+import NextHeader, { NavItem } from '../../organisms/nextHeader'
 import NextFooter from '../../organisms/nextFooter'
 import { Box, Container } from '@chakra-ui/react'
 import NextWhatsIcon from '../../atoms/nextWhatsIcon'
 import Link from 'next/link'
 
 type Props = {
+  navItems?: Array<NavItem>
   title?: string
   description?: string
   nextSocialNetwork?: string
 }
 
 const NextLayout = ({
+  navItems,
   children,
   title = 'NeXTIME',
   description = 'Site da empresa NeXTIME, temos como visão: otimizar o tempo através do desenvolvimento de novas tecnologias, produtos inovadores, soluções criativas e educação. Possibilitando aos indivíduos gastarem suas energias realizando os seus sonhos.',
@@ -26,7 +28,7 @@ const NextLayout = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <NextHeader />
+      <NextHeader navItems={navItems} />
 
       <main>
         <Container maxW="container.xl">{children}</Container>

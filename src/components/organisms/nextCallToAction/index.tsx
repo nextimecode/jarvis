@@ -43,7 +43,7 @@ const NextCallToAction = ({
             >
               {title}
             </Text>
-            <Text fontSize={{ base: 'md', lg: 'lg' }} color={'white'}>
+            <Text fontSize={{ base: 'md', lg: 'lg' }} color={'white'} whiteSpace={'pre-wrap'}>
               {text}
             </Text>
             <Box display={{ base: 'none', md: 'block' }}>

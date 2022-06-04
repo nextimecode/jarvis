@@ -10,6 +10,7 @@ import {
   Text,
   useColorModeValue
 } from '@chakra-ui/react'
+import Link from 'next/link'
 import { FaCheckCircle } from 'react-icons/fa'
 
 const optionsStarter = [
@@ -41,13 +42,17 @@ const optionsPro = [
   { id: 4, desc: '1 hora de mentoria.' }
 ]
 
+const optionsButtons =
+  'https://api.whatsapp.com/send?phone=5511972436305&text=Ol%C3%A1,%20Pedro!%0AGostaria%20de%20participar%20da%20mentoria%20Plano%20'
+
 interface PackageTierProps {
   title: string
   options: Array<{ id: number; desc: string }>
   typePlan: string
   checked?: boolean
+  url: string
 }
-const PackageTier = ({ title, options, typePlan, checked = false }: PackageTierProps) => {
+const PackageTier = ({ title, options, typePlan, checked = false, url }: PackageTierProps) => {
   const colorTextLight = checked ? 'white' : 'next-primary'
   const bgColorLight = checked ? 'purple.400' : 'gray.300'
 
@@ -79,13 +84,15 @@ const PackageTier = ({ title, options, typePlan, checked = false }: PackageTierP
       </List>
       <Heading size={'xl'}>{typePlan}</Heading>
       <Stack>
-        <Button
-          size="md"
-          color={useColorModeValue(colorTextLight, colorTextDark)}
-          bgColor={useColorModeValue(bgColorLight, bgColorDark)}
-        >
-          SIM! QUERO PARTICIPAR
-        </Button>
+        <Link href={url}>
+          <Button
+            size="md"
+            color={useColorModeValue(colorTextLight, colorTextDark)}
+            bgColor={useColorModeValue(bgColorLight, bgColorDark)}
+          >
+            SIM! QUERO PARTICIPAR
+          </Button>
+        </Link>
       </Stack>
     </Stack>
   )
@@ -131,15 +138,28 @@ const NextThreeTierPricingHorizontal = () => {
         </Stack>
         <Divider />
         <PackageTier
+          url={`${optionsButtons}Start`}
           title={'Start'}
           checked={true}
           typePlan="R$9,70/mês"
           options={optionsStarter}
         />
         <Divider />
-        <PackageTier title={'Plus'} checked={true} typePlan="R$77,70/mês" options={optionsPlus} />
+        <PackageTier
+          url={`${optionsButtons}Plus`}
+          title={'Plus'}
+          checked={true}
+          typePlan="R$77,70/mês"
+          options={optionsPlus}
+        />
         <Divider />
-        <PackageTier title={'Pro'} checked={true} typePlan="R$97,70/mês" options={optionsPro} />
+        <PackageTier
+          url={`${optionsButtons}Pro`}
+          title={'Pro'}
+          checked={true}
+          typePlan="R$97,70/mês"
+          options={optionsPro}
+        />
       </Stack>
     </Box>
   )

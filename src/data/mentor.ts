@@ -1,5 +1,24 @@
 import { NextCallToActionProps } from '../components/organisms/nextCallToAction'
 import { NextFeatureProps } from '../components/molecules/nextFeature'
+import { NavItem } from 'components/organisms/nextHeader'
+
+export const NAV_ITEMS: Array<NavItem> = [
+  {
+    label: 'Home'
+  },
+  {
+    label: 'Benefícios',
+    href: '#site'
+  },
+  {
+    label: 'Mentor',
+    href: '#marketing'
+  },
+  {
+    label: 'Preço',
+    href: '#investimento'
+  }
+]
 
 export const nextSocialNetwork =
   'https://api.whatsapp.com/send?phone=5511972436305&text=Ol%C3%A1,%20Pedro!%0AGostaria%20de%20participar%20da%20mentoria.'

@@ -54,7 +54,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   )
 }
 
-interface NavItem {
+export interface NavItem {
   label: string
   subLabel?: string
   children?: Array<NavItem>
@@ -98,14 +98,18 @@ const NAV_ITEMS: Array<NavItem> = [
   }
 ]
 
-const DesktopNav = () => {
+type Props = {
+  navItems?: Array<NavItem>
+}
+
+const DesktopNav = ({ navItems = NAV_ITEMS }: Props) => {
   const linkColor = 'white'
   const linkHoverColor = 'next-primary'
   const popoverContentBgColor = 'gray.800'
 
   return (
     <Stack direction={'row'} spacing={4}>
-      {NAV_ITEMS.map(navItem => (
+      {navItems.map(navItem => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
@@ -197,17 +201,17 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
   )
 }
 
-const MobileNav = () => {
+const MobileNav = ({ navItems = NAV_ITEMS }: Props) => {
   return (
     <Stack bg={'gray.800'} p={4} display={{ md: 'none' }}>
-      {NAV_ITEMS.map(navItem => (
+      {navItems.map(navItem => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
     </Stack>
   )
 }
 
-const NextHeader = () => {
+const NextHeader = ({ navItems = NAV_ITEMS }: Props) => {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
@@ -231,7 +235,7 @@ const NextHeader = () => {
             />
           </Flex>
           <Flex display={{ base: 'none', md: 'flex' }}>
-            <DesktopNav />
+            <DesktopNav navItems={navItems} />
           </Flex>
 
           <Stack flex={{ base: 1 }} justify={'flex-end'} direction={'row'} spacing={6}>
@@ -274,7 +278,7 @@ const NextHeader = () => {
         </Flex>
 
         <Collapse in={isOpen} animateOpacity>
-          <MobileNav />
+          <MobileNav navItems={navItems} />
         </Collapse>
       </Container>
     </Box>
