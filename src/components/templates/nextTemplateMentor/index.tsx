@@ -29,7 +29,14 @@ const NextTemplateMentor = ({
   nextTechnologyItems
 }: NextTemplateMentorProps) => {
   return (
-    <NextLayout nextSocialNetwork={nextSocialNetwork} navItems={navItems}>
+    <NextLayout
+      title={'NeXTMentor'}
+      description={
+        'Quer entrar na programação e não sabe como? Obtenha orientação e aconselhamento de um professor e profissional com 14 anos de mercado para descobrir em qual área você gosta e se destaca'
+      }
+      nextSocialNetwork={nextSocialNetwork}
+      navItems={navItems}
+    >
       <NextCallToActionWithAnnotation />
       <NextHero
         id="hero"

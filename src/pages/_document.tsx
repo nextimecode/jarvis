@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/next-script-for-ga */
 import React from 'react'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
-import Script from 'next/script'
 
 export default class MyDocument extends Document {
   render(): JSX.Element {
@@ -11,19 +11,17 @@ export default class MyDocument extends Document {
             name="description"
             content="Site da empresa NeXTIME, temos como visão: otimizar o tempo através do desenvolvimento de novas tecnologias, produtos inovadores, soluções criativas e educação. Possibilitando aos indivíduos gastarem suas energias realizando os seus sonhos."
           />
-          <Script
-            src="https://www.googletagmanager.com/gtag/js?id=G-HN7P9PMXX2"
-            strategy="afterInteractive"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-HN7P9PMXX2" />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
               window.dataLayer = window.dataLayer || [];
-              function gtag(){window.dataLayer.push(arguments);}
+              function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-
               gtag('config', 'G-HN7P9PMXX2');
-            `}
-          </Script>
+            `
+            }}
+          />
           <script
             dangerouslySetInnerHTML={{
               __html: `
