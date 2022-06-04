@@ -4,12 +4,14 @@ import {
   nextFeatureItems,
   nextCallToActionItems,
   nextTechnologyItems,
-  nextTeamItems
+  nextTeamItems,
+  nextSocialNetwork
 } from '../data/mentor'
 
 const NextHome = () => {
   return (
     <NextTemplateMentor
+      nextSocialNetwork={nextSocialNetwork}
       nextHeroItem={nextHeroItem}
       nextFeatureItems={nextFeatureItems}
       nextCallToActionItems={nextCallToActionItems}

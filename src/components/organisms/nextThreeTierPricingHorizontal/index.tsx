@@ -15,10 +15,8 @@ import { FaCheckCircle } from 'react-icons/fa'
 const optionsStarter = [
   {
     id: 1,
-    desc: 'Acesso a um grupo no TELEGRAM\ncom dicas, novidades na tecnologia,\nvagas de emprego e muito mais.'
-  },
-  { id: 2, desc: 'Lorem, ipsum dolor.' },
-  { id: 3, desc: 'Monthly Updates' }
+    desc: 'Acesso a um grupo no TELEGRAM\ncom dicas da área, novidades na tecnologia,\nvagas de emprego e muito mais.'
+  }
 ]
 
 const optionsPlus = [

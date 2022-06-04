@@ -1,11 +1,8 @@
 import { NextCallToActionProps } from '../components/organisms/nextCallToAction'
 import { NextFeatureProps } from '../components/molecules/nextFeature'
 
-export const nextSocialNetwork = (numberPhone = '5511972436305') => {
-  return {
-    url: `https://api.whatsapp.com/send?phone=${numberPhone}&text=Ol%C3%A1,%20NeXTIME!%0AGostaria%20de%20participar%20da%20mentoria.`
-  }
-}
+export const nextSocialNetwork =
+  'https://api.whatsapp.com/send?phone=5511972436305&text=Ol%C3%A1,%20Pedro!%0AGostaria%20de%20participar%20da%20mentoria.'
 
 export const nextHeroItem = {
   title: 'O que é mentoria?',

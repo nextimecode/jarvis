@@ -11,6 +11,7 @@ import NextCallToActionWithAnnotation from 'components/organisms/nextCallToActio
 import NextThreeTierPricingHorizontal from 'components/organisms/nextThreeTierPricingHorizontal'
 
 export type NextTemplateMentorProps = {
+  nextSocialNetwork: string
   nextHeroItem: NextHeroProps
   nextFeatureItems: Array<NextFeatureProps>
   nextCallToActionItems: Array<NextCallToActionProps>
@@ -19,12 +20,13 @@ export type NextTemplateMentorProps = {
 }
 
 const NextTemplateMentor = ({
+  nextSocialNetwork,
   nextHeroItem,
   nextCallToActionItems,
   nextTechnologyItems
 }: NextTemplateMentorProps) => {
   return (
-    <NextLayout>
+    <NextLayout nextSocialNetwork={nextSocialNetwork}>
       <NextCallToActionWithAnnotation />
       <NextHero
         id="hero"
