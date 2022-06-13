@@ -16,14 +16,14 @@ import { FaCheckCircle } from 'react-icons/fa'
 const optionsStarter = [
   {
     id: 1,
-    desc: 'Acesso a um grupo no TELEGRAM\ncom dicas da área, novidades na tecnologia,\nvagas de emprego e muito mais.'
+    desc: 'Acesso a um grupo no WhatsApp\ncom dicas da área de TI, novidades na tecnologia,\nvagas de emprego e muito mais.'
   }
 ]
 
 const optionsPlus = [
   {
     id: 1,
-    desc: 'Acesso a um grupo no TELEGRAM\ncom dicas, novidades na tecnologia,\nvagas de emprego e muito mais.'
+    desc: 'Acesso a um grupo no WhatsApp\ncom dicas da área de TI, novidades na tecnologia,\nvagas de emprego e muito mais.'
   },
   { id: 2, desc: 'Teste analisado individualmente para saber\nqual área você se destaca.' },
   { id: 3, desc: '30 minutos de mentoria.' }
@@ -32,7 +32,7 @@ const optionsPlus = [
 const optionsPro = [
   {
     id: 1,
-    desc: 'Acesso a um grupo no TELEGRAM\ncom dicas, novidades na tecnologia,\nvagas de emprego e muito mais.'
+    desc: 'Acesso a um grupo no WhatsApp\ncom dicas da área de TI, novidades na tecnologia,\nvagas de emprego e muito mais.'
   },
   {
     id: 2,
@@ -138,10 +138,10 @@ const NextThreeTierPricingHorizontal = () => {
         </Stack>
         <Divider />
         <PackageTier
-          url={`${optionsButtons}Start`}
+          url={'https://chat.whatsapp.com/BUvZGzSuqziJ3VWYYTilP7'}
           title={'Start'}
           checked={true}
-          typePlan="R$9,70/mês"
+          typePlan="GRÁTIS"
           options={optionsStarter}
         />
         <Divider />

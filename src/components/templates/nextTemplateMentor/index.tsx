@@ -5,7 +5,7 @@ import NextCallToAction, { NextCallToActionProps } from '../../organisms/nextCal
 import NextFeatures from '../../organisms/nextFeatures'
 import NextHero, { NextHeroProps } from '../../organisms/nextHero'
 import NextLayout from '../nextLayout'
-import { FaLinkedin, FaInstagram } from 'react-icons/fa'
+import { FaLinkedin, FaInstagram, FaGithubSquare, FaYoutube } from 'react-icons/fa'
 import Link from 'next/link'
 import NextCallToActionWithAnnotation from 'components/organisms/nextCallToActionWithAnnotation'
 import NextThreeTierPricingHorizontal from 'components/organisms/nextThreeTierPricingHorizontal'
@@ -94,21 +94,41 @@ const NextTemplateMentor = ({
                 </a>
               </Link>
             </Box>
+            <Box px="4">
+              <Link href={'https://www.youtube.com/watch?v=-TqTAxrOxaM'}>
+                <a target="_blank" rel="noreferrer">
+                  <Icon
+                    color="next-primary"
+                    _hover={{
+                      color: 'white'
+                    }}
+                    as={FaYoutube}
+                    w={16}
+                    h={16}
+                  />
+                </a>
+              </Link>
+            </Box>
+            <Box px="4">
+              <Link href={'https://github.com/phdduarte'}>
+                <a target="_blank" rel="noreferrer">
+                  <Icon
+                    color="next-primary"
+                    _hover={{
+                      color: 'white'
+                    }}
+                    as={FaGithubSquare}
+                    w={16}
+                    h={16}
+                  />
+                </a>
+              </Link>
+            </Box>
           </Flex>
         </Center>
       </Container>
-      <Container py={8}>
-        <Box
-          as="iframe"
-          src="https://www.youtube.com/embed/-TqTAxrOxaM"
-          width="100%"
-          sx={{
-            aspectRatio: '16/9'
-          }}
-        />
-      </Container>
       <Center pt={16} pb={8}>
-        <Heading>O que os mentorados estão dizendo</Heading>
+        <Heading>O que os alunos estão dizendo</Heading>
       </Center>
       <SimpleGrid columns={2} spacing={10} pb={8}>
         <Box
