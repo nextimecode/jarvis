@@ -26,7 +26,7 @@ const optionsPlus = [
     desc: 'Acesso a um grupo no WhatsApp\ncom dicas da área de TI, novidades na tecnologia,\nvagas de emprego e muito mais.'
   },
   { id: 2, desc: 'Teste analisado individualmente para saber\nqual área você se destaca.' },
-  { id: 3, desc: '30 minutos de mentoria.' }
+  { id: 3, desc: '30 minutos de mentoria no mês.' }
 ]
 
 const optionsPro = [
@@ -36,10 +36,10 @@ const optionsPro = [
   },
   {
     id: 2,
-    desc: 'Acesso a um grupo no WHATSAPP\npara responder a dúvidas e muito mais.'
+    desc: 'Acesso individual ao WHATSAPP\npara tirar dúvidas e pedir aconselhamentos.'
   },
   { id: 3, desc: 'Teste analisado individualmente para saber\nqual área você se destaca.' },
-  { id: 4, desc: '1 hora de mentoria.' }
+  { id: 4, desc: '1 hora de mentoria no mês.' }
 ]
 
 const optionsButtons =
