@@ -16,30 +16,30 @@ import { FaCheckCircle } from 'react-icons/fa'
 const optionsStarter = [
   {
     id: 1,
-    desc: 'Acesso a um grupo no TELEGRAM\ncom dicas da área, novidades na tecnologia,\nvagas de emprego e muito mais.'
+    desc: 'Acesso a um grupo no WhatsApp\ncom dicas da área de TI, novidades na tecnologia,\nvagas de emprego e muito mais.'
   }
 ]
 
 const optionsPlus = [
   {
     id: 1,
-    desc: 'Acesso a um grupo no TELEGRAM\ncom dicas, novidades na tecnologia,\nvagas de emprego e muito mais.'
+    desc: 'Acesso a um grupo no WhatsApp\ncom dicas da área de TI, novidades na tecnologia,\nvagas de emprego e muito mais.'
   },
   { id: 2, desc: 'Teste analisado individualmente para saber\nqual área você se destaca.' },
-  { id: 3, desc: '30 minutos de mentoria.' }
+  { id: 3, desc: '30 minutos de mentoria no mês.' }
 ]
 
 const optionsPro = [
   {
     id: 1,
-    desc: 'Acesso a um grupo no TELEGRAM\ncom dicas, novidades na tecnologia,\nvagas de emprego e muito mais.'
+    desc: 'Acesso a um grupo no WhatsApp\ncom dicas da área de TI, novidades na tecnologia,\nvagas de emprego e muito mais.'
   },
   {
     id: 2,
-    desc: 'Acesso a um grupo no WHATSAPP\npara responder a dúvidas e muito mais.'
+    desc: 'Acesso individual ao WHATSAPP\npara tirar dúvidas e pedir aconselhamentos.'
   },
   { id: 3, desc: 'Teste analisado individualmente para saber\nqual área você se destaca.' },
-  { id: 4, desc: '1 hora de mentoria.' }
+  { id: 4, desc: '1 hora de mentoria no mês.' }
 ]
 
 const optionsButtons =
@@ -138,10 +138,10 @@ const NextThreeTierPricingHorizontal = () => {
         </Stack>
         <Divider />
         <PackageTier
-          url={`${optionsButtons}Start`}
+          url={'https://chat.whatsapp.com/BUvZGzSuqziJ3VWYYTilP7'}
           title={'Start'}
           checked={true}
-          typePlan="R$9,70/mês"
+          typePlan="GRÁTIS"
           options={optionsStarter}
         />
         <Divider />
