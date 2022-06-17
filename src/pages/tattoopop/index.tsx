@@ -1,4 +1,4 @@
-import NextTemplateMentor from '../components/templates/nextTemplateMentor'
+import NextTemplateTattoo from '../../components/templates/nextTemplateTattoo'
 import {
   nextHeroItem,
   nextFeatureItems,
@@ -7,12 +7,11 @@ import {
   nextTeamItems,
   nextSocialNetwork,
   NAV_ITEMS
-} from '../data/mentor'
+} from '../../data/tattoopop'
 
-const Mentor = () => {
+const TattooPop = () => {
   return (
-    <NextTemplateMentor
-      hasNextCallToActionWithAnnotation
+    <NextTemplateTattoo
       navItems={NAV_ITEMS}
       nextSocialNetwork={nextSocialNetwork}
       nextHeroItem={nextHeroItem}
@@ -24,4 +23,4 @@ const Mentor = () => {
   )
 }
 
-export default Mentor
+export default TattooPop
