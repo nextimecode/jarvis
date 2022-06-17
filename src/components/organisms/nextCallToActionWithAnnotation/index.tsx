@@ -9,7 +9,7 @@ export default function NextCallToActionWithAnnotation() {
           as={Box}
           textAlign={'center'}
           spacing={{ base: 8, md: 14 }}
-          py={{ base: 10, md: 16 }}
+          pt={{ base: 10, md: 16 }}
         >
           <Heading
             fontWeight={600}

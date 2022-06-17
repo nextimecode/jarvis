@@ -39,8 +39,8 @@ export const nextCallToActionItems = [
     image: '/images/illustrations/undraw_youtube_tutorial_re_69qc.svg',
     textButton: 'SIM! QUERO PARTICIPAR DA MENTORIA',
     url: '#investimento',
-    width: 600,
-    height: 630,
+    width: 388,
+    height: 408,
     directionMd: 'row-reverse'
   },
   {
