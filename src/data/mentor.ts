@@ -59,8 +59,8 @@ export const nextCallToActionItems = [
     text: '"Você sabe o que eu amo na minha vida? Eu sei qual é o meu PORQUÊ.\nTento levantar todos os dias para fazer algo que possa devolver às pessoas o seu bem mais precioso, o TEMPO. Acredito que pensando diferente podemos usar melhor esse recurso finito.\nO mais interessante é que temos diferentes formas de poder devolver o tempo às pessoas e uma delas é usar a tecnologia.\nPor isso sou Bacharel em Ciência da Computação pela Universidade Federal de Ouro Preto - UFOP. Fui presidente da empresa júnior Voluta Soluções Digitais - UFOP. Presidente do Centro Acadêmico do Curso de Ciência da Computação - UFOP 2013/14. Professor pelo programa PRONATEC e pela Let’s Code, escola de programação. Especialista em AMP Cognizant/Google e atualmente desenvolvedor FrontEnd. Tenho muita sorte de ter trabalhado em lugares que me ajudaram e me ajudam no meu porquê." - Pedro Duarte CEO NeXTIME',
     image: '/images/illustrations/eu2.jpeg',
     url: '#investimento',
-    width: 684,
-    height: 912,
+    width: 431,
+    height: 650,
     textButton: 'SIM! QUERO PARTICIPAR DA MENTORIA',
     directionMd: 'row-reverse'
   }
