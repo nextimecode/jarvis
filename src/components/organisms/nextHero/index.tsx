@@ -27,7 +27,7 @@ const NextHero = ({
 }: NextHeroProps) => {
   return (
     <header>
-      <Container id={id} bg={bg} maxW="container.xl">
+      <Container id={id} bg={bg} maxW="container.lg">
         <Stack minH={'80vh'} align={'center'} direction={{ base: 'column', md: 'row-reverse' }}>
           <Flex flex={1} align={'center'} justify={'center'}>
             <Stack spacing={6} w={'full'} maxW={'lg'}>
@@ -56,7 +56,7 @@ const NextHero = ({
             </Stack>
           </Flex>
           <Flex flex={1}>
-            <Image alt={'Login Image'} src={image} width={550} height={550} />
+            <Image alt={'Login Image'} src={image} width={450} height={450} />
           </Flex>
           <Box display={{ base: 'block', md: 'none' }} pt={6} pb={12}>
             <Link href={url}>

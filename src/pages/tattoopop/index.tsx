@@ -3,8 +3,6 @@ import {
   nextHeroItem,
   nextFeatureItems,
   nextCallToActionItems,
-  nextTechnologyItems,
-  nextTeamItems,
   nextSocialNetwork,
   NAV_ITEMS
 } from '../../data/tattoopop'
@@ -17,8 +15,6 @@ const TattooPop = () => {
       nextHeroItem={nextHeroItem}
       nextFeatureItems={nextFeatureItems}
       nextCallToActionItems={nextCallToActionItems}
-      nextTechnologyItems={nextTechnologyItems}
-      nextTeamItems={nextTeamItems}
     />
   )
 }

@@ -12,8 +12,6 @@ export type NextTemplateMentorTattooProps = {
   nextHeroItem: NextHeroProps
   nextFeatureItems: Array<NextFeatureProps>
   nextCallToActionItems: Array<NextCallToActionProps>
-  nextTechnologyItems: Array<Record<string, unknown>>
-  nextTeamItems: Array<Record<string, string>>
   hasNextCallToActionWithAnnotation?: boolean
 }
 
@@ -22,7 +20,6 @@ const NextTemplateMentorTattoo = ({
   nextSocialNetwork,
   nextHeroItem,
   nextCallToActionItems,
-  nextTechnologyItems,
   hasNextCallToActionWithAnnotation
 }: NextTemplateMentorTattooProps) => {
   return (
