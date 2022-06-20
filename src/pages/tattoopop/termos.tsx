@@ -466,7 +466,9 @@ const Termos = () => {
             estabelecida entre as partes, podendo sempre ser consultada a data da última atualização
             ao final deste instrumento.
           </Text>
-          <Text as="p">Belo Horizonte/MINAS GERAIS, 26 de maio de 2022.</Text>
+          <Text as="p" pt={6}>
+            Belo Horizonte/MINAS GERAIS, 26 de maio de 2022.
+          </Text>
         </Box>
       </Container>
     </NextLayout>
