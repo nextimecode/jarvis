@@ -43,8 +43,8 @@ export const nextCallToActionItems = [
     text: 'Tenha a ajuda dos experts NeXTIME para criar campanhas completas para sua marca. Esteja presente em todas as plataformas e redes sociais para ganhar uma legião de clientes.',
     image: '/images/home/instagram.png',
     url: nextSocialNetwork().url,
-    width: 504,
-    height: 543,
+    width: 450,
+    height: 480,
     textButton: 'Quero que minha empresa seja vista',
     directionMd: 'row-reverse'
   }

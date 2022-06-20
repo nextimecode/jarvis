@@ -19,6 +19,7 @@ export type NextTemplateMentorProps = {
   nextCallToActionItems: Array<NextCallToActionProps>
   nextTechnologyItems: Array<Record<string, unknown>>
   nextTeamItems: Array<Record<string, string>>
+  hasNextCallToActionWithAnnotation?: boolean
 }
 
 const NextTemplateMentor = ({
@@ -26,7 +27,8 @@ const NextTemplateMentor = ({
   nextSocialNetwork,
   nextHeroItem,
   nextCallToActionItems,
-  nextTechnologyItems
+  nextTechnologyItems,
+  hasNextCallToActionWithAnnotation
 }: NextTemplateMentorProps) => {
   return (
     <NextLayout
@@ -37,7 +39,7 @@ const NextTemplateMentor = ({
       nextSocialNetwork={nextSocialNetwork}
       navItems={navItems}
     >
-      <NextCallToActionWithAnnotation />
+      {hasNextCallToActionWithAnnotation && <NextCallToActionWithAnnotation />}
       <NextHero
         id="hero"
         words={nextHeroItem.words}

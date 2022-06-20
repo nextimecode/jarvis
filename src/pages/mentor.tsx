@@ -9,9 +9,10 @@ import {
   NAV_ITEMS
 } from '../data/mentor'
 
-const NextHome = () => {
+const Mentor = () => {
   return (
     <NextTemplateMentor
+      hasNextCallToActionWithAnnotation
       navItems={NAV_ITEMS}
       nextSocialNetwork={nextSocialNetwork}
       nextHeroItem={nextHeroItem}
@@ -23,4 +24,4 @@ const NextHome = () => {
   )
 }
 
-export default NextHome
+export default Mentor

@@ -5,12 +5,7 @@ export default function NextCallToActionWithAnnotation() {
   return (
     <>
       <Container maxW={'3xl'}>
-        <Stack
-          as={Box}
-          textAlign={'center'}
-          spacing={{ base: 8, md: 14 }}
-          py={{ base: 10, md: 16 }}
-        >
+        <Stack as={Box} textAlign={'center'} spacing={{ base: 8, md: 8 }} pt={{ base: 10, md: 16 }}>
           <Heading
             fontWeight={600}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
@@ -23,7 +18,10 @@ export default function NextCallToActionWithAnnotation() {
           </Heading>
           <Text color={'gray.500'}>
             Obtenha orientação e aconselhamento de um professor e profissional com 14 anos de
-            mercado para descobrir em qual área você gosta e se destaca
+            mercado para descobrir em qual área você gosta e se destaca.{' '}
+            <Text as={'span'} color={'red.200'}>
+              Como é necessário dar atenção individual as vagas são limitadas.
+            </Text>
           </Text>
           <Stack
             direction={'column'}
@@ -42,7 +40,7 @@ export default function NextCallToActionWithAnnotation() {
                   bg: 'green.500'
                 }}
               >
-                SIM! QUERO PARTICIPAR
+                QUERO PARTICIPAR
               </Button>
             </Link>
             <Link href={'#hero'}>
