@@ -31,7 +31,9 @@ const NextLayout = ({
       <NextHeader navItems={navItems} />
 
       <main>
-        <Container maxW="container.xl">{children}</Container>
+        <Container maxW="container.lg" py={[8, 12]}>
+          {children}
+        </Container>
       </main>
 
       <NextFooter />

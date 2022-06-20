@@ -28,12 +28,14 @@ const NextHero = ({
   return (
     <header>
       <Container id={id} bg={bg} maxW="container.lg">
-        <Stack minH={'80vh'} align={'center'} direction={{ base: 'column', md: 'row-reverse' }}>
+        <Stack minH={'70vh'} align={'center'} direction={{ base: 'column', md: 'row-reverse' }}>
           <Flex flex={1} align={'center'} justify={'center'}>
             <Stack spacing={6} w={'full'} maxW={'lg'}>
-              <Text pt={4} color={'next-gray'} textAlign={{ base: 'center', md: 'left' }}>
-                {words}
-              </Text>
+              {words && (
+                <Text pt={4} color={'next-gray'} textAlign={{ base: 'center', md: 'left' }}>
+                  {words}
+                </Text>
+              )}
               <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
                 <Text color={'white'} as={'span'}>
                   {title}
