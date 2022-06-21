@@ -5,6 +5,8 @@ import NextHero, { NextHeroProps } from '../../organisms/nextHero'
 import NextLayout from '../nextLayout'
 import NextCallToActionWithAnnotation from 'components/organisms/nextCallToActionWithAnnotation'
 import { NavItem } from 'components/organisms/nextHeader'
+import { Box } from '@chakra-ui/react'
+import NextFeatures from 'components/organisms/nextFeatures'
 
 export type NextTemplateMentorTattooProps = {
   navItems?: Array<NavItem>
@@ -20,7 +22,8 @@ const NextTemplateMentorTattoo = ({
   nextSocialNetwork,
   nextHeroItem,
   nextCallToActionItems,
-  hasNextCallToActionWithAnnotation
+  hasNextCallToActionWithAnnotation,
+  nextFeatureItems
 }: NextTemplateMentorTattooProps) => {
   return (
     <NextLayout
@@ -30,6 +33,10 @@ const NextTemplateMentorTattoo = ({
       }
       nextSocialNetwork={nextSocialNetwork}
       navItems={navItems}
+      logoSrc={'/images/logos/next.svg'}
+      logoHeight={62}
+      logoSubtitle="Tattoo"
+      logoSubtitleColor="next-blue.100"
     >
       {hasNextCallToActionWithAnnotation && <NextCallToActionWithAnnotation />}
       <NextHero
@@ -40,6 +47,8 @@ const NextTemplateMentorTattoo = ({
         image={nextHeroItem.image}
         textButton={nextHeroItem.textButton}
         url={nextHeroItem.url}
+        width={nextHeroItem.width}
+        height={nextHeroItem.height}
       />
       {nextCallToActionItems?.map((item, index) => (
         <NextCallToAction
@@ -55,6 +64,19 @@ const NextTemplateMentorTattoo = ({
           url={item.url}
         />
       ))}
+      <NextFeatures title={'Algumas funcionalidades'} items={nextFeatureItems} numberGrid={3} />
+      <Box id="form">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfQTb3uMVXumzPdf-jgKVRuXyvmALeGV4Gl1Nat3oOi5l33XQ/viewform?embedded=true"
+          width="100%"
+          height="700"
+          frameBorder="0"
+          marginHeight={0}
+          marginWidth={0}
+        >
+          Carregando…
+        </iframe>
+      </Box>
     </NextLayout>
   )
 }

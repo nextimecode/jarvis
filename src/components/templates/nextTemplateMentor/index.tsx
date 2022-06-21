@@ -38,6 +38,10 @@ const NextTemplateMentor = ({
       }
       nextSocialNetwork={nextSocialNetwork}
       navItems={navItems}
+      logoSrc={'/images/logos/next.svg'}
+      logoHeight={62}
+      logoSubtitle="Mentor"
+      logoSubtitleColor="next-primary"
     >
       {hasNextCallToActionWithAnnotation && <NextCallToActionWithAnnotation />}
       <NextHero

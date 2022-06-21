@@ -26,7 +26,7 @@ const Termos = () => {
             <Heading
               as="h1"
               py={4}
-              textColor={'red.200'}
+              textColor={'next-red.200'}
               fontSize={{ base: 'sm', md: 'md', lg: 'lg' }}
             >
               LEIA ATENTAMENTE O PRESENTE TERMO DE USO ANTES DE ACESSAR OU UTILIZAR OS SERVIÇOS DO

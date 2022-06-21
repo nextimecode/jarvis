@@ -104,6 +104,12 @@ const NAV_ITEMS: Array<NavItem> = [
 
 type Props = {
   navItems?: Array<NavItem>
+  logoSrc?: string
+  logoWidth?: number
+  logoHeight?: number
+  logoAlt?: string
+  logoSubtitle?: string
+  logoSubtitleColor?: string
 }
 
 const DesktopNav = ({ navItems = NAV_ITEMS }: Props) => {
@@ -215,7 +221,15 @@ const MobileNav = ({ navItems = NAV_ITEMS }: Props) => {
   )
 }
 
-const NextHeader = ({ navItems = NAV_ITEMS }: Props) => {
+const NextHeader = ({
+  navItems = NAV_ITEMS,
+  logoSrc = '/images/logos/logo_nextime.svg',
+  logoWidth = 146,
+  logoHeight = 45,
+  logoAlt = 'NeXTIME Logo',
+  logoSubtitle,
+  logoSubtitleColor = 'next-primary'
+}: Props) => {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
@@ -230,13 +244,13 @@ const NextHeader = ({ navItems = NAV_ITEMS }: Props) => {
               aria-label={'Toggle Navigation'}
             />
           </Flex>
-          <Flex flex={{ base: 1 }} justify={{ base: 'center' }}>
-            <Image
-              src="/images/logos/logo_nextime.svg"
-              alt="NeXTIME Logo"
-              width={146}
-              height={45}
-            />
+          <Flex flex={{ base: 1 }} justify={{ base: 'center' }} alignItems={'center'}>
+            <Image src={logoSrc} alt={logoAlt} width={logoWidth} height={logoHeight} />
+            {logoSubtitle && (
+              <Text fontSize={{ base: 'lg', lg: 'xl' }} color={logoSubtitleColor}>
+                {logoSubtitle}
+              </Text>
+            )}
           </Flex>
           <Flex display={{ base: 'none', md: 'flex' }}>
             <DesktopNav navItems={navItems} />

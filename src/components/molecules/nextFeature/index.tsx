@@ -13,7 +13,7 @@ export interface NextFeatureProps {
 
 const NextFeature = ({ title, text, image, icon, width = 64, height = 64 }: NextFeatureProps) => {
   return (
-    <Stack>
+    <Stack spacing={4} align="start">
       {icon && (
         <Flex
           w={16}
@@ -30,7 +30,7 @@ const NextFeature = ({ title, text, image, icon, width = 64, height = 64 }: Next
       )}
       {image && <Image alt={title} src={image} width={width} height={height} />}
       {title && <Text fontWeight={600}>{title}</Text>}
-      {text && <Text color={'gray.600'}>{text}</Text>}
+      {text && <Text color={'next-blue.100'}>{text}</Text>}
     </Stack>
   )
 }

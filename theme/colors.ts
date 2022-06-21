@@ -6,11 +6,12 @@ const colors = {
   'next-gray': '#BDBDBD',
   'next-dark-gray': '#2A2A2D',
   dark: '#17171B',
-  blue: {
+  'next-blue': {
+    100: '#00DAE9',
     200: '#4882F8',
     900: '#2D426D'
   },
-  red: {
+  'next-red': {
     200: '#EB4A68',
     300: '#FF747C',
     400: '#EE468E'
