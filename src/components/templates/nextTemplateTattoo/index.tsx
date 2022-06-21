@@ -30,6 +30,10 @@ const NextTemplateMentorTattoo = ({
       }
       nextSocialNetwork={nextSocialNetwork}
       navItems={navItems}
+      logoSrc={'/images/logos/next.svg'}
+      logoHeight={62}
+      logoSubtitle="Tattoo"
+      logoSubtitleColor="next-blue.100"
     >
       {hasNextCallToActionWithAnnotation && <NextCallToActionWithAnnotation />}
       <NextHero

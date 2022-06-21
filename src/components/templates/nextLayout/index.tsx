@@ -11,6 +11,10 @@ type Props = {
   title?: string
   description?: string
   nextSocialNetwork?: string
+  logoSrc?: string
+  logoHeight?: number
+  logoSubtitle?: string
+  logoSubtitleColor?: string
 }
 
 const NextLayout = ({
@@ -18,7 +22,11 @@ const NextLayout = ({
   children,
   title = 'NeXTIME',
   description = 'Site da empresa NeXTIME, temos como visão: otimizar o tempo através do desenvolvimento de novas tecnologias, produtos inovadores, soluções criativas e educação. Possibilitando aos indivíduos gastarem suas energias realizando os seus sonhos.',
-  nextSocialNetwork = 'https://api.whatsapp.com/send?phone=553189217467&text=Ol%C3%A1,%20NeXTIME!%0AGostaria%20de%20solicitar%20um%20orçamento.'
+  nextSocialNetwork = 'https://api.whatsapp.com/send?phone=553189217467&text=Ol%C3%A1,%20NeXTIME!%0AGostaria%20de%20solicitar%20um%20orçamento.',
+  logoSrc,
+  logoHeight,
+  logoSubtitle,
+  logoSubtitleColor
 }: PropsWithChildren<Props>) => {
   return (
     <>
@@ -28,10 +36,16 @@ const NextLayout = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <NextHeader navItems={navItems} />
+      <NextHeader
+        navItems={navItems}
+        logoSrc={logoSrc}
+        logoHeight={logoHeight}
+        logoSubtitle={logoSubtitle}
+        logoSubtitleColor={logoSubtitleColor}
+      />
 
       <main>
-        <Container maxW="container.lg" py={[8, 12]}>
+        <Container maxW="container.lg" py={[8, 16]}>
           {children}
         </Container>
       </main>
