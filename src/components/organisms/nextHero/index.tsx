@@ -13,6 +13,9 @@ export type NextHeroProps = {
   textButton: string
   bg?: string
   url: string
+  width?: number
+  height?: number
+  alt?: string
 }
 
 const NextHero = ({
@@ -23,11 +26,14 @@ const NextHero = ({
   textButton,
   bg,
   url,
-  image = '/images/home/code_hero.png'
+  image = '/images/home/code_hero.png',
+  width = 450,
+  height = 450,
+  alt = 'Imagem Hero'
 }: NextHeroProps) => {
   return (
     <header>
-      <Container id={id} bg={bg} maxW="container.lg">
+      <Container id={id} bg={bg} maxW="container.lg" pb={[12, 24]}>
         <Stack minH={'70vh'} align={'center'} direction={{ base: 'column', md: 'row-reverse' }}>
           <Flex flex={1} align={'center'} justify={'center'}>
             <Stack spacing={6} w={'full'} maxW={'lg'}>
@@ -58,7 +64,7 @@ const NextHero = ({
             </Stack>
           </Flex>
           <Flex flex={1}>
-            <Image alt={'Login Image'} src={image} width={450} height={450} />
+            <Image alt={alt} src={image} width={width} height={height} />
           </Flex>
           <Box display={{ base: 'block', md: 'none' }} pt={6} pb={12}>
             <Link href={url}>

@@ -32,7 +32,7 @@ const NextCallToAction = ({
   directionBase = 'column'
 }: NextCallToActionProps) => {
   return (
-    <Container id={id} bg={bg} maxW="container.lg" pb={12}>
+    <Container id={id} bg={bg} maxW="container.lg" pb={24}>
       <Stack align={'center'} direction={{ base: directionBase, md: directionMd }}>
         <Flex flex={1} align={'center'} justify={'center'}>
           <Stack spacing={6} w={'full'} maxW={'lg'}>
