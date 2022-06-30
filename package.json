@@ -9,9 +9,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --fix .",
-    "precommit": "yarn && yarn lint",
+    "precommit": "yarn && yarn lint && yarn audit",
     "commit": "cz",
-    "prepush": "git diff HEAD --quiet && git fetch && git pull origin main && yarn precommit && yarn audit && yarn build",
+    "prepush": "git diff HEAD --quiet && git fetch && git pull origin main && yarn precommit && yarn build",
     "go": "yarn prepush && yarn dev",
     "prepare": "husky install",
     "postinstall": "husky install"
