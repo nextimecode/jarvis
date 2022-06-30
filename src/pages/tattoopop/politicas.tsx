@@ -8,7 +8,7 @@ const Politicas = () => {
       <Container maxW={'container.lg'}>
         <Box>
           <Heading as="h1" pb={4}>
-            Termos de uso
+            Política de Privacidade
           </Heading>
           <VStack pb={4} spacing="2" alignItems="flex-start">
             <Text as="p" fontSize="lg">
