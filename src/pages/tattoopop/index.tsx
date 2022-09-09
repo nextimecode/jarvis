@@ -15,6 +15,7 @@ const TattooPop = () => {
       nextHeroItem={nextHeroItem}
       nextFeatureItems={nextFeatureItems}
       nextCallToActionItems={nextCallToActionItems}
+      bg={''}
     />
   )
 }

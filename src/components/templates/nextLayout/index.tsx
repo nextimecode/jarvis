@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React, { PropsWithChildren } from 'react'
 import NextHeader, { NavItem } from '../../organisms/nextHeader'
 import NextFooter from '../../organisms/nextFooter'
-import { Box, Container } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import NextWhatsIcon from '../../atoms/nextWhatsIcon'
 import Link from 'next/link'
 
@@ -15,6 +15,7 @@ type Props = {
   logoHeight?: number
   logoSubtitle?: string
   logoSubtitleColor?: string
+  bg?: string
 }
 
 const NextLayout = ({
@@ -26,7 +27,8 @@ const NextLayout = ({
   logoSrc,
   logoHeight,
   logoSubtitle,
-  logoSubtitleColor
+  logoSubtitleColor,
+  bg = 'next-primary'
 }: PropsWithChildren<Props>) => {
   return (
     <>
@@ -44,13 +46,9 @@ const NextLayout = ({
         logoSubtitleColor={logoSubtitleColor}
       />
 
-      <main>
-        <Container maxW="container.lg" py={[8, 16]}>
-          {children}
-        </Container>
-      </main>
+      <main>{children}</main>
 
-      <NextFooter />
+      <NextFooter bg={bg} />
       <Box position="fixed" width="60px" height="60px" zIndex={100} bottom="20px" right="20px">
         <Link href={nextSocialNetwork}>
           <a target="_blank" rel="noreferrer">

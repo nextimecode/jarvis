@@ -5,7 +5,7 @@ import NextHero, { NextHeroProps } from '../../organisms/nextHero'
 import NextLayout from '../nextLayout'
 import NextCallToActionWithAnnotation from 'components/organisms/nextCallToActionWithAnnotation'
 import { NavItem } from 'components/organisms/nextHeader'
-import { Box } from '@chakra-ui/react'
+import { Box, Container } from '@chakra-ui/react'
 import NextFeatures from 'components/organisms/nextFeatures'
 
 export type NextTemplateMentorTattooProps = {
@@ -15,6 +15,7 @@ export type NextTemplateMentorTattooProps = {
   nextFeatureItems: Array<NextFeatureProps>
   nextCallToActionItems: Array<NextCallToActionProps>
   hasNextCallToActionWithAnnotation?: boolean
+  bg?: string
 }
 
 const NextTemplateMentorTattoo = ({
@@ -23,7 +24,8 @@ const NextTemplateMentorTattoo = ({
   nextHeroItem,
   nextCallToActionItems,
   hasNextCallToActionWithAnnotation,
-  nextFeatureItems
+  nextFeatureItems,
+  bg
 }: NextTemplateMentorTattooProps) => {
   return (
     <NextLayout
@@ -37,8 +39,19 @@ const NextTemplateMentorTattoo = ({
       logoHeight={62}
       logoSubtitle="Tattoo"
       logoSubtitleColor="next-blue.100"
+      bg={bg}
     >
       {hasNextCallToActionWithAnnotation && <NextCallToActionWithAnnotation />}
+      <Container maxW="container.md" py={6}>
+        <Box
+          as="iframe"
+          src="https://www.youtube.com/embed/pa80P9FVLF0"
+          width="100%"
+          sx={{
+            aspectRatio: '16/9'
+          }}
+        />
+      </Container>
       <NextHero
         id="hero"
         words={nextHeroItem.words}
@@ -64,8 +77,13 @@ const NextTemplateMentorTattoo = ({
           url={item.url}
         />
       ))}
-      <NextFeatures title={'Algumas funcionalidades'} items={nextFeatureItems} numberGrid={3} />
-      <Box id="form">
+      <NextFeatures
+        id="funcionalidades"
+        title={'Algumas funcionalidades'}
+        items={nextFeatureItems}
+        numberGrid={3}
+      />
+      {/* <Box id="form">
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSfQTb3uMVXumzPdf-jgKVRuXyvmALeGV4Gl1Nat3oOi5l33XQ/viewform?embedded=true"
           width="100%"
@@ -76,7 +94,7 @@ const NextTemplateMentorTattoo = ({
         >
           Carregando…
         </iframe>
-      </Box>
+      </Box> */}
     </NextLayout>
   )
 }
