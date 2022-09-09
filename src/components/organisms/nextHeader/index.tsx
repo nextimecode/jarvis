@@ -65,21 +65,25 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Home'
   },
-  {
-    label: 'Apps',
-    href: '#app'
-  },
-  {
-    label: 'WebSites',
-    href: '#site'
-  },
-  {
-    label: 'Marketing',
-    href: '#marketing'
-  },
+  // {
+  //   label: 'Apps',
+  //   href: '#app'
+  // },
+  // {
+  //   label: 'WebSites',
+  //   href: '#site'
+  // },
+  // {
+  //   label: 'Marketing',
+  //   href: '#marketing'
+  // },
   {
     label: 'Mentoria',
     href: '/mentor'
+  },
+  {
+    label: 'Tattoo Pop',
+    href: '/tattoopop'
   },
   // {
   //   label: 'Portfólio',

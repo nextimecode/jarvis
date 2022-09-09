@@ -64,7 +64,12 @@ const NextTemplateMentorTattoo = ({
           url={item.url}
         />
       ))}
-      <NextFeatures title={'Algumas funcionalidades'} items={nextFeatureItems} numberGrid={3} />
+      <NextFeatures
+        id="funcionalidades"
+        title={'Algumas funcionalidades'}
+        items={nextFeatureItems}
+        numberGrid={3}
+      />
       <Box id="form">
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSfQTb3uMVXumzPdf-jgKVRuXyvmALeGV4Gl1Nat3oOi5l33XQ/viewform?embedded=true"
