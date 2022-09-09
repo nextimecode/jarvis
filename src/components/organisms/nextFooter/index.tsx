@@ -25,7 +25,7 @@ import {
 } from 'react-icons/fa'
 
 export type NextFooterProps = {
-  bg?: 'next-primary' | undefined
+  bg?: string | undefined
 }
 
 const NextFooter = ({ bg = 'next-primary' }: NextFooterProps) => {

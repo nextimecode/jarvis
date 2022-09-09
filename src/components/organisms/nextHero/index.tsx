@@ -33,7 +33,7 @@ const NextHero = ({
 }: NextHeroProps) => {
   return (
     <header>
-      <Container id={id} bg={bg} maxW="container.lg" pb={[12, 24]}>
+      <Container id={id} bg={bg} maxW="container.lg">
         <Stack minH={'70vh'} align={'center'} direction={{ base: 'column', md: 'row-reverse' }}>
           <Flex flex={1} align={'center'} justify={'center'}>
             <Stack spacing={6} w={'full'} maxW={'lg'}>
