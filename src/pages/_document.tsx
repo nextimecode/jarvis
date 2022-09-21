@@ -7,10 +7,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta
-            name="description"
-            content="Site da empresa NeXTIME, temos como visão: otimizar o tempo através do desenvolvimento de novas tecnologias, produtos inovadores, soluções criativas e educação. Possibilitando aos indivíduos gastarem suas energias realizando os seus sonhos."
-          />
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-HN7P9PMXX2" />
           <script
             dangerouslySetInnerHTML={{
