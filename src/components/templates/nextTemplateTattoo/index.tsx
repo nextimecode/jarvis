@@ -29,9 +29,9 @@ const NextTemplateMentorTattoo = ({
 }: NextTemplateMentorTattooProps) => {
   return (
     <NextLayout
-      title={'NeXTMentor'}
+      title={'TattooPop'}
       description={
-        'Quer entrar na programação e não sabe como? Obtenha orientação e aconselhamento de um professor e profissional com 14 anos de mercado para descobrir em qual área você gosta e se destaca'
+        'No app Tattoo Pop você encontra, além de inspirações para os mais diversos estilos de tatuagens, os melhores tatuadores da sua região. E se o tatuador for você? Bom, aqui você divulga seu trabalho e aumenta o seu alcance. Baixe agora o Tattoo Pop e participe da maior comunidade de tatuados e tatuadores do país! '
       }
       nextSocialNetwork={nextSocialNetwork}
       navItems={navItems}
@@ -40,6 +40,7 @@ const NextTemplateMentorTattoo = ({
       logoSubtitle="Tattoo"
       logoSubtitleColor="next-blue.100"
       bg={bg}
+      keywords={'Tattoo, tatuagem, tatuadores, tatuador, aplicativo, app'}
     >
       {hasNextCallToActionWithAnnotation && <NextCallToActionWithAnnotation />}
       <Container maxW="container.md" py={6}>
