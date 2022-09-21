@@ -16,6 +16,7 @@ type Props = {
   logoSubtitle?: string
   logoSubtitleColor?: string
   bg?: string
+  keywords?: string
 }
 
 const NextLayout = ({
@@ -28,13 +29,15 @@ const NextLayout = ({
   logoHeight,
   logoSubtitle,
   logoSubtitleColor,
-  bg = 'next-primary'
+  bg = 'next-primary',
+  keywords
 }: PropsWithChildren<Props>) => {
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
