@@ -5,8 +5,9 @@ import NextHero, { NextHeroProps } from '../../organisms/nextHero'
 import NextLayout from '../nextLayout'
 import NextCallToActionWithAnnotation from 'components/organisms/nextCallToActionWithAnnotation'
 import { NavItem } from 'components/organisms/nextHeader'
-import { Box, Container } from '@chakra-ui/react'
+import { Box, Center, Container, Flex, Text } from '@chakra-ui/react'
 import NextFeatures from 'components/organisms/nextFeatures'
+import Link from 'next/link'
 
 export type NextTemplateMentorTattooProps = {
   navItems?: Array<NavItem>
@@ -84,18 +85,21 @@ const NextTemplateMentorTattoo = ({
         items={nextFeatureItems}
         numberGrid={3}
       />
-      {/* <Box id="form">
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSfQTb3uMVXumzPdf-jgKVRuXyvmALeGV4Gl1Nat3oOi5l33XQ/viewform?embedded=true"
-          width="100%"
-          height="700"
-          frameBorder="0"
-          marginHeight={0}
-          marginWidth={0}
-        >
-          Carregando…
-        </iframe>
-      </Box> */}
+      <Center>
+        <Flex>
+          <Text decoration="underline">
+            <Link href="/tattoopop/termos">
+              <a>Termos de uso</a>
+            </Link>
+          </Text>
+          |
+          <Text decoration="underline">
+            <Link href="/tattoopop/politicas">
+              <a>{''}Política de Privacidade</a>
+            </Link>
+          </Text>
+        </Flex>
+      </Center>
     </NextLayout>
   )
 }
