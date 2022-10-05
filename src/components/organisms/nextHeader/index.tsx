@@ -33,7 +33,12 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
     >
       <Stack direction={'row'} align={'center'}>
         <Box>
-          <Text transition={'all .3s ease'} _groupHover={{ color: 'pink.400' }} fontWeight={500}>
+          <Text
+            transition={'all .3s ease'}
+            color="white"
+            _groupHover={{ color: 'next-primary' }}
+            fontWeight={500}
+          >
             {label}
           </Text>
           <Text fontSize={'sm'}>{subLabel}</Text>
@@ -47,7 +52,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           align={'center'}
           flex={1}
         >
-          <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+          <Icon color={'next-primary'} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
     </Link>
@@ -65,41 +70,26 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Home'
   },
-  // {
-  //   label: 'Apps',
-  //   href: '#app'
-  // },
-  // {
-  //   label: 'WebSites',
-  //   href: '#site'
-  // },
-  // {
-  //   label: 'Marketing',
-  //   href: '#marketing'
-  // },
   {
-    label: 'Mentoria',
-    href: '/mentor'
+    label: 'Projetos',
+    children: [
+      {
+        label: 'TattooPop',
+        subLabel: 'Encontre os melhores tatuadores.',
+        href: '/tattoopop'
+      },
+      {
+        label: 'NeXTshow',
+        subLabel: 'Game que você aposta nos participantes dos realities shows.',
+        href: '#'
+      },
+      {
+        label: 'Mentoria',
+        subLabel: 'Obtenha orientação e aconselhamento de um professor.',
+        href: '/mentor'
+      }
+    ]
   },
-  {
-    label: 'Tattoo Pop',
-    href: '/tattoopop'
-  },
-  // {
-  //   label: 'Portfólio',
-  //   children: [
-  //     {
-  //       label: 'Tattoo Pop',
-  //       subLabel: 'Find your dream design job',
-  //       href: '#'
-  //     },
-  //     {
-  //       label: 'Optar',
-  //       subLabel: 'An exclusive list for contract work',
-  //       href: '#'
-  //     }
-  //   ]
-  // },
   {
     label: 'Orçamento',
     href: nextSocialNetwork().url

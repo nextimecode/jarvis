@@ -1,6 +1,6 @@
 {
   "name": "jarvis",
-  "version": "0.18.1",
+  "version": "0.20.0",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -8,7 +8,8 @@
     "clean": "rm -rf node_modules .next yarn.lock package-lock.json && yarn cache clean",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --fix .",
+    "lint": "eslint src --ext .tsx,.ts",
+    "lint:fix": "eslint src --ext .tsx,.ts --fix",
     "precommit": "yarn && yarn lint && yarn audit",
     "commit": "cz",
     "prepush": "git diff HEAD --quiet && git fetch && git pull origin main && yarn precommit && yarn build",
@@ -17,14 +18,14 @@
     "postinstall": "husky install"
   },
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.10",
-    "@chakra-ui/react": "^2.3.4",
+    "@chakra-ui/icons": "^2.0.11",
+    "@chakra-ui/react": "^2.3.5",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
-    "@fontsource/open-sans": "^4.5.11",
-    "@fontsource/rajdhani": "^4.5.9",
+    "@fontsource/open-sans": "^4.5.12",
+    "@fontsource/rajdhani": "^4.5.10",
     "eslint-plugin-n": "^15.3.0",
-    "framer-motion": "^7.3.6",
+    "framer-motion": "^7.5.2",
     "next": "^12.3.1",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
@@ -32,17 +33,17 @@
     "react-icons": "^4.4.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.1",
+    "@babel/core": "^7.19.3",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
-    "@types/node": "^18.7.18",
+    "@types/node": "^18.8.2",
     "@types/react": "^18.0.21",
-    "@typescript-eslint/eslint-plugin": "^5.38.0",
-    "@typescript-eslint/parser": "^5.38.0",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.23.1",
+    "eslint": "^8.24.0",
     "eslint-config-next": "^12.3.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^17.0.0",
@@ -55,7 +56,7 @@
     "eslint-plugin-standard": "^5.0.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "typescript": "^4.8.3"
+    "typescript": "^4.8.4"
   },
   "config": {
     "commitizen": {
