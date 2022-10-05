@@ -7,6 +7,33 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link rel="icon" href="/next_ico.svg" />
+          <meta
+            name="keywords"
+            content="criação de sites, empresas de sites, desenvolvedor de sites, programador de sites, criação de aplicativos, desenvolver aplicativos, criação de site profissional, criação de websites, criador de sites, criar um site, desenvolvedor de aplicativos, site responsivo, criação de app, elaboração de sites, site personalizado, desenvolver ecommerce, design system, designer para fazer site, site alto padrão"
+          />
+          <meta property="og:url" content="https://www.nextime.com.br/" />
+          <meta property="og:type" content="page" />
+          <meta property="og:title" content="NeXTIME" />
+          <meta
+            property="og:image"
+            content="https://www.nextime.com.br/images/logos/logo_nextime.svg"
+          />
+          <meta
+            property="og:description"
+            content="Site da empresa NeXTIME, temos como visão: otimizar o tempo através do desenvolvimento de novas tecnologias, produtos inovadores, soluções criativas e educação. Possibilitando aos indivíduos gastarem suas energias realizando os seus sonhos."
+          />
+          <meta property="og:site_name" content="NeXTIME" />
+          <meta property="article:author" content="NeXTIME" />
+          <meta name="twitter:title" content="NeXTIME" />
+          <meta
+            name="twitter:description"
+            content="Site da empresa NeXTIME, temos como visão: otimizar o tempo através do desenvolvimento de novas tecnologias, produtos inovadores, soluções criativas e educação. Possibilitando aos indivíduos gastarem suas energias realizando os seus sonhos."
+          />
+          <meta
+            property="twitter:image:src"
+            content="https://www.nextime.com.br/images/logos/logo_nextime.svg"
+          />
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-HN7P9PMXX2" />
           <script
             dangerouslySetInnerHTML={{
