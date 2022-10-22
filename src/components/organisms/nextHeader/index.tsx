@@ -81,7 +81,7 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: 'NeXTshow',
         subLabel: 'Game que você aposta nos participantes dos realities shows.',
-        href: '#'
+        href: 'http://nextshow.com.br/'
       },
       {
         label: 'Mentoria',
