@@ -252,38 +252,32 @@ const NextHeader = ({
 
           <Stack flex={{ base: 1 }} justify={'flex-end'} direction={'row'} spacing={6}>
             <HStack spacing={{ base: 3, md: 6 }}>
-              <NextJSLink href={'https://www.instagram.com/nextimetec/'}>
-                <a target="_blank" rel="noreferrer">
-                  <Icon
-                    color="next-gray"
-                    _hover={{ color: 'next-primary' }}
-                    as={FaInstagram}
-                    w={6}
-                    h={6}
-                  />
-                </a>
+              <NextJSLink href={'https://www.instagram.com/nextimetec/'} target={'_blank'}>
+                <Icon
+                  color="next-gray"
+                  _hover={{ color: 'next-primary' }}
+                  as={FaInstagram}
+                  w={6}
+                  h={6}
+                />
               </NextJSLink>
-              <NextJSLink href={'https://www.facebook.com/nextimetecnologia'}>
-                <a target="_blank" rel="noreferrer">
-                  <Icon
-                    color="next-gray"
-                    _hover={{ color: 'next-primary' }}
-                    as={FaFacebookF}
-                    w={6}
-                    h={6}
-                  />
-                </a>
+              <NextJSLink href={'https://www.facebook.com/nextimetecnologia'} target={'_blank'}>
+                <Icon
+                  color="next-gray"
+                  _hover={{ color: 'next-primary' }}
+                  as={FaFacebookF}
+                  w={6}
+                  h={6}
+                />
               </NextJSLink>
-              <NextJSLink href={'https://www.linkedin.com/company/nextimetec/'}>
-                <a target="_blank" rel="noreferrer">
-                  <Icon
-                    color="next-gray"
-                    _hover={{ color: 'next-primary' }}
-                    as={FaLinkedinIn}
-                    w={6}
-                    h={6}
-                  />
-                </a>
+              <NextJSLink href={'https://www.linkedin.com/company/nextimetec/'} target={'_blank'}>
+                <Icon
+                  color="next-gray"
+                  _hover={{ color: 'next-primary' }}
+                  as={FaLinkedinIn}
+                  w={6}
+                  h={6}
+                />
               </NextJSLink>
             </HStack>
           </Stack>

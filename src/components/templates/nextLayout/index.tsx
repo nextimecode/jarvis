@@ -65,10 +65,8 @@ const NextLayout = ({
 
       <NextFooter bg={bg} />
       <Box position="fixed" width="60px" height="60px" zIndex={100} bottom="20px" right="20px">
-        <Link href={nextSocialNetwork}>
-          <a target="_blank" rel="noreferrer">
-            <NextWhatsIcon />
-          </a>
+        <Link href={nextSocialNetwork} target={'_blank'}>
+          <NextWhatsIcon />
         </Link>
       </Box>
     </>

@@ -1,7 +1,5 @@
 <p align="center">
-  <a href="https://github.com/chakra-ui/chakra-ui">
-    <img src="./images/logo_text.png" alt="Chakra logo" />
-  </a>
+  <img src="https://www.nextime.com.br/images/logos/logo_nextime.svg" alt="Chakra logo" />
 </p>
 
 <h1 align="center">🦅 Seja bem-vindo à NeXTIME 🦅</h1>

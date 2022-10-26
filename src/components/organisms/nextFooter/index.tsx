@@ -42,49 +42,42 @@ const NextFooter = ({ bg = 'next-primary' }: NextFooterProps) => {
                     href={
                       'mailto:contato@nextime.com.br?subject=Orçamento para NeXTIME&body=Olá,%20NeXTIME'
                     }
+                    target={'_blank'}
                   >
-                    <a target="_blank" rel="noreferrer">
-                      <Icon
-                        color="white"
-                        _hover={{ color: 'next-dark' }}
-                        as={FaMailBulk}
-                        w={16}
-                        h={16}
-                      />
-                    </a>
+                    <Icon
+                      color="white"
+                      _hover={{ color: 'next-dark' }}
+                      as={FaMailBulk}
+                      w={16}
+                      h={16}
+                    />
                   </Link>
-                  <Link href={nextSocialNetwork().url}>
-                    <a target="_blank" rel="noreferrer">
-                      <Icon
-                        color="white"
-                        _hover={{ color: 'next-dark' }}
-                        as={FaWhatsapp}
-                        w={16}
-                        h={16}
-                      />
-                    </a>
+                  <Link href={nextSocialNetwork().url} target={'_blank'}>
+                    <Icon
+                      color="white"
+                      _hover={{ color: 'next-dark' }}
+                      as={FaWhatsapp}
+                      w={16}
+                      h={16}
+                    />
                   </Link>
-                  <Link href={'https://m.me/102621504903865'}>
-                    <a target="_blank" rel="noreferrer">
-                      <Icon
-                        color="white"
-                        _hover={{ color: 'next-dark' }}
-                        as={FaFacebookMessenger}
-                        w={16}
-                        h={16}
-                      />
-                    </a>
+                  <Link href={'https://m.me/102621504903865'} target={'_blank'}>
+                    <Icon
+                      color="white"
+                      _hover={{ color: 'next-dark' }}
+                      as={FaFacebookMessenger}
+                      w={16}
+                      h={16}
+                    />
                   </Link>
-                  <Link href={'https://www.instagram.com/nextimetec/'}>
-                    <a target="_blank" rel="noreferrer">
-                      <Icon
-                        color="white"
-                        _hover={{ color: 'next-dark' }}
-                        as={FaInstagram}
-                        w={16}
-                        h={16}
-                      />
-                    </a>
+                  <Link href={'https://www.instagram.com/nextimetec/'} target={'_blank'}>
+                    <Icon
+                      color="white"
+                      _hover={{ color: 'next-dark' }}
+                      as={FaInstagram}
+                      w={16}
+                      h={16}
+                    />
                   </Link>
                 </HStack>
                 <Heading fontWeight={600}>Serviços</Heading>
@@ -105,27 +98,23 @@ const NextFooter = ({ bg = 'next-primary' }: NextFooterProps) => {
                       height={46}
                     />
                   </Box>
-                  <Link href={'https://www.linkedin.com/company/nextimetec/'}>
-                    <a target="_blank" rel="noreferrer">
-                      <Icon
-                        color="white"
-                        _hover={{ color: 'next-dark' }}
-                        as={FaLinkedinIn}
-                        w={8}
-                        h={8}
-                      />
-                    </a>
+                  <Link href={'https://www.linkedin.com/company/nextimetec/'} target={'_blank'}>
+                    <Icon
+                      color="white"
+                      _hover={{ color: 'next-dark' }}
+                      as={FaLinkedinIn}
+                      w={8}
+                      h={8}
+                    />
                   </Link>
-                  <Link href={'https://www.youtube.com/watch?v=-TqTAxrOxaM'}>
-                    <a target="_blank" rel="noreferrer">
-                      <Icon
-                        color="white"
-                        _hover={{ color: 'next-dark' }}
-                        as={FaYoutube}
-                        w={8}
-                        h={8}
-                      />
-                    </a>
+                  <Link href={'https://www.youtube.com/watch?v=-TqTAxrOxaM'} target={'_blank'}>
+                    <Icon
+                      color="white"
+                      _hover={{ color: 'next-dark' }}
+                      as={FaYoutube}
+                      w={8}
+                      h={8}
+                    />
                   </Link>
                 </HStack>
               </Box>

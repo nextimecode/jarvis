@@ -56,9 +56,7 @@ const NextHero = ({
                 spacing={4}
               >
                 <Link href={url}>
-                  <a rel="noreferrer">
-                    <NextButton>{textButton}</NextButton>
-                  </a>
+                  <NextButton>{textButton}</NextButton>
                 </Link>
               </Stack>
             </Stack>
@@ -68,9 +66,7 @@ const NextHero = ({
           </Flex>
           <Box display={{ base: 'block', md: 'none' }} pt={6} pb={12}>
             <Link href={url}>
-              <a rel="noreferrer">
-                <NextButton>{textButton}</NextButton>
-              </a>
+              <NextButton>{textButton}</NextButton>
             </Link>
           </Box>
         </Stack>
