@@ -82,7 +82,7 @@ const NextTeamCard = ({
             <Flex>
               {linkedin && (
                 <Box p="4">
-                  <Link href={linkedin}>
+                  <Link href={linkedin} target={'_blank'}>
                     <a target="_blank" rel="noreferrer">
                       <Icon color="next-primary" as={FaLinkedinIn} w={8} h={8} />
                     </a>

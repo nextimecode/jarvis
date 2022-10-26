@@ -88,15 +88,11 @@ const NextTemplateMentorTattoo = ({
       <Center>
         <Flex>
           <Text decoration="underline">
-            <Link href="/tattoopop/termos">
-              <a>Termos de uso</a>
-            </Link>
+            <Link href="/tattoopop/termos">Termos de uso</Link>
           </Text>
           |
           <Text decoration="underline">
-            <Link href="/tattoopop/politicas">
-              <a>{''}Política de Privacidade</a>
-            </Link>
+            <Link href="/tattoopop/politicas">{''}Política de Privacidade</Link>
           </Text>
         </Flex>
       </Center>
