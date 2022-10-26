@@ -5,7 +5,7 @@ export default function NextCallToActionWithAnnotation() {
   return (
     <>
       <Container maxW={'3xl'}>
-        <Stack as={Box} textAlign={'center'} spacing={{ base: 8, md: 8 }}>
+        <Stack as={Box} textAlign={'center'} spacing={{ base: 8, md: 8 }} pt={6}>
           <Heading
             fontWeight={600}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
