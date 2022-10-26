@@ -82,28 +82,22 @@ const NextTeamCard = ({
             <Flex>
               {linkedin && (
                 <Box p="4">
-                  <Link href={linkedin}>
-                    <a target="_blank" rel="noreferrer">
-                      <Icon color="next-primary" as={FaLinkedinIn} w={8} h={8} />
-                    </a>
+                  <Link href={linkedin} target={'_blank'}>
+                    <Icon color="next-primary" as={FaLinkedinIn} w={8} h={8} />
                   </Link>
                 </Box>
               )}
               {instagram && (
                 <Box p="4">
-                  <Link href={instagram}>
-                    <a target="_blank" rel="noreferrer">
-                      <Icon color="next-primary" as={FaInstagram} w={8} h={8} />
-                    </a>
+                  <Link href={instagram} target={'_blank'}>
+                    <Icon color="next-primary" as={FaInstagram} w={8} h={8} />
                   </Link>
                 </Box>
               )}
               {youtube && (
                 <Box p="4">
-                  <Link href={youtube}>
-                    <a target="_blank" rel="noreferrer">
-                      <Icon color="next-primary" as={FaYoutube} w={8} h={8} />
-                    </a>
+                  <Link href={youtube} target={'_blank'}>
+                    <Icon color="next-primary" as={FaYoutube} w={8} h={8} />
                   </Link>
                 </Box>
               )}

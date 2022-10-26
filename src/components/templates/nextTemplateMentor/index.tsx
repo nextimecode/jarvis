@@ -42,6 +42,10 @@ const NextTemplateMentor = ({
       logoHeight={62}
       logoSubtitle="Mentor"
       logoSubtitleColor="next-primary"
+      keywords={
+        'mentoria, mentor, liderança, lideranças, mudança de carreira, como se tornar um desenvolvedor, como ser um programador, como se tornar programador'
+      }
+      image={'./images/mentor/social_image.png'}
     >
       {hasNextCallToActionWithAnnotation && <NextCallToActionWithAnnotation />}
       <NextHero
@@ -71,63 +75,55 @@ const NextTemplateMentor = ({
         <Center>
           <Flex>
             <Box px="4">
-              <Link href={'https://www.linkedin.com/in/phdduarte/'}>
-                <a target="_blank" rel="noreferrer">
-                  <Icon
-                    color="next-primary"
-                    _hover={{
-                      color: 'white'
-                    }}
-                    as={FaLinkedin}
-                    w={16}
-                    h={16}
-                  />
-                </a>
+              <Link href={'https://www.linkedin.com/in/phdduarte/'} target={'_blank'}>
+                <Icon
+                  color="next-primary"
+                  _hover={{
+                    color: 'white'
+                  }}
+                  as={FaLinkedin}
+                  w={16}
+                  h={16}
+                />
               </Link>
             </Box>
             <Box px="4">
-              <Link href={'https://www.instagram.com/phdduarte/'}>
-                <a target="_blank" rel="noreferrer">
-                  <Icon
-                    color="next-primary"
-                    _hover={{
-                      color: 'white'
-                    }}
-                    as={FaInstagram}
-                    w={16}
-                    h={16}
-                  />
-                </a>
+              <Link href={'https://www.instagram.com/phdduarte/'} target={'_blank'}>
+                <Icon
+                  color="next-primary"
+                  _hover={{
+                    color: 'white'
+                  }}
+                  as={FaInstagram}
+                  w={16}
+                  h={16}
+                />
               </Link>
             </Box>
             <Box px="4">
-              <Link href={'https://www.youtube.com/watch?v=-TqTAxrOxaM'}>
-                <a target="_blank" rel="noreferrer">
-                  <Icon
-                    color="next-primary"
-                    _hover={{
-                      color: 'white'
-                    }}
-                    as={FaYoutube}
-                    w={16}
-                    h={16}
-                  />
-                </a>
+              <Link href={'https://www.youtube.com/watch?v=-TqTAxrOxaM'} target={'_blank'}>
+                <Icon
+                  color="next-primary"
+                  _hover={{
+                    color: 'white'
+                  }}
+                  as={FaYoutube}
+                  w={16}
+                  h={16}
+                />
               </Link>
             </Box>
             <Box px="4">
-              <Link href={'https://github.com/phdduarte'}>
-                <a target="_blank" rel="noreferrer">
-                  <Icon
-                    color="next-primary"
-                    _hover={{
-                      color: 'white'
-                    }}
-                    as={FaGithubSquare}
-                    w={16}
-                    h={16}
-                  />
-                </a>
+              <Link href={'https://github.com/phdduarte'} target={'_blank'}>
+                <Icon
+                  color="next-primary"
+                  _hover={{
+                    color: 'white'
+                  }}
+                  as={FaGithubSquare}
+                  w={16}
+                  h={16}
+                />
               </Link>
             </Box>
           </Flex>

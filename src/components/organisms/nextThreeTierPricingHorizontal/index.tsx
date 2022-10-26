@@ -7,8 +7,7 @@ import {
   ListIcon,
   ListItem,
   Stack,
-  Text,
-  useColorModeValue
+  Text
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import { FaCheckCircle } from 'react-icons/fa'
@@ -48,13 +47,7 @@ interface PackageTierProps {
   checked?: boolean
   url: string
 }
-const PackageTier = ({ title, options, typePlan, checked = false, url }: PackageTierProps) => {
-  const colorTextLight = checked ? 'white' : 'next-primary'
-  const bgColorLight = checked ? 'purple.400' : 'gray.300'
-
-  const colorTextDark = checked ? 'white' : 'next-primary'
-  const bgColorDark = checked ? 'next-primary' : 'gray.300'
-
+const PackageTier = ({ title, options, typePlan, url }: PackageTierProps) => {
   return (
     <Stack
       p={3}
@@ -81,12 +74,8 @@ const PackageTier = ({ title, options, typePlan, checked = false, url }: Package
       <Heading size={'xl'}>{typePlan}</Heading>
       <Stack>
         <Link href={url}>
-          <Button
-            size="md"
-            color={useColorModeValue(colorTextLight, colorTextDark)}
-            bgColor={useColorModeValue(bgColorLight, bgColorDark)}
-          >
-            SIM! QUERO PARTICIPAR
+          <Button size="md" colorScheme={'blue'}>
+            QUERO PARTICIPAR
           </Button>
         </Link>
       </Stack>
@@ -137,7 +126,7 @@ const NextThreeTierPricingHorizontal = () => {
           url={'https://chat.whatsapp.com/BUvZGzSuqziJ3VWYYTilP7'}
           title={'Start'}
           checked={true}
-          typePlan="GRÁTIS"
+          typePlan="ACESSO GRATUITO"
           options={optionsStarter}
         />
         <Divider />

@@ -17,6 +17,7 @@ type Props = {
   logoSubtitleColor?: string
   bg?: string
   keywords?: string
+  image?: string
 }
 
 const NextLayout = ({
@@ -30,7 +31,8 @@ const NextLayout = ({
   logoSubtitle,
   logoSubtitleColor,
   bg = 'next-primary',
-  keywords
+  keywords,
+  image = './images/social_image.png'
 }: PropsWithChildren<Props>) => {
   return (
     <>
@@ -39,6 +41,36 @@ const NextLayout = ({
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:url" content="https://www.nextshow.com.br/" />
+        <meta property="og:type" content="page" />
+        <meta property="og:title" content={title} />
+        <meta property="og:image" content={image} />
+        <meta property="og:description" content={description} />
+        <meta property="og:site_name" content="NeXTShow" />
+        <meta property="og:image" content={image} />
+        <meta property="og:image:secure_url" content={image} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="631" />
+        <meta property="og:image:alt" content="mentoria" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="article:author" content="NeXTIME" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta property="twitter:image:src" content={image} />
+        <meta
+          name="robots"
+          content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        />
+        <link rel="canonical" href="https://www.nextime.com.br/" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={image} />
+        <meta name="twitter:label1" content="Written by" />
+        <meta name="twitter:data1" content="NeXTMentor" />
+        <meta name="twitter:label2" content="Time to read" />
+        <meta name="twitter:data2" content="6 minutos" />
       </Head>
 
       <NextHeader
@@ -53,10 +85,8 @@ const NextLayout = ({
 
       <NextFooter bg={bg} />
       <Box position="fixed" width="60px" height="60px" zIndex={100} bottom="20px" right="20px">
-        <Link href={nextSocialNetwork}>
-          <a target="_blank" rel="noreferrer">
-            <NextWhatsIcon />
-          </a>
+        <Link href={nextSocialNetwork} target={'_blank'}>
+          <NextWhatsIcon />
         </Link>
       </Box>
     </>

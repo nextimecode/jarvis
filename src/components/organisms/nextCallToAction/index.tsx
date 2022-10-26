@@ -12,8 +12,8 @@ export interface NextCallToActionProps {
   textButton?: string
   image: string
   url: string
-  width: string
-  height: string
+  width: number
+  height: number
   directionMd?: 'row' | 'column' | 'row-reverse' | 'column-reverse'
   directionBase?: 'row' | 'column' | 'row-reverse' | 'column-reverse'
 }
@@ -48,9 +48,7 @@ const NextCallToAction = ({
             </Text>
             <Box display={{ base: 'none', md: 'block' }}>
               <Link href={url}>
-                <a rel="noreferrer">
-                  <NextButton variant="outline">{textButton}</NextButton>
-                </a>
+                <NextButton variant="outline">{textButton}</NextButton>
               </Link>
             </Box>
           </Stack>
@@ -60,9 +58,7 @@ const NextCallToAction = ({
         </Flex>
         <Box display={{ base: 'block', md: 'none' }}>
           <Link href={url}>
-            <a rel="noreferrer">
-              <NextButton variant="outline">{textButton}</NextButton>
-            </a>
+            <NextButton variant="outline">{textButton}</NextButton>
           </Link>
         </Box>
       </Stack>
