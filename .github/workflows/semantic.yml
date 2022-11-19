@@ -1,3 +1,5 @@
+- name: semantic-pull-request
+  uses: amannn/action-semantic-pull-request@v5.0.2
 # Disable validation, and skip status check creation
 enabled: false
 # Always validate the PR title, and ignore the commits
