@@ -1,6 +1,6 @@
 {
   "name": "jarvis",
-  "version": "0.21.0",
+  "version": "0.0.0-development",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -15,7 +15,8 @@
     "prepush": "git diff HEAD --quiet && git fetch && git pull origin main && yarn precommit && yarn build",
     "go": "yarn prepush && yarn dev",
     "prepare": "husky install",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@chakra-ui/icons": "latest",
@@ -30,7 +31,8 @@
     "prettier": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-icons": "latest"
+    "react-icons": "latest",
+    "semantic-release": "^19.0.5"
   },
   "devDependencies": {
     "@babel/core": "latest",
@@ -56,11 +58,19 @@
     "eslint-plugin-standard": "latest",
     "husky": "latest",
     "lint-staged": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "semantic-release": "^19.0.5"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nextimecode/jarvis.git"
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }
