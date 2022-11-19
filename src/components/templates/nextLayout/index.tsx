@@ -3,7 +3,7 @@ import React, { PropsWithChildren } from 'react'
 import NextHeader, { NavItem } from '../../organisms/nextHeader'
 import NextFooter from '../../organisms/nextFooter'
 import { Box } from '@chakra-ui/react'
-import NextWhatsIcon from '../../atoms/NextWhatsIcon'
+import NextWhatsIcon from '../../atoms/nextWhatsIcon'
 import Link from 'next/link'
 
 type Props = {
