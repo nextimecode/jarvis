@@ -41,7 +41,7 @@ const NextTemplateMentorTattoo = ({
       logoSubtitle="Tattoo"
       logoSubtitleColor="next-blue.100"
       bg={bg}
-      keywords={'Tattoo, tatuagem, tatuadores, tatuador, aplicativo, app'}
+      keywords={['Tattoo', 'tatuagem', 'tatuadores', 'tatuador', 'aplicativo', 'app']}
     >
       {hasNextCallToActionWithAnnotation && <NextCallToActionWithAnnotation />}
       <Container maxW="container.md" py={6}>
