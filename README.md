@@ -29,6 +29,7 @@ Os nossos projetos são desenvolvidos com:
 - [Clean Code with JS](https://medium.com/trainingcenter/c%C3%B3digo-limpo-vers%C3%A3o-javascript-80adecafdbec)
 - [Tutorial do git fluxo da Nextime](https://drive.google.com/file/d/1a44AWwM_JGLa0Z5-ECCT2sw4qisU9e_F/view?usp=sharing)
 - [Tutorial do fluxo de review da Nextime](https://drive.google.com/file/d/1HG_m-s8U1JZ-Wp_8Gk9t1lb2YtcHme4R/view?usp=sharing)
+- [Using semantic-release with GitHub Actions](https://www.youtube.com/watch?v=rCXq86FOlzQ)
 
 
 ## Conventional commits
