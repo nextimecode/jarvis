@@ -53,7 +53,7 @@
     "eslint-plugin-promise": "latest",
     "eslint-plugin-react": "latest",
     "eslint-plugin-react-hooks": "latest",
-    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-standard": "latest",
     "husky": "latest",
     "lint-staged": "latest",
     "typescript": "latest"
