@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Container, Flex, Stack, Text } from '@chakra-ui/react'
-import { NextButton } from '../../atoms/NextButton'
+import { NextButton } from '../../atoms/nextButton'
 import Link from 'next/link'
 import Image from 'next/image'
 
