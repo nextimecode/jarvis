@@ -1,0 +1,33 @@
+query GetPosts {
+  posts {
+    id
+    author {
+      id
+      name
+      picture {
+        url
+      }
+      title
+    }
+    createdAt
+    date
+    excerpt
+    slug
+    stage
+    tags
+    title
+    updatedAt
+    coverImage {
+      id
+      url
+      height
+      width
+    }
+    content {
+      text
+    }
+    seo {
+      keywords
+    }
+  }
+}

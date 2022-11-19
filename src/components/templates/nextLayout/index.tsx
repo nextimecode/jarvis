@@ -15,8 +15,8 @@ type Props = {
   logoHeight?: number
   logoSubtitle?: string
   logoSubtitleColor?: string
+  keywords?: Array<string>
   bg?: string
-  keywords?: string
   image?: string
 }
 
@@ -31,7 +31,18 @@ const NextLayout = ({
   logoSubtitle,
   logoSubtitleColor,
   bg = 'next-primary',
-  keywords,
+  keywords = [
+    'site responsivo',
+    'site personalizado',
+    'site alto padrão',
+    'programador de sites',
+    'empresas de sites',
+    'elaboração de sites',
+    'designer para fazer site',
+    'design system',
+    'desenvolver ecommerce',
+    'desenvolver aplicativos'
+  ],
   image = './images/social_image.png'
 }: PropsWithChildren<Props>) => {
   return (
@@ -39,7 +50,7 @@ const NextLayout = ({
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
+        <meta name="keywords" content={keywords?.join(', ')} />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:url" content="https://www.nextshow.com.br/" />
         <meta property="og:type" content="page" />
