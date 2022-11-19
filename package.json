@@ -16,6 +16,7 @@
     "go": "yarn prepush && yarn dev",
     "prepare": "husky install",
     "postinstall": "husky install",
+    "test": "jest",
     "semantic-release": "semantic-release"
   },
   "dependencies": {
@@ -37,6 +38,8 @@
     "@babel/core": "latest",
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
     "@types/node": "latest",
     "@types/react": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
@@ -56,6 +59,8 @@
     "eslint-plugin-react-hooks": "latest",
     "eslint-plugin-standard": "latest",
     "husky": "latest",
+    "jest": "latest",
+    "jest-environment-jsdom": "^29.3.1",
     "lint-staged": "latest",
     "semantic-release": "latest",
     "typescript": "latest"

@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Box, Container, Flex, Heading, Stack, Text } from '@chakra-ui/react'
-import NextButton from '../../atoms/nextButton'
+import { NextButton } from '../../atoms/NextButton'
 
 export type NextHeroProps = {
   id?: string

@@ -8,7 +8,7 @@ type Props = {
   hover?: 'next-primary' | 'next-dark' | 'white' | 'dark' | undefined
 }
 
-const NextButton = ({
+export const NextButton = ({
   bg,
   children,
   variant = 'solid',
@@ -39,5 +39,3 @@ const NextButton = ({
     </>
   )
 }
-
-export default NextButton
