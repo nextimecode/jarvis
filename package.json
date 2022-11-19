@@ -59,7 +59,7 @@
     "husky": "latest",
     "lint-staged": "latest",
     "typescript": "latest",
-    "semantic-release": "^19.0.5"
+    "semantic-release": "latest"
   },
   "config": {
     "commitizen": {
