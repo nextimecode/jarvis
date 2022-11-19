@@ -31,8 +31,7 @@
     "prettier": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-icons": "latest",
-    "semantic-release": "^19.0.5"
+    "react-icons": "latest"
   },
   "devDependencies": {
     "@babel/core": "latest",
