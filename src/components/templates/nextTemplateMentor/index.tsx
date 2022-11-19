@@ -42,9 +42,16 @@ const NextTemplateMentor = ({
       logoHeight={62}
       logoSubtitle="Mentor"
       logoSubtitleColor="next-primary"
-      keywords={
-        'mentoria, mentor, liderança, lideranças, mudança de carreira, como se tornar um desenvolvedor, como ser um programador, como se tornar programador'
-      }
+      keywords={[
+        'mentoria',
+        'mentor',
+        'liderança',
+        'lideranças',
+        'mudança de carreira',
+        'como se tornar um desenvolvedor',
+        'como ser um programador',
+        'como se tornar programador'
+      ]}
       image={'./images/mentor/social_image.png'}
     >
       {hasNextCallToActionWithAnnotation && <NextCallToActionWithAnnotation />}
