@@ -30,7 +30,6 @@ jobs:
             The subject "{subject}" found in the pull request title "{title}"
             didn't match the configured pattern. Please ensure that the subject
             doesn't start with an uppercase character.
-          githubBaseUrl: https://github.myorg.com/api/v3
           ignoreLabels: |
             bot
             ignore-semantic-pull-request
