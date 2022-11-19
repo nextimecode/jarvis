@@ -57,8 +57,8 @@
     "eslint-plugin-standard": "latest",
     "husky": "latest",
     "lint-staged": "latest",
-    "typescript": "latest",
-    "semantic-release": "latest"
+    "semantic-release": "latest",
+    "typescript": "latest"
   },
   "config": {
     "commitizen": {
