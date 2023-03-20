@@ -3,7 +3,6 @@
 # dotenv environment variables file (build for Zeit Now)
 .env.build
 .env.local
-.env
 # Dependency directories
 node_modules/
 node_modules

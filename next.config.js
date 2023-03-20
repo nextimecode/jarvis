@@ -3,8 +3,5 @@ module.exports = {
     domains: ['media.graphassets.com', 'ipdata.co'],
   },
   reactStrictMode: true,
-}
-
-module.exports = {
   swcMinify: true,
 }
