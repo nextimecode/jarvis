@@ -1,5 +1,6 @@
 const { google } = require('googleapis')
-require('dotenv').config()
+
+console.log('teste', process.env.GOOGLE_APPLICATION_CREDENTIALS)
 
 async function authenticate() {
   // Carregue suas credenciais das variáveis de ambiente.
@@ -11,15 +12,18 @@ async function authenticate() {
   return await auth.getClient()
 }
 
-async function notifyGoogle(sitemapUrl) {
+export async function notifyGoogle() {
+  const siteUrl = 'https://www.nextime.com.br'
+  const sitemapUrl = `${siteUrl}/sitemap.xml`
+
   try {
     const client = await authenticate()
     const webmasters = google.webmasters({ version: 'v3', auth: client })
 
     // Use o método 'submit' para enviar o sitemap ao Google.
     await webmasters.sitemaps.submit({
-      siteUrl: 'https://www.nextime.com.br',
-      feedpath: `/sitemap.xml`,
+      siteUrl,
+      feedpath: sitemapUrl,
     })
 
     console.log(`Notificação enviada com sucesso para: ${sitemapUrl}`)
@@ -28,4 +32,4 @@ async function notifyGoogle(sitemapUrl) {
   }
 }
 
-module.exports = notifyGoogle
+notifyGoogle() // Adicione esta linha para executar a função ao executar o script.
