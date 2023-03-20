@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "clean": "rm -rf node_modules .next pnpm-lock.yaml && npx jest --clearCache && pnpm store prune",
-    "build": "next build && node notifyGoogleBuild.js",
+    "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "lint": "eslint src --ext .tsx,.ts",
