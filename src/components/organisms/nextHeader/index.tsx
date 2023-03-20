@@ -93,6 +93,10 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Orçamento',
     href: nextSocialNetwork().url
+  },
+  {
+    label: 'Blog',
+    href: '/blog'
   }
 ]
 

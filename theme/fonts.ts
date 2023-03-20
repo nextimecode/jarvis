@@ -1,5 +1,5 @@
 const fonts = {
-  heading: 'Rajdhani',
+  heading: "'Roboto', sans-serif",
   body: 'Open Sans'
 }
 

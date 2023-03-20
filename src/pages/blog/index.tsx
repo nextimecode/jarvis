@@ -4,9 +4,12 @@ import { useGetPostsQuery } from '../../graphql/generated'
 
 export default function Blog() {
   const { data } = useGetPostsQuery()
+  const posts = data?.posts
+  const invertedPosts = posts?.map((item, index) => posts[posts.length - index - 1])
+
   return (
     <NextLayout>
-      <NextArticleList posts={data?.posts} />
+      <NextArticleList posts={invertedPosts} />
     </NextLayout>
   )
 }

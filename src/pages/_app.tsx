@@ -1,8 +1,4 @@
 import React from 'react'
-import '@fontsource/rajdhani/400.css'
-import '@fontsource/rajdhani/500.css'
-import '@fontsource/rajdhani/600.css'
-import '@fontsource/rajdhani/700.css'
 import '@fontsource/open-sans/400.css'
 import '@fontsource/open-sans/500.css'
 import '@fontsource/open-sans/600.css'
