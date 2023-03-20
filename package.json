@@ -5,12 +5,14 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "clean": "rm -rf node_modules .next pnpm-lock.yaml && pnpm store prune",
+    "clean": "rm -rf node_modules .next pnpm-lock.yaml && npx jest --clearCache && pnpm store prune",
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "lint": "eslint src --ext .tsx,.ts",
     "lint:fix": "eslint src --ext .tsx,.ts --fix",
+    "audit": "pnpm audit",
+    "typecheck": "tsc --noEmit",
     "precommit": "pnpm lint",
     "commit": "cz",
     "go": "git pull origin main && pnpm precommit && pnpm build && pnpm audit && pnpm dev",
@@ -18,7 +20,10 @@
     "postinstall": "husky install",
     "codegen": "graphql-codegen",
     "test": "jest",
-    "semantic-release": "semantic-release"
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "semantic-release": "semantic-release",
+    "depcheck": "depcheck"
   },
   "dependencies": {
     "@apollo/client": "^3.7.10",
@@ -69,6 +74,7 @@
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "date-fns": "^2.29.3",
+    "depcheck": "^1.4.3",
     "eslint": "^8.36.0",
     "eslint-config-next": "^13.2.4",
     "eslint-config-prettier": "^8.7.0",
