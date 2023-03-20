@@ -49,6 +49,7 @@ export type Asset = Node & {
   history: Array<Version>
   /** The unique identifier */
   id: Scalars['ID']
+  imageSeo: Array<Seo>
   /** System Locale field */
   locale: Locale
   /** Get the other localizations for this document */
@@ -60,7 +61,6 @@ export type Asset = Node & {
   /** User that last published this document */
   publishedBy?: Maybe<User>
   scheduledIn: Array<ScheduledOperation>
-  seoImage: Array<Seo>
   /** The file size */
   size?: Maybe<Scalars['Float']>
   /** System stage field */
@@ -80,6 +80,7 @@ export type AssetAuthorAvatarArgs = {
   after?: InputMaybe<Scalars['String']>
   before?: InputMaybe<Scalars['String']>
   first?: InputMaybe<Scalars['Int']>
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   last?: InputMaybe<Scalars['Int']>
   locales?: InputMaybe<Array<Locale>>
   orderBy?: InputMaybe<AuthorOrderByInput>
@@ -92,6 +93,7 @@ export type AssetCoverImagePostArgs = {
   after?: InputMaybe<Scalars['String']>
   before?: InputMaybe<Scalars['String']>
   first?: InputMaybe<Scalars['Int']>
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   last?: InputMaybe<Scalars['Int']>
   locales?: InputMaybe<Array<Locale>>
   orderBy?: InputMaybe<PostOrderByInput>
@@ -106,6 +108,7 @@ export type AssetCreatedAtArgs = {
 
 /** Asset system model */
 export type AssetCreatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -124,6 +127,19 @@ export type AssetHistoryArgs = {
 }
 
 /** Asset system model */
+export type AssetImageSeoArgs = {
+  after?: InputMaybe<Scalars['String']>
+  before?: InputMaybe<Scalars['String']>
+  first?: InputMaybe<Scalars['Int']>
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
+  last?: InputMaybe<Scalars['Int']>
+  locales?: InputMaybe<Array<Locale>>
+  orderBy?: InputMaybe<SeoOrderByInput>
+  skip?: InputMaybe<Scalars['Int']>
+  where?: InputMaybe<SeoWhereInput>
+}
+
+/** Asset system model */
 export type AssetLocalizationsArgs = {
   includeCurrent?: Scalars['Boolean']
   locales?: Array<Locale>
@@ -136,6 +152,7 @@ export type AssetPublishedAtArgs = {
 
 /** Asset system model */
 export type AssetPublishedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -144,22 +161,11 @@ export type AssetScheduledInArgs = {
   after?: InputMaybe<Scalars['String']>
   before?: InputMaybe<Scalars['String']>
   first?: InputMaybe<Scalars['Int']>
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   last?: InputMaybe<Scalars['Int']>
   locales?: InputMaybe<Array<Locale>>
   skip?: InputMaybe<Scalars['Int']>
   where?: InputMaybe<ScheduledOperationWhereInput>
-}
-
-/** Asset system model */
-export type AssetSeoImageArgs = {
-  after?: InputMaybe<Scalars['String']>
-  before?: InputMaybe<Scalars['String']>
-  first?: InputMaybe<Scalars['Int']>
-  last?: InputMaybe<Scalars['Int']>
-  locales?: InputMaybe<Array<Locale>>
-  orderBy?: InputMaybe<SeoOrderByInput>
-  skip?: InputMaybe<Scalars['Int']>
-  where?: InputMaybe<SeoWhereInput>
 }
 
 /** Asset system model */
@@ -169,6 +175,7 @@ export type AssetUpdatedAtArgs = {
 
 /** Asset system model */
 export type AssetUpdatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -201,10 +208,10 @@ export type AssetCreateInput = {
   fileName: Scalars['String']
   handle: Scalars['String']
   height?: InputMaybe<Scalars['Float']>
+  imageSeo?: InputMaybe<SeoCreateManyInlineInput>
   /** Inline mutations for managing document localizations excluding the default locale */
   localizations?: InputMaybe<AssetCreateLocalizationsInput>
   mimeType?: InputMaybe<Scalars['String']>
-  seoImage?: InputMaybe<SeoCreateManyInlineInput>
   size?: InputMaybe<Scalars['Float']>
   updatedAt?: InputMaybe<Scalars['DateTime']>
   width?: InputMaybe<Scalars['Float']>
@@ -309,6 +316,9 @@ export type AssetManyWhereInput = {
   id_not_starts_with?: InputMaybe<Scalars['ID']>
   /** All values starting with the given string. */
   id_starts_with?: InputMaybe<Scalars['ID']>
+  imageSeo_every?: InputMaybe<SeoWhereInput>
+  imageSeo_none?: InputMaybe<SeoWhereInput>
+  imageSeo_some?: InputMaybe<SeoWhereInput>
   publishedAt?: InputMaybe<Scalars['DateTime']>
   /** All values greater than the given value. */
   publishedAt_gt?: InputMaybe<Scalars['DateTime']>
@@ -328,9 +338,6 @@ export type AssetManyWhereInput = {
   scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>
   scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>
   scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>
-  seoImage_every?: InputMaybe<SeoWhereInput>
-  seoImage_none?: InputMaybe<SeoWhereInput>
-  seoImage_some?: InputMaybe<SeoWhereInput>
   updatedAt?: InputMaybe<Scalars['DateTime']>
   /** All values greater than the given value. */
   updatedAt_gt?: InputMaybe<Scalars['DateTime']>
@@ -386,10 +393,10 @@ export type AssetUpdateInput = {
   fileName?: InputMaybe<Scalars['String']>
   handle?: InputMaybe<Scalars['String']>
   height?: InputMaybe<Scalars['Float']>
+  imageSeo?: InputMaybe<SeoUpdateManyInlineInput>
   /** Manage document localizations */
   localizations?: InputMaybe<AssetUpdateLocalizationsInput>
   mimeType?: InputMaybe<Scalars['String']>
-  seoImage?: InputMaybe<SeoUpdateManyInlineInput>
   size?: InputMaybe<Scalars['Float']>
   width?: InputMaybe<Scalars['Float']>
 }
@@ -625,6 +632,9 @@ export type AssetWhereInput = {
   id_not_starts_with?: InputMaybe<Scalars['ID']>
   /** All values starting with the given string. */
   id_starts_with?: InputMaybe<Scalars['ID']>
+  imageSeo_every?: InputMaybe<SeoWhereInput>
+  imageSeo_none?: InputMaybe<SeoWhereInput>
+  imageSeo_some?: InputMaybe<SeoWhereInput>
   mimeType?: InputMaybe<Scalars['String']>
   /** All values containing the given string. */
   mimeType_contains?: InputMaybe<Scalars['String']>
@@ -663,9 +673,6 @@ export type AssetWhereInput = {
   scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>
   scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>
   scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>
-  seoImage_every?: InputMaybe<SeoWhereInput>
-  seoImage_none?: InputMaybe<SeoWhereInput>
-  seoImage_some?: InputMaybe<SeoWhereInput>
   size?: InputMaybe<Scalars['Float']>
   /** All values greater than the given value. */
   size_gt?: InputMaybe<Scalars['Float']>
@@ -769,6 +776,7 @@ export type Author = Node & {
 }
 
 export type AuthorCreatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -785,6 +793,7 @@ export type AuthorHistoryArgs = {
 }
 
 export type AuthorPictureArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -792,6 +801,7 @@ export type AuthorPostsArgs = {
   after?: InputMaybe<Scalars['String']>
   before?: InputMaybe<Scalars['String']>
   first?: InputMaybe<Scalars['Int']>
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   last?: InputMaybe<Scalars['Int']>
   locales?: InputMaybe<Array<Locale>>
   orderBy?: InputMaybe<PostOrderByInput>
@@ -800,6 +810,7 @@ export type AuthorPostsArgs = {
 }
 
 export type AuthorPublishedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -807,6 +818,7 @@ export type AuthorScheduledInArgs = {
   after?: InputMaybe<Scalars['String']>
   before?: InputMaybe<Scalars['String']>
   first?: InputMaybe<Scalars['Int']>
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   last?: InputMaybe<Scalars['Int']>
   locales?: InputMaybe<Array<Locale>>
   skip?: InputMaybe<Scalars['Int']>
@@ -814,6 +826,7 @@ export type AuthorScheduledInArgs = {
 }
 
 export type AuthorUpdatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -2230,7 +2243,7 @@ export type Page = Node & {
   /** User that last published this document */
   publishedBy?: Maybe<User>
   scheduledIn: Array<ScheduledOperation>
-  /** Relate an SEO model to this page */
+  /** Attach an SEO model to this post */
   seo?: Maybe<Seo>
   /** Enter the slug for this page, such as about, blog, or contact */
   slug: Scalars['String']
@@ -2247,6 +2260,7 @@ export type Page = Node & {
 }
 
 export type PageCreatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -2263,6 +2277,7 @@ export type PageHistoryArgs = {
 }
 
 export type PagePublishedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -2270,6 +2285,7 @@ export type PageScheduledInArgs = {
   after?: InputMaybe<Scalars['String']>
   before?: InputMaybe<Scalars['String']>
   first?: InputMaybe<Scalars['Int']>
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   last?: InputMaybe<Scalars['Int']>
   locales?: InputMaybe<Array<Locale>>
   skip?: InputMaybe<Scalars['Int']>
@@ -2277,10 +2293,12 @@ export type PageScheduledInArgs = {
 }
 
 export type PageSeoArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
 export type PageUpdatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -2796,14 +2814,17 @@ export type Post = Node & {
 }
 
 export type PostAuthorArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
 export type PostCoverImageArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
 export type PostCreatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -2820,6 +2841,7 @@ export type PostHistoryArgs = {
 }
 
 export type PostPublishedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -2827,6 +2849,7 @@ export type PostScheduledInArgs = {
   after?: InputMaybe<Scalars['String']>
   before?: InputMaybe<Scalars['String']>
   first?: InputMaybe<Scalars['Int']>
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   last?: InputMaybe<Scalars['Int']>
   locales?: InputMaybe<Array<Locale>>
   skip?: InputMaybe<Scalars['Int']>
@@ -2834,10 +2857,12 @@ export type PostScheduledInArgs = {
 }
 
 export type PostSeoArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
 export type PostUpdatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -3768,6 +3793,7 @@ export type ScheduledOperationAffectedDocumentsArgs = {
   after?: InputMaybe<Scalars['String']>
   before?: InputMaybe<Scalars['String']>
   first?: InputMaybe<Scalars['Int']>
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   last?: InputMaybe<Scalars['Int']>
   locales?: InputMaybe<Array<Locale>>
   skip?: InputMaybe<Scalars['Int']>
@@ -3775,6 +3801,7 @@ export type ScheduledOperationAffectedDocumentsArgs = {
 
 /** Scheduled Operation system model */
 export type ScheduledOperationCreatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -3787,16 +3814,19 @@ export type ScheduledOperationDocumentInStagesArgs = {
 
 /** Scheduled Operation system model */
 export type ScheduledOperationPublishedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
 /** Scheduled Operation system model */
 export type ScheduledOperationReleaseArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
 /** Scheduled Operation system model */
 export type ScheduledOperationUpdatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -3937,6 +3967,8 @@ export type ScheduledOperationManyWhereInput = {
   /** All values that are not contained in given list. */
   publishedAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>
   publishedBy?: InputMaybe<UserWhereInput>
+  /** All values containing the given json path. */
+  rawPayload_json_path_exists?: InputMaybe<Scalars['String']>
   release?: InputMaybe<ScheduledReleaseWhereInput>
   status?: InputMaybe<ScheduledOperationStatus>
   /** All values that are contained in given list. */
@@ -4104,6 +4136,8 @@ export type ScheduledOperationWhereInput = {
   /** All values that are not contained in given list. */
   publishedAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>
   publishedBy?: InputMaybe<UserWhereInput>
+  /** All values containing the given json path. */
+  rawPayload_json_path_exists?: InputMaybe<Scalars['String']>
   release?: InputMaybe<ScheduledReleaseWhereInput>
   status?: InputMaybe<ScheduledOperationStatus>
   /** All values that are contained in given list. */
@@ -4176,6 +4210,7 @@ export type ScheduledRelease = Node & {
 
 /** Scheduled Release system model */
 export type ScheduledReleaseCreatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -4191,6 +4226,7 @@ export type ScheduledReleaseOperationsArgs = {
   after?: InputMaybe<Scalars['String']>
   before?: InputMaybe<Scalars['String']>
   first?: InputMaybe<Scalars['Int']>
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   last?: InputMaybe<Scalars['Int']>
   locales?: InputMaybe<Array<Locale>>
   orderBy?: InputMaybe<ScheduledOperationOrderByInput>
@@ -4200,11 +4236,13 @@ export type ScheduledReleaseOperationsArgs = {
 
 /** Scheduled Release system model */
 export type ScheduledReleasePublishedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
 /** Scheduled Release system model */
 export type ScheduledReleaseUpdatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -4742,6 +4780,7 @@ export type Seo = Node & {
 }
 
 export type SeoCreatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -4758,14 +4797,17 @@ export type SeoHistoryArgs = {
 }
 
 export type SeoImageArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
 export type SeoParentArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
 export type SeoPublishedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -4773,6 +4815,7 @@ export type SeoScheduledInArgs = {
   after?: InputMaybe<Scalars['String']>
   before?: InputMaybe<Scalars['String']>
   first?: InputMaybe<Scalars['Int']>
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   last?: InputMaybe<Scalars['Int']>
   locales?: InputMaybe<Array<Locale>>
   skip?: InputMaybe<Scalars['Int']>
@@ -4780,6 +4823,7 @@ export type SeoScheduledInArgs = {
 }
 
 export type SeoUpdatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>
   locales?: InputMaybe<Array<Locale>>
 }
 
@@ -5744,6 +5788,7 @@ export enum _FilterKind {
   Gt = 'gt',
   Gte = 'gte',
   In = 'in',
+  JsonPathExists = 'json_path_exists',
   Lt = 'lt',
   Lte = 'lte',
   NotContains = 'not_contains',

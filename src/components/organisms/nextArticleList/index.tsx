@@ -60,7 +60,7 @@ const NextArticleList = ({ posts }: NextArticleListProps) => {
     'radial(orange.600 1px, transparent 1px)',
     'radial(orange.300 1px, transparent 1px)'
   )
-  const color = useColorModeValue('gray.700', 'gray.200')
+  const color = useColorModeValue('gray.400', 'gray.200')
   return (
     <Container maxW={'7xl'} p="12">
       <Heading as="h1">Novidades</Heading>
