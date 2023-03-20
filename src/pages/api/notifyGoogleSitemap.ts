@@ -1,8 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { google } from 'googleapis'
 
-console.log('teste', process.env.GOOGLE_APPLICATION_CREDENTIALS)
-
 async function authenticate() {
   const auth = new google.auth.GoogleAuth({
     credentials: JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS),
