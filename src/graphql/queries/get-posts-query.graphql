@@ -24,7 +24,7 @@ query GetPosts {
       width
     }
     content {
-      text
+      html
     }
     seo {
       keywords

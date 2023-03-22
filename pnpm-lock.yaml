@@ -19,6 +19,7 @@ specifiers:
   '@hookform/error-message': ^2.0.1
   '@hookform/resolvers': ^3.0.0
   '@next/env': ^13.2.4
+  '@nikolovlazar/chakra-ui-prose': ^1.2.1
   '@sentry/nextjs': ^7.44.2
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/react': ^14.0.0
@@ -83,6 +84,7 @@ dependencies:
   '@fontsource/roboto': 4.5.8
   '@hookform/error-message': 2.0.1_uhwulzutksnhndxl7pn6po6rdu
   '@hookform/resolvers': 3.0.0_react-hook-form@7.43.7
+  '@nikolovlazar/chakra-ui-prose': 1.2.1_3cuv7n3uzglapoui4a2dtovyjy
   '@sentry/nextjs': 7.44.2_next@13.2.4+react@18.2.0
   axios: 1.3.4
   axios-retry: 3.4.0
@@ -3871,6 +3873,18 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@nikolovlazar/chakra-ui-prose/1.2.1_3cuv7n3uzglapoui4a2dtovyjy:
+    resolution: {integrity: sha512-I8EZiKDGkOnzBOkPquLWir1gvHoKpo7x23O+VusK2WhPcWtgR7p56On+e/QPMCitMbV4xW997ecivCohOxGk9Q==}
+    peerDependencies:
+      '@chakra-ui/react': '>=1.8.6'
+      '@chakra-ui/system': '>=1.11.2'
+      react: '>=17.0.2'
+    dependencies:
+      '@chakra-ui/react': 2.5.2_we6jxqs7rqbd5vconftit5qut4
+      '@chakra-ui/system': 2.5.2_xqp3pgpqjlfxxa3zxu4zoc4fba
+      react: 18.2.0
+    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}

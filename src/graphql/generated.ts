@@ -4969,6 +4969,10 @@ export type SeoManyWhereInput = {
   keywords_contains_some?: InputMaybe<Array<Scalars['String']>>
   /** Matches if the field array does not contains *all* items provided to the filter or order does not match */
   keywords_not?: InputMaybe<Array<Scalars['String']>>
+  /** All values in which the union is connected to the given models */
+  parent?: InputMaybe<SeoParentWhereInput>
+  /** All values in which the union is empty */
+  parent_empty?: InputMaybe<Scalars['Boolean']>
   publishedAt?: InputMaybe<Scalars['DateTime']>
   /** All values greater than the given value. */
   publishedAt_gt?: InputMaybe<Scalars['DateTime']>
@@ -5288,6 +5292,10 @@ export type SeoWhereInput = {
   keywords_contains_some?: InputMaybe<Array<Scalars['String']>>
   /** Matches if the field array does not contains *all* items provided to the filter or order does not match */
   keywords_not?: InputMaybe<Array<Scalars['String']>>
+  /** All values in which the union is connected to the given models */
+  parent?: InputMaybe<SeoParentWhereInput>
+  /** All values in which the union is empty */
+  parent_empty?: InputMaybe<Scalars['Boolean']>
   publishedAt?: InputMaybe<Scalars['DateTime']>
   /** All values greater than the given value. */
   publishedAt_gt?: InputMaybe<Scalars['DateTime']>
@@ -5815,7 +5823,12 @@ export enum _FilterKind {
   RelationalSingle = 'relational_single',
   RelationalSome = 'relational_some',
   Search = 'search',
-  StartsWith = 'starts_with'
+  StartsWith = 'starts_with',
+  UnionEmpty = 'union_empty',
+  UnionEvery = 'union_every',
+  UnionNone = 'union_none',
+  UnionSingle = 'union_single',
+  UnionSome = 'union_some'
 }
 
 export enum _MutationInputFieldKind {
@@ -5898,7 +5911,7 @@ export type GetPostsQuery = {
       height?: number | null
       width?: number | null
     } | null
-    content: { __typename?: 'RichText'; text: string }
+    content: { __typename?: 'RichText'; html: string }
     seo?: { __typename?: 'Seo'; keywords: Array<string> } | null
   }>
 }
@@ -5930,7 +5943,7 @@ export const GetPostsDocument = gql`
         width
       }
       content {
-        text
+        html
       }
       seo {
         keywords
