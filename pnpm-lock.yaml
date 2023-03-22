@@ -84,7 +84,10 @@ dependencies:
   '@fontsource/roboto': 4.5.8
   '@hookform/error-message': 2.0.1_uhwulzutksnhndxl7pn6po6rdu
   '@hookform/resolvers': 3.0.0_react-hook-form@7.43.7
+<<<<<<< HEAD
   '@nikolovlazar/chakra-ui-prose': 1.2.1_3cuv7n3uzglapoui4a2dtovyjy
+=======
+>>>>>>> main
   '@sentry/nextjs': 7.44.2_next@13.2.4+react@18.2.0
   axios: 1.3.4
   axios-retry: 3.4.0
