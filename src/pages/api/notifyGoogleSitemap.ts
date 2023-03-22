@@ -18,7 +18,6 @@ export async function notifyGoogle() {
     const client = await authenticate()
     const webmasters = google.webmasters({ version: 'v3', auth: client })
 
-    // Use o método 'submit' para enviar o sitemap ao Google.
     await webmasters.sitemaps.submit({
       siteUrl,
       feedpath: sitemapUrl

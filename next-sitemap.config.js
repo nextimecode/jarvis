@@ -5,11 +5,8 @@ module.exports = {
   changefreq: 'daily',
   priority: 0.7,
   sitemapSize: 5000,
-  generateRobotsTxt: true,
   exclude: [],
   robotsTxtOptions: {
-    additionalSitemaps: [
-      `${url}/sitemap.xml`,
-    ],
-  },
+    additionalSitemaps: [`${url}/sitemap.xml`, `${url}/server-sitemap-index.xml`]
+  }
 }
