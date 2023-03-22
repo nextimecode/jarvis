@@ -7,7 +7,7 @@
     "dev": "next dev",
     "clean": "rm -rf node_modules .next pnpm-lock.yaml && npx jest --clearCache && pnpm store prune",
     "build": "next build",
-    "postbuild": "next-sitemap && node notifyGoogle.js",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "eslint src --ext .tsx,.ts",
     "lint:fix": "eslint src --ext .tsx,.ts --fix",
