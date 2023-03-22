@@ -3,10 +3,10 @@ import { NextFeatureProps } from '../../molecules/nextFeature'
 import NextCallToAction, { NextCallToActionProps } from '../../organisms/nextCallToAction'
 import NextHero, { NextHeroProps } from '../../organisms/nextHero'
 import NextLayout from '../nextLayout'
-import NextCallToActionWithAnnotation from 'components/organisms/nextCallToActionWithAnnotation'
-import { NavItem } from 'components/organisms/nextHeader'
+import NextCallToActionWithAnnotation from '../../organisms/nextCallToActionWithAnnotation'
+import { NavItem } from '../../organisms/nextHeader'
 import { Box, Center, Container, Flex, Text } from '@chakra-ui/react'
-import NextFeatures from 'components/organisms/nextFeatures'
+import NextFeatures from '../../organisms/nextFeatures'
 import Link from 'next/link'
 
 export type NextTemplateMentorTattooProps = {

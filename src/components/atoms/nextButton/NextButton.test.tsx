@@ -1,5 +1,5 @@
+// NextButton.test.tsx
 import { render } from '@testing-library/react'
-import '@testing-library/jest-dom'
 import { NextButton } from '.'
 
 describe('NextButton', () => {
