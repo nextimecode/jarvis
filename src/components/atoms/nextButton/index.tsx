@@ -21,21 +21,19 @@ export const NextButton = ({
     hover = 'next-dark'
   }
   return (
-    <>
-      <Button
-        bg={bg}
-        textColor={textColor}
-        borderColor="next-primary"
-        variant={variant}
-        height="45px"
-        _hover={{
-          background: hover,
-          color: 'white',
-          borderColor: 'next-dark'
-        }}
-      >
-        {children}
-      </Button>
-    </>
+    <Button
+      bg={bg}
+      textColor={textColor}
+      borderColor="next-primary"
+      variant={variant}
+      height="45px"
+      _hover={{
+        background: hover,
+        color: 'white',
+        borderColor: 'next-dark'
+      }}
+    >
+      {children}
+    </Button>
   )
 }

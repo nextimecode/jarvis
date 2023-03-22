@@ -7,3 +7,4 @@ Host: https://www.nextime.com.br
 
 # Sitemaps
 Sitemap: https://www.nextime.com.br/sitemap.xml
+Sitemap: https://www.nextime.com.br/server-sitemap-index.xml

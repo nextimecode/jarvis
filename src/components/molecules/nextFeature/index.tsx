@@ -28,7 +28,7 @@ const NextFeature = ({ title, text, image, icon, width = 64, height = 64 }: Next
           {icon}
         </Flex>
       )}
-      {image && <Image alt={title} src={image} width={width} height={height} />}
+      {image && <Image alt={String(title)} src={image} width={width} height={height} />}
       {title && <Text fontWeight={600}>{title}</Text>}
       {text && <Text color={'next-blue.100'}>{text}</Text>}
     </Stack>

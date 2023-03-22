@@ -1,6 +1,6 @@
 import { NextCallToActionProps } from '../components/organisms/nextCallToAction'
 import { NextFeatureProps } from '../components/molecules/nextFeature'
-import { NavItem } from 'components/organisms/nextHeader'
+import { NavItem } from '../components/organisms/nextHeader'
 
 export const NAV_ITEMS: Array<NavItem> = [
   {

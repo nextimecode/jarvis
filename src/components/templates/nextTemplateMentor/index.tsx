@@ -7,9 +7,9 @@ import NextHero, { NextHeroProps } from '../../organisms/nextHero'
 import NextLayout from '../nextLayout'
 import { FaLinkedin, FaInstagram, FaGithubSquare, FaYoutube } from 'react-icons/fa'
 import Link from 'next/link'
-import NextCallToActionWithAnnotation from 'components/organisms/nextCallToActionWithAnnotation'
-import NextThreeTierPricingHorizontal from 'components/organisms/nextThreeTierPricingHorizontal'
-import { NavItem } from 'components/organisms/nextHeader'
+import NextCallToActionWithAnnotation from '../../organisms/nextCallToActionWithAnnotation'
+import NextThreeTierPricingHorizontal from '../../organisms/nextThreeTierPricingHorizontal'
+import { NavItem } from '../../organisms/nextHeader'
 
 export type NextTemplateMentorProps = {
   navItems?: Array<NavItem>

@@ -1,4 +1,5 @@
 .DS_Store
+.vscode/
 .next
 # dotenv environment variables file (build for Zeit Now)
 .env.build
