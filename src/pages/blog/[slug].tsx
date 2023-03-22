@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { Container, Heading, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 import { BlogAuthor, BlogTags } from '../../components/organisms/nextArticleList'
+import { Prose } from '@nikolovlazar/chakra-ui-prose'
 
 export default function Blog() {
   const { query } = useRouter()
@@ -29,9 +30,12 @@ export default function Blog() {
         )}
         <Heading pt={6}>{post?.title}</Heading>
         <Text textAlign={'center'}>{date.toLocaleDateString()}</Text>
-        <Text py={4} whiteSpace={'pre-wrap'}>
-          {post?.content.text}
-        </Text>
+        <Prose
+          py={4}
+          dangerouslySetInnerHTML={{
+            __html: String(post?.content.html)
+          }}
+        ></Prose>
         {author && author.picture?.url && author.title && (
           <BlogAuthor
             image={author.picture?.url}
