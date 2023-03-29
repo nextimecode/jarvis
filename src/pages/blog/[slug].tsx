@@ -3,7 +3,7 @@ import { Asset, useGetPostsQuery } from '../../graphql/generated'
 import { useRouter } from 'next/router'
 import { Box, Center, Container, Heading, Spinner, Text } from '@chakra-ui/react'
 import Image from 'next/image'
-import { BlogAuthor, BlogTags } from '../../components/organisms/NextArticleList'
+import { BlogAuthor, BlogTags } from '../../components/organisms/NextArticleList2'
 import { Prose } from '@nikolovlazar/chakra-ui-prose'
 
 export default function Blog() {

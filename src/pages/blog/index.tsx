@@ -1,5 +1,5 @@
 import { Center, Spinner } from '@chakra-ui/react'
-import { NextArticleList } from '../../components/organisms/NextArticleList'
+import { NextArticleList } from '../../components/organisms/NextArticleList2'
 import { NextLayout } from '../../components/templates/NextLayout'
 import { useGetPostsQuery, Post } from '../../graphql/generated'
 
