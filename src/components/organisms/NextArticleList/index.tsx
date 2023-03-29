@@ -9,7 +9,7 @@ import {
   useColorModeValue,
   Container,
   Wrap,
-  WrapItem
+  WrapItem,
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import { Post, Maybe, Asset } from '../../../graphql/generated'
@@ -19,10 +19,10 @@ interface IBlogTags {
   marginTop?: SpaceProps['marginTop']
 }
 
-export const BlogTags: React.FC<IBlogTags> = props => {
+export function BlogTags(props: IBlogTags) {
   return (
     <Wrap marginTop={props.marginTop}>
-      {props.tags?.map(tag => {
+      {props.tags?.map((tag) => {
         return (
           <WrapItem key={tag}>
             <Tag w={'100%'} size={'md'} variant="solid" bg="next-blue.900">
@@ -42,7 +42,7 @@ interface BlogAuthorProps {
   title: string
 }
 
-export const BlogAuthor: React.FC<BlogAuthorProps> = props => {
+export function BlogAuthor(props: BlogAuthorProps) {
   return (
     <HStack marginTop="2" spacing="2" display="flex" alignItems="center">
       {props.image && (
@@ -67,13 +67,13 @@ export const BlogAuthor: React.FC<BlogAuthorProps> = props => {
 export const NextArticleList = ({ posts }: { posts: Post[] }) => {
   const bgGradient = useColorModeValue(
     'radial(orange.600 1px, transparent 1px)',
-    'radial(orange.300 1px, transparent 1px)'
+    'radial(orange.300 1px, transparent 1px)',
   )
   const color = useColorModeValue('gray.400', 'gray.200')
   return (
     <Container maxW={'7xl'} p="12">
       <Heading as="h1">Novidades</Heading>
-      {posts?.map(post => (
+      {posts?.map((post) => (
         <Box
           key={post?.id}
           marginTop={{ base: '1', sm: '5' }}
@@ -81,7 +81,13 @@ export const NextArticleList = ({ posts }: { posts: Post[] }) => {
           flexDirection={{ base: 'column', sm: 'row' }}
           justifyContent="space-between"
         >
-          <Box display="flex" flex="1" marginRight="3" position="relative" alignItems="center">
+          <Box
+            display="flex"
+            flex="1"
+            marginRight="3"
+            position="relative"
+            alignItems="center"
+          >
             {post.coverImage && (
               <Box
                 width={{ base: '100%', sm: '85%' }}
@@ -92,8 +98,9 @@ export const NextArticleList = ({ posts }: { posts: Post[] }) => {
                 <Link
                   href={{
                     pathname: '/blog/[slug]',
-                    query: { slug: post?.slug }
+                    query: { slug: post?.slug },
                   }}
+                  aria-label="Leias sobre novidades na tecnologia em nosso blog"
                 >
                   <Box borderRadius="lg">
                     <Image
@@ -108,7 +115,12 @@ export const NextArticleList = ({ posts }: { posts: Post[] }) => {
               </Box>
             )}
             <Box zIndex="1" width="100%" position="absolute" height="100%">
-              <Box bgGradient={bgGradient} backgroundSize="20px 20px" opacity="0.4" height="100%" />
+              <Box
+                bgGradient={bgGradient}
+                backgroundSize="20px 20px"
+                opacity="0.4"
+                height="100%"
+              />
             </Box>
           </Box>
           <Box
@@ -128,8 +140,9 @@ export const NextArticleList = ({ posts }: { posts: Post[] }) => {
               <Link
                 href={{
                   pathname: '/blog/[slug]',
-                  query: { slug: post.slug }
+                  query: { slug: post.slug },
                 }}
+                aria-label={`Leias sobre ${post.title}`}
               >
                 {post?.title}
               </Link>

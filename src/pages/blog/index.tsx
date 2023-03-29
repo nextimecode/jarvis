@@ -10,7 +10,13 @@ export default function Blog() {
     <NextLayout>
       {loading && (
         <Center height={'50vh'}>
-          <Spinner thickness="4px" speed="0.65s" emptyColor="gray.200" color="blue.500" size="xl" />
+          <Spinner
+            thickness="4px"
+            speed="0.65s"
+            emptyColor="gray.200"
+            color="blue.500"
+            size="xl"
+          />
         </Center>
       )}
       {posts && <NextArticleList posts={posts as Post[]} />}

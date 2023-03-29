@@ -1,9 +1,19 @@
 import { NextLayout } from '../../components/templates/NextLayout'
 import { Asset, useGetPostsQuery } from '../../graphql/generated'
 import { useRouter } from 'next/router'
-import { Box, Center, Container, Heading, Spinner, Text } from '@chakra-ui/react'
+import {
+  Box,
+  Center,
+  Container,
+  Heading,
+  Spinner,
+  Text,
+} from '@chakra-ui/react'
 import Image from 'next/image'
-import { BlogAuthor, BlogTags } from '../../components/organisms/NextArticleList'
+import {
+  BlogAuthor,
+  BlogTags,
+} from '../../components/organisms/NextArticleList'
 import { Prose } from '@nikolovlazar/chakra-ui-prose'
 
 export default function Blog() {
@@ -11,7 +21,7 @@ export default function Blog() {
   const { data, loading } = useGetPostsQuery()
 
   const posts = data?.posts
-  const post = posts?.find(post => post.slug === query.slug)
+  const post = posts?.find((post) => post.slug === query.slug)
   const date = new Date(post?.date)
   const image = post?.coverImage
   const author = post?.author
@@ -37,13 +47,18 @@ export default function Blog() {
           </Center>
         )}
         {image && image.width && image.height && (
-          <Image width={image.width} height={image.height} alt={post?.title} src={image.url} />
+          <Image
+            width={image.width}
+            height={image.height}
+            alt={post?.title}
+            src={image.url}
+          />
         )}
         <Heading pt={6}>{post?.title}</Heading>
         <Text textAlign={'center'}>{date.toLocaleDateString()}</Text>
         <Prose
           dangerouslySetInnerHTML={{
-            __html: String(post?.content.html)
+            __html: String(post?.content.html),
           }}
         ></Prose>
         {author && author.picture && (

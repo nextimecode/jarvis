@@ -5,20 +5,20 @@ import { NavItem } from '../components/organisms/nextHeader'
 export const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Home',
-    href: '/'
+    href: '/',
   },
   {
     label: 'Benefícios',
-    href: '#site'
+    href: '#site',
   },
   {
     label: 'Mentor',
-    href: '#marketing'
+    href: '#marketing',
   },
   {
     label: 'Preço',
-    href: '#investimento'
-  }
+    href: '#investimento',
+  },
 ]
 
 export const nextSocialNetwork =
@@ -29,7 +29,7 @@ export const nextHeroItem = {
   text: 'Mentoria é uma forma de capacitar pessoas por meio do aprendizado com alguém mais experiente na área. O mentor é, geralmente, um profissional com perfil sênior na função ou em algum tema específico, enquanto o mentorado é um iniciante. \n\n O mentor atua como um professor, não apenas para ensinar habilidades técnicas, mas também para ensinar habilidades comportamentais e ajudar no desenvolvimento da carreira do profissional. ',
   image: '/images/illustrations/undraw_social_friends_re_7uaa.svg',
   textButton: 'SIM! QUERO PARTICIPAR DA MENTORIA',
-  url: '#investimento'
+  url: '#investimento',
 }
 
 export const nextCallToActionItems = [
@@ -42,7 +42,7 @@ export const nextCallToActionItems = [
     url: '#investimento',
     width: 388,
     height: 408,
-    directionMd: 'row-reverse'
+    directionMd: 'row-reverse',
   },
   {
     id: 'site',
@@ -52,7 +52,7 @@ export const nextCallToActionItems = [
     url: '#investimento',
     width: 595,
     height: 528,
-    image: '/images/illustrations/undraw_personal_file_re_5joy.svg'
+    image: '/images/illustrations/undraw_personal_file_re_5joy.svg',
   },
   {
     id: 'marketing',
@@ -63,127 +63,127 @@ export const nextCallToActionItems = [
     width: 431,
     height: 650,
     textButton: 'SIM! QUERO PARTICIPAR DA MENTORIA',
-    directionMd: 'row-reverse'
-  }
+    directionMd: 'row-reverse',
+  },
 ] as unknown as Array<NextCallToActionProps>
 
 export const nextFeatureItems = [
   {
     title: 'Tecnologia',
     text: 'Usamos o que há de melhor no mercado, entregando soluções modernas. Adicionamos tecnologias de inteligência Artificial e estratégias analíticas para o seu negócio.',
-    icon: ''
+    icon: '',
   },
   {
     title: 'Design',
     text: 'Usamos o que há de melhor no mercado, entregando soluções modernas. Adicionamos tecnologias de inteligência Artificial e estratégias analíticas para o seu negócio.',
-    icon: ''
+    icon: '',
   },
   {
     title: 'Apps',
     text: 'Usamos o que há de melhor no mercado, entregando soluções modernas. Adicionamos tecnologias de inteligência Artificial e estratégias analíticas para o seu negócio.',
-    icon: ''
+    icon: '',
   },
   {
     title: 'Sites Otimizados',
     text: 'Usamos o que há de melhor no mercado, entregando soluções modernas. Adicionamos tecnologias de inteligência Artificial e estratégias analíticas para o seu negócio.',
-    icon: ''
+    icon: '',
   },
   {
     title: 'Inteligência Artificial',
     text: 'Usamos o que há de melhor no mercado, entregando soluções modernas. Adicionamos tecnologias de inteligência Artificial e estratégias analíticas para o seu negócio.',
-    icon: ''
+    icon: '',
   },
   {
     title: 'Marketing',
     text: 'Usamos o que há de melhor no mercado, entregando soluções modernas. Adicionamos tecnologias de inteligência Artificial e estratégias analíticas para o seu negócio.',
-    icon: ''
-  }
+    icon: '',
+  },
 ] as unknown as Array<NextFeatureProps>
 
 export const nextTechnologyItems = [
   {
     image: '/images/logos/nextjs.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/vercel.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/firebase.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/amp.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/bootstrap.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/tailwind.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/chakra.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/stripe.svg',
     width: 64,
-    height: 64
-  }
+    height: 64,
+  },
 ]
 
 export const videos = [
   {
     image: '/images/logos/nextjs.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/vercel.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/firebase.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/amp.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/bootstrap.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/tailwind.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/chakra.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/stripe.svg',
     width: 64,
-    height: 64
-  }
+    height: 64,
+  },
 ]
 
 export const nextTeamItems = [
@@ -194,7 +194,7 @@ export const nextTeamItems = [
     avatar: '/images/illustrations/team/daniel.svg',
     linkedin: 'https://www.linkedin.com/in/phdduarte/',
     instagram: 'https://www.instagram.com/phdduarte/',
-    youtube: 'https://www.youtube.com/watch?v=-TqTAxrOxaM'
+    youtube: 'https://www.youtube.com/watch?v=-TqTAxrOxaM',
   },
   {
     name: 'Daniel Rodrigues',
@@ -202,18 +202,18 @@ export const nextTeamItems = [
     text: "I didn't even need training. We've used EEZY for the last five years. I have gotten at least 50 times the value from EEZY. I made back the purchase price in just 48 hours!",
     avatar: '/images/illustrations/team/daniel.svg',
     linkedin: 'https://www.linkedin.com/in/daniel-rodrigues-5a6007121/',
-    instagram: 'https://www.instagram.com/danielkeoma/'
+    instagram: 'https://www.instagram.com/danielkeoma/',
   },
   {
     name: 'Priscilla',
     role: 'Movie star',
     text: "Thank you for making it painless, pleasant and most of all, hassle free! I'm good to go. No matter where you go, EEZY is the coolest, most happening thing around! I love EEZY!",
-    avatar: '/images/illustrations/team/daniel.svg'
+    avatar: '/images/illustrations/team/daniel.svg',
   },
   {
     name: 'Luiz',
     role: 'Musician',
     text: 'I am so pleased with this product. EEZY is both attractive and highly adaptable. Without EEZY, we would have gone bankrupt by now. Thank you for creating this product!',
-    avatar: '/images/illustrations/team/bruna.svg'
-  }
+    avatar: '/images/illustrations/team/bruna.svg',
+  },
 ] as unknown as Array<Record<string, string>>

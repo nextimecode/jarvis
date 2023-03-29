@@ -19,7 +19,7 @@ export const layout = {
     'designer para fazer site',
     'design system',
     'desenvolver ecommerce',
-    'desenvolver aplicativos'
+    'desenvolver aplicativos',
   ],
   siteName: 'NeXTIME',
   socialTitle:
@@ -33,7 +33,7 @@ export const layout = {
   logoAlt: 'NeXTIME Logo',
   logoSubtitle: undefined,
   bg: 'next-dark',
-  logoSubtitleColor: 'next-primary'
+  logoSubtitleColor: 'next-primary',
 }
 
 export const nextHeroItem = {
@@ -41,7 +41,7 @@ export const nextHeroItem = {
   title: 'Transforme suas ideias em negócios de sucesso',
   text: 'Tenha nosso time ao seu lado para fazer seus planos virarem realidade. Foque onde precisa enquanto nossos especialistas cuidam de tudo para o seu negócio evoluir como você sempre quis.',
   textButton: 'Quero revolucionar minha empresa',
-  url: layout.nextSocialNetwork
+  url: layout.nextSocialNetwork,
 }
 
 export const nextCallToActionItems = [
@@ -54,7 +54,7 @@ export const nextCallToActionItems = [
     url: layout.nextSocialNetwork,
     width: 600,
     height: 630,
-    directionMd: 'row-reverse'
+    directionMd: 'row-reverse',
   },
   {
     id: 'site',
@@ -64,7 +64,7 @@ export const nextCallToActionItems = [
     url: layout.nextSocialNetwork,
     width: 595,
     height: 528,
-    image: '/images/home/optar.png'
+    image: '/images/home/optar.png',
   },
   {
     id: 'marketing',
@@ -75,99 +75,99 @@ export const nextCallToActionItems = [
     width: 450,
     height: 480,
     textButton: 'Quero que minha empresa seja vista',
-    directionMd: 'row-reverse'
-  }
+    directionMd: 'row-reverse',
+  },
 ] as unknown as Array<NextCallToActionProps>
 
 export const nextFeatureItems = [
   {
     title: 'Tecnologia',
     text: 'Usamos o que há de melhor no mercado, entregando soluções modernas. Adicionamos tecnologias de inteligência Artificial e estratégias analíticas para o seu negócio.',
-    icon: ''
+    icon: '',
   },
   {
     title: 'Design',
     text: 'Usamos o que há de melhor no mercado, entregando soluções modernas. Adicionamos tecnologias de inteligência Artificial e estratégias analíticas para o seu negócio.',
-    icon: ''
+    icon: '',
   },
   {
     title: 'Apps',
     text: 'Usamos o que há de melhor no mercado, entregando soluções modernas. Adicionamos tecnologias de inteligência Artificial e estratégias analíticas para o seu negócio.',
-    icon: ''
+    icon: '',
   },
   {
     title: 'Sites Otimizados',
     text: 'Usamos o que há de melhor no mercado, entregando soluções modernas. Adicionamos tecnologias de inteligência Artificial e estratégias analíticas para o seu negócio.',
-    icon: ''
+    icon: '',
   },
   {
     title: 'Inteligência Artificial',
     text: 'Usamos o que há de melhor no mercado, entregando soluções modernas. Adicionamos tecnologias de inteligência Artificial e estratégias analíticas para o seu negócio.',
-    icon: ''
+    icon: '',
   },
   {
     title: 'Marketing',
     text: 'Usamos o que há de melhor no mercado, entregando soluções modernas. Adicionamos tecnologias de inteligência Artificial e estratégias analíticas para o seu negócio.',
-    icon: ''
-  }
+    icon: '',
+  },
 ] as unknown as Array<NextFeatureProps>
 
 export const nextTechnologyItems = [
   {
     image: '/images/logos/flutter.svg',
     width: 51,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/nextjs.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/vercel.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/nodejs.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/nestjs.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/firebase.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/amp.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/bootstrap.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/tailwind.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/chakra.svg',
     width: 64,
-    height: 64
+    height: 64,
   },
   {
     image: '/images/logos/stripe.svg',
     width: 64,
-    height: 64
-  }
+    height: 64,
+  },
 ]
 
 export const nextTeamItems = [
@@ -178,7 +178,7 @@ export const nextTeamItems = [
     avatar: '/images/home/team/daniel.svg',
     linkedin: 'https://www.linkedin.com/in/phdduarte/',
     instagram: 'https://www.instagram.com/phdduarte/',
-    youtube: 'https://www.youtube.com/watch?v=-TqTAxrOxaM'
+    youtube: 'https://www.youtube.com/watch?v=-TqTAxrOxaM',
   },
   {
     name: 'Daniel Rodrigues',
@@ -186,18 +186,18 @@ export const nextTeamItems = [
     text: "I didn't even need training. We've used EEZY for the last five years. I have gotten at least 50 times the value from EEZY. I made back the purchase price in just 48 hours!",
     avatar: '/images/home/team/daniel.svg',
     linkedin: 'https://www.linkedin.com/in/daniel-rodrigues-5a6007121/',
-    instagram: 'https://www.instagram.com/danielkeoma/'
+    instagram: 'https://www.instagram.com/danielkeoma/',
   },
   {
     name: 'Priscilla',
     role: 'Movie star',
     text: "Thank you for making it painless, pleasant and most of all, hassle free! I'm good to go. No matter where you go, EEZY is the coolest, most happening thing around! I love EEZY!",
-    avatar: '/images/home/team/daniel.svg'
+    avatar: '/images/home/team/daniel.svg',
   },
   {
     name: 'Luiz',
     role: 'Musician',
     text: 'I am so pleased with this product. EEZY is both attractive and highly adaptable. Without EEZY, we would have gone bankrupt by now. Thank you for creating this product!',
-    avatar: '/images/home/team/bruna.svg'
-  }
+    avatar: '/images/home/team/bruna.svg',
+  },
 ] as unknown as Array<Record<string, string>>

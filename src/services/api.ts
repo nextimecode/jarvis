@@ -4,7 +4,7 @@ import getConfig from 'next/config'
 const { publicRuntimeConfig } = getConfig()
 
 const api = axios.create({
-  baseURL: publicRuntimeConfig.backendUrl
+  baseURL: publicRuntimeConfig.backendUrl,
 })
 
 const retryDelay = (retryNumber = 0) => {
@@ -16,7 +16,7 @@ const retryDelay = (retryNumber = 0) => {
 axiosRetry(api, {
   retries: 5,
   retryDelay,
-  retryCondition: axiosRetry.isRetryableError
+  retryCondition: axiosRetry.isRetryableError,
 })
 
 export default api

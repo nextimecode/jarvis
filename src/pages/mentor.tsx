@@ -6,7 +6,7 @@ import {
   nextTechnologyItems,
   nextTeamItems,
   nextSocialNetwork,
-  NAV_ITEMS
+  NAV_ITEMS,
 } from '../data/mentor'
 
 const Mentor = () => {

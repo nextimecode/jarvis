@@ -1,11 +1,26 @@
-import { Box, Center, Container, Flex, Heading, Icon, SimpleGrid } from '@chakra-ui/react'
+import {
+  Box,
+  Center,
+  Container,
+  Flex,
+  Heading,
+  Icon,
+  SimpleGrid,
+} from '@chakra-ui/react'
 import React from 'react'
 import { NextFeatureProps } from '../../molecules/nextFeature'
-import NextCallToAction, { NextCallToActionProps } from '../../organisms/nextCallToAction'
+import NextCallToAction, {
+  NextCallToActionProps,
+} from '../../organisms/nextCallToAction'
 import NextFeatures from '../../organisms/nextFeatures'
 import NextHero, { NextHeroProps } from '../../organisms/nextHero'
 import { NextLayout } from '../NextLayout'
-import { FaLinkedin, FaInstagram, FaGithubSquare, FaYoutube } from 'react-icons/fa'
+import {
+  FaLinkedin,
+  FaInstagram,
+  FaGithubSquare,
+  FaYoutube,
+} from 'react-icons/fa'
 import Link from 'next/link'
 import NextCallToActionWithAnnotation from '../../organisms/nextCallToActionWithAnnotation'
 import NextThreeTierPricingHorizontal from '../../organisms/nextThreeTierPricingHorizontal'
@@ -28,7 +43,7 @@ const NextTemplateMentor = ({
   nextHeroItem,
   nextCallToActionItems,
   nextTechnologyItems,
-  hasNextCallToActionWithAnnotation
+  hasNextCallToActionWithAnnotation,
 }: NextTemplateMentorProps) => {
   return (
     <NextLayout
@@ -50,7 +65,7 @@ const NextTemplateMentor = ({
         'mudança de carreira',
         'como se tornar um desenvolvedor',
         'como ser um programador',
-        'como se tornar programador'
+        'como se tornar programador',
       ]}
       socialImageUrl={'./images/mentor/social_image.png'}
     >
@@ -82,11 +97,14 @@ const NextTemplateMentor = ({
         <Center>
           <Flex>
             <Box px="4">
-              <Link href={'https://www.linkedin.com/in/phdduarte/'} target={'_blank'}>
+              <Link
+                href={'https://www.linkedin.com/in/phdduarte/'}
+                target={'_blank'}
+              >
                 <Icon
                   color="next-primary"
                   _hover={{
-                    color: 'white'
+                    color: 'white',
                   }}
                   as={FaLinkedin}
                   w={16}
@@ -95,11 +113,14 @@ const NextTemplateMentor = ({
               </Link>
             </Box>
             <Box px="4">
-              <Link href={'https://www.instagram.com/phdduarte/'} target={'_blank'}>
+              <Link
+                href={'https://www.instagram.com/phdduarte/'}
+                target={'_blank'}
+              >
                 <Icon
                   color="next-primary"
                   _hover={{
-                    color: 'white'
+                    color: 'white',
                   }}
                   as={FaInstagram}
                   w={16}
@@ -108,11 +129,14 @@ const NextTemplateMentor = ({
               </Link>
             </Box>
             <Box px="4">
-              <Link href={'https://www.youtube.com/watch?v=-TqTAxrOxaM'} target={'_blank'}>
+              <Link
+                href={'https://www.youtube.com/watch?v=-TqTAxrOxaM'}
+                target={'_blank'}
+              >
                 <Icon
                   color="next-primary"
                   _hover={{
-                    color: 'white'
+                    color: 'white',
                   }}
                   as={FaYoutube}
                   w={16}
@@ -125,7 +149,7 @@ const NextTemplateMentor = ({
                 <Icon
                   color="next-primary"
                   _hover={{
-                    color: 'white'
+                    color: 'white',
                   }}
                   as={FaGithubSquare}
                   w={16}
@@ -147,7 +171,7 @@ const NextTemplateMentor = ({
           poster="/videos/aluno1.png"
           objectFit="contain"
           sx={{
-            aspectRatio: '16/9'
+            aspectRatio: '16/9',
           }}
         />
         <Box
@@ -157,7 +181,7 @@ const NextTemplateMentor = ({
           poster="/videos/aluno2.png"
           objectFit="contain"
           sx={{
-            aspectRatio: '16/9'
+            aspectRatio: '16/9',
           }}
         />
         <Box
@@ -167,7 +191,7 @@ const NextTemplateMentor = ({
           poster="/videos/aluno3.png"
           objectFit="contain"
           sx={{
-            aspectRatio: '16/9'
+            aspectRatio: '16/9',
           }}
         />
         <Box
@@ -177,7 +201,7 @@ const NextTemplateMentor = ({
           poster="/videos/aluno4.png"
           objectFit="contain"
           sx={{
-            aspectRatio: '16/9'
+            aspectRatio: '16/9',
           }}
         />
       </SimpleGrid>

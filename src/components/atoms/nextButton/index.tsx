@@ -2,10 +2,22 @@ import React, { PropsWithChildren } from 'react'
 import { Button } from '@chakra-ui/react'
 
 type Props = {
-  bg?: 'next-primary' | 'next-dark' | 'next-green' | 'white' | 'dark' | undefined
+  bg?:
+    | 'next-primary'
+    | 'next-dark'
+    | 'next-green'
+    | 'white'
+    | 'dark'
+    | undefined
   variant?: 'solid' | 'outline' | 'ghost' | 'link' | undefined
   textColor?: 'next-primary' | 'next-dark' | 'white' | 'dark' | undefined
-  hover?: 'next-primary' | 'next-dark' | 'next-dark-gray' | 'white' | 'dark' | undefined
+  hover?:
+    | 'next-primary'
+    | 'next-dark'
+    | 'next-dark-gray'
+    | 'white'
+    | 'dark'
+    | undefined
 }
 
 export const NextButton = ({
@@ -13,7 +25,7 @@ export const NextButton = ({
   children,
   variant = 'solid',
   textColor = 'next-primary',
-  hover = 'next-dark'
+  hover = 'next-dark',
 }: PropsWithChildren<Props>) => {
   if (variant === 'solid') {
     bg = 'next-dark'
@@ -30,7 +42,7 @@ export const NextButton = ({
       _hover={{
         background: hover,
         color: 'white',
-        borderColor: 'next-dark'
+        borderColor: 'next-dark',
       }}
     >
       {children}

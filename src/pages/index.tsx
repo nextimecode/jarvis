@@ -4,7 +4,7 @@ import {
   nextFeatureItems,
   nextCallToActionItems,
   nextTechnologyItems,
-  nextTeamItems
+  nextTeamItems,
 } from '../data'
 
 export default function NextHome() {

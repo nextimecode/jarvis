@@ -7,7 +7,7 @@ import {
   ListIcon,
   ListItem,
   Stack,
-  Text
+  Text,
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import { FaCheckCircle } from 'react-icons/fa'
@@ -15,26 +15,32 @@ import { FaCheckCircle } from 'react-icons/fa'
 const optionsStarter = [
   {
     id: 1,
-    desc: 'Acesso a um grupo no WhatsApp\ncom dicas da área de TI, novidades na tecnologia,\nvagas de emprego e muito mais.'
-  }
+    desc: 'Acesso a um grupo no WhatsApp\ncom dicas da área de TI, novidades na tecnologia,\nvagas de emprego e muito mais.',
+  },
 ]
 
 const optionsPlus = [
   {
     id: 1,
-    desc: 'Acesso a um grupo no WhatsApp\ncom dicas da área de TI, novidades na tecnologia,\nvagas de emprego e muito mais.'
+    desc: 'Acesso a um grupo no WhatsApp\ncom dicas da área de TI, novidades na tecnologia,\nvagas de emprego e muito mais.',
   },
-  { id: 2, desc: 'Teste analisado individualmente para saber\nqual área você se destaca.' },
-  { id: 3, desc: '30 minutos de mentoria no mês.' }
+  {
+    id: 2,
+    desc: 'Teste analisado individualmente para saber\nqual área você se destaca.',
+  },
+  { id: 3, desc: '30 minutos de mentoria no mês.' },
 ]
 
 const optionsPro = [
   {
     id: 1,
-    desc: 'Acesso a um grupo no WhatsApp\ncom dicas da área de TI, novidades na tecnologia,\nvagas de emprego e muito mais.'
+    desc: 'Acesso a um grupo no WhatsApp\ncom dicas da área de TI, novidades na tecnologia,\nvagas de emprego e muito mais.',
   },
-  { id: 2, desc: 'Teste analisado individualmente para saber\nqual área você se destaca.' },
-  { id: 3, desc: '1 hora de mentoria no mês.' }
+  {
+    id: 2,
+    desc: 'Teste analisado individualmente para saber\nqual área você se destaca.',
+  },
+  { id: 3, desc: '1 hora de mentoria no mês.' },
 ]
 
 const optionsButtons =
@@ -54,11 +60,11 @@ const PackageTier = ({ title, options, typePlan, url }: PackageTierProps) => {
       py={3}
       justifyContent={{
         base: 'flex-start',
-        md: 'space-around'
+        md: 'space-around',
       }}
       direction={{
         base: 'column',
-        md: 'row'
+        md: 'row',
       }}
       alignItems={{ md: 'center' }}
     >
@@ -91,17 +97,17 @@ const NextThreeTierPricingHorizontal = () => {
           alignItems={'center'}
           justifyContent={{
             base: 'flex-start',
-            md: 'space-around'
+            md: 'space-around',
           }}
           direction={{
             base: 'column',
-            md: 'row'
+            md: 'row',
           }}
         >
           <Stack
             width={{
               base: '100%',
-              md: '40%'
+              md: '40%',
             }}
             textAlign={'center'}
           >
@@ -112,12 +118,13 @@ const NextThreeTierPricingHorizontal = () => {
           <Stack
             width={{
               base: '100%',
-              md: '60%'
+              md: '60%',
             }}
           >
             <Text textAlign={'center'}>
-              Todos os passos para o pagamento e entrada nos grupos serão explicado no whatsapp após
-              a escolha do plano. Basta clicar em um dos botões e será redirecionado.
+              Todos os passos para o pagamento e entrada nos grupos serão
+              explicado no whatsapp após a escolha do plano. Basta clicar em um
+              dos botões e será redirecionado.
             </Text>
           </Stack>
         </Stack>

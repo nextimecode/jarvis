@@ -41,7 +41,7 @@ export function NextLayout({
   bg = layout.bg,
   keywords = layout.keywords,
   siteName = layout.siteName,
-  socialImageUrl = layout.socialImageUrl
+  socialImageUrl = layout.socialImageUrl,
 }: PropsWithChildren<Props>) {
   return (
     <>
@@ -61,34 +61,34 @@ export function NextLayout({
               width: 853,
               height: 600,
               alt: 'logo da empresa NeXTIME',
-              type: 'image/jpeg'
-            }
+              type: 'image/jpeg',
+            },
           ],
-          siteName
+          siteName,
         }}
         twitter={{
           handle: '@phdduarte',
-          cardType: 'summary_large_image'
+          cardType: 'summary_large_image',
         }}
         additionalLinkTags={[
           {
             rel: 'icon',
-            href: `${url}/favicon.ico`
-          }
+            href: `${url}/favicon.ico`,
+          },
         ]}
         additionalMetaTags={[
           {
             name: 'application-name',
-            content: 'Nextime'
+            content: 'Nextime',
           },
           {
             name: 'keywords',
-            content: keywords?.join(', ')
+            content: keywords?.join(', '),
           },
           {
             name: 'application-name',
-            content: 'Nextime'
-          }
+            content: 'Nextime',
+          },
         ]}
         robotsProps={{
           nosnippet: true,
@@ -97,7 +97,7 @@ export function NextLayout({
           noarchive: true,
           maxSnippet: -1,
           maxImagePreview: 'large',
-          maxVideoPreview: -1
+          maxVideoPreview: -1,
         }}
       />
 
@@ -114,7 +114,14 @@ export function NextLayout({
       <main>{children}</main>
 
       <NextFooter bg={bg} />
-      <Box position="fixed" width="60px" height="60px" zIndex={100} bottom="20px" right="20px">
+      <Box
+        position="fixed"
+        width="60px"
+        height="60px"
+        zIndex={100}
+        bottom="20px"
+        right="20px"
+      >
         <Link href={nextSocialNetwork} target={'_blank'}>
           <NextWhatsIcon />
         </Link>

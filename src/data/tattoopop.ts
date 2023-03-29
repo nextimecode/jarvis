@@ -5,16 +5,16 @@ import { NavItem } from '../components/organisms/nextHeader'
 export const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Melhores tatuadores',
-    href: '#tatuadores'
+    href: '#tatuadores',
   },
   {
     label: 'Divulgue seu trabalho',
-    href: '#trabalho'
+    href: '#trabalho',
   },
   {
     label: 'Funcionalidades',
-    href: '#funcionalidades'
-  }
+    href: '#funcionalidades',
+  },
 ]
 
 export const nextSocialNetwork =
@@ -27,7 +27,7 @@ export const nextHeroItem = {
   height: 640,
   image: '/images/tattoopop/celular02.svg',
   textButton: 'BAIXE O APLICATIVO AGORA MESMO',
-  url: 'https://tattoopopprd.page.link/AaTt'
+  url: 'https://tattoopopprd.page.link/AaTt',
 }
 
 export const nextCallToActionItems = [
@@ -40,7 +40,7 @@ export const nextCallToActionItems = [
     url: 'https://tattoopopprd.page.link/AaTt',
     width: 396,
     height: 396,
-    directionMd: 'row-reverse'
+    directionMd: 'row-reverse',
   },
   {
     id: 'trabalho',
@@ -50,8 +50,8 @@ export const nextCallToActionItems = [
     url: 'https://tattoopopprd.page.link/AaTt',
     width: 433,
     height: 433,
-    image: '/images/tattoopop/circulo2.png'
-  }
+    image: '/images/tattoopop/circulo2.png',
+  },
 ] as unknown as Array<NextCallToActionProps>
 
 export const nextFeatureItems = [
@@ -60,20 +60,20 @@ export const nextFeatureItems = [
     text: 'Já imaginou você encontrar os melhores tatuadores próximos de você? No tattoo Pop isso é possível apenas inserindo o local que deseja visualizar o artista.',
     image: '/images/tattoopop/icon_cloud.svg',
     width: 60,
-    height: 50
+    height: 50,
   },
   {
     title: 'Meus artistas favoritos',
     text: 'Fácil e prático! Aqui no Tattoo você pode listar seus artistas favoritos apenas com um clique.',
     image: '/images/tattoopop/icon_cloud.svg',
     width: 60,
-    height: 50
+    height: 50,
   },
   {
     title: 'Publique seu trabalho',
     text: 'Para você que é tatuador e deseja aumentar sua cartela de clientes, aqui no tattoo você vai se conectar com clientes de todo o mundo!',
     image: '/images/tattoopop/icon_cloud.svg',
     width: 60,
-    height: 50
-  }
+    height: 50,
+  },
 ] as unknown as Array<NextFeatureProps>
