@@ -119,8 +119,12 @@ export const NextArticleList = ({ posts }: { posts: Post[] }) => {
             marginTop={{ base: '3', sm: '0' }}
             pb={4}
           >
-            <BlogTags tags={post?.tags} />
-            <Heading marginTop="1" pt={1}>
+            {post?.tags && (
+              <Box display={['none', 'block']}>
+                <BlogTags tags={post.tags} />
+              </Box>
+            )}
+            <Heading fontSize={['md', '4xl']} marginTop="1">
               <Link
                 href={{
                   pathname: '/blog/[slug]',
@@ -130,16 +134,20 @@ export const NextArticleList = ({ posts }: { posts: Post[] }) => {
                 {post?.title}
               </Link>
             </Heading>
-            <Text as="p" marginTop="2" color={color} fontSize="lg">
-              {post?.excerpt}
-            </Text>
+            <Box display={['none', 'block']}>
+              <Text as="p" marginTop="2" color={color} fontSize="lg">
+                {post?.excerpt}
+              </Text>
+            </Box>
             {post.author && (
-              <BlogAuthor
-                image={post.author.picture}
-                name={post.author.name}
-                date={new Date(post.date)}
-                title={post.author.title as string}
-              />
+              <Box display={['none', 'block']}>
+                <BlogAuthor
+                  image={post.author.picture}
+                  name={post.author.name}
+                  date={new Date(post.date)}
+                  title={post.author.title as string}
+                />
+              </Box>
             )}
           </Box>
         </Box>

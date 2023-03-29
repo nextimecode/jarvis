@@ -6,7 +6,6 @@ import { useGetPostsQuery, Post } from '../../graphql/generated'
 export default function Blog() {
   const { data, loading } = useGetPostsQuery()
   const posts = data?.posts
-  console.log(loading)
   return (
     <NextLayout>
       {loading && (
