@@ -1,15 +1,20 @@
+import { Center, Spinner } from '@chakra-ui/react'
 import { NextArticleList } from '../../components/organisms/NextArticleList'
 import { NextLayout } from '../../components/templates/NextLayout'
-import { useGetPostsQuery } from '../../graphql/generated'
+import { useGetPostsQuery, Post } from '../../graphql/generated'
 
 export default function Blog() {
-  const { data } = useGetPostsQuery()
+  const { data, loading } = useGetPostsQuery()
   const posts = data?.posts
-  const invertedPosts = posts?.map((item, index) => posts[posts.length - index - 1])
-
+  console.log(loading)
   return (
     <NextLayout>
-      <NextArticleList posts={invertedPosts} />
+      {loading && (
+        <Center height={'50vh'}>
+          <Spinner thickness="4px" speed="0.65s" emptyColor="gray.200" color="blue.500" size="xl" />
+        </Center>
+      )}
+      {posts && <NextArticleList posts={posts as Post[]} />}
     </NextLayout>
   )
 }

@@ -1,13 +1,15 @@
 query GetPosts {
-  posts {
+  posts(orderBy: createdAt_DESC) {
     id
     author {
       id
       name
+      title
       picture {
         url
+        height
+        width
       }
-      title
     }
     createdAt
     date
@@ -28,6 +30,7 @@ query GetPosts {
     }
     seo {
       keywords
+      id
     }
   }
 }
