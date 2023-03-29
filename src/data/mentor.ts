@@ -4,7 +4,8 @@ import { NavItem } from '../components/organisms/nextHeader'
 
 export const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Home'
+    label: 'Home',
+    href: '/'
   },
   {
     label: 'Benefícios',
