@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { nextSocialNetwork } from '../../../data'
+import { layout } from '../../../data'
 
 import {
   Box,
@@ -28,7 +28,7 @@ export type NextFooterProps = {
   bg?: string | undefined
 }
 
-const NextFooter = ({ bg = 'next-primary' }: NextFooterProps) => {
+export function NextFooter({ bg = 'next-primary' }: NextFooterProps) {
   return (
     <footer>
       <Box bg={bg} pt={12} pb={12}>
@@ -52,7 +52,7 @@ const NextFooter = ({ bg = 'next-primary' }: NextFooterProps) => {
                       h={16}
                     />
                   </Link>
-                  <Link href={nextSocialNetwork().url} target={'_blank'}>
+                  <Link href={layout.nextSocialNetwork} target={'_blank'}>
                     <Icon
                       color="white"
                       _hover={{ color: 'next-dark' }}
@@ -135,5 +135,3 @@ const NextFooter = ({ bg = 'next-primary' }: NextFooterProps) => {
     </footer>
   )
 }
-
-export default NextFooter

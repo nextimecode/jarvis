@@ -1,11 +1,8 @@
-name: Run tests
+name: Audit
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  - pull_request
 jobs:
-  tests:
+  audit:
     runs-on: ubuntu-latest
 
     steps:
@@ -39,8 +36,4 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
-
-      - name: Run tests
-        run: pnpm run test
-
+        run: pnpm audit

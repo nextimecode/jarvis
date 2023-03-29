@@ -3,7 +3,7 @@ import { NextFeatureProps } from '../../molecules/nextFeature'
 import NextCallToAction, { NextCallToActionProps } from '../../organisms/nextCallToAction'
 import NextFeatures from '../../organisms/nextFeatures'
 import NextHero, { NextHeroProps } from '../../organisms/nextHero'
-import NextLayout from '../nextLayout'
+import { NextLayout } from '../NextLayout'
 
 export type NextTemplateHomeProps = {
   nextHeroItem: NextHeroProps
@@ -13,7 +13,7 @@ export type NextTemplateHomeProps = {
   nextTeamItems: Array<Record<string, string>>
 }
 
-const NextTemplateHome = ({
+export const NextTemplateHome = ({
   nextHeroItem,
   nextCallToActionItems,
   nextTechnologyItems
@@ -46,5 +46,3 @@ const NextTemplateHome = ({
     </NextLayout>
   )
 }
-
-export default NextTemplateHome

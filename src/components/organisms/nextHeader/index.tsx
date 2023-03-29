@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import NextJSLink from 'next/link'
+import Link from 'next/link'
 import {
   Box,
   Flex,
@@ -9,7 +9,6 @@ import {
   Stack,
   Collapse,
   Icon,
-  Link,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -19,19 +18,13 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
-import { nextSocialNetwork } from '../../../data'
+import { layout } from '../../../data'
+import { useRouter } from 'next/router'
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
-    <Link
-      href={href}
-      role={'group'}
-      display={'block'}
-      p={2}
-      rounded={'md'}
-      _hover={{ bg: 'gray.900' }}
-    >
-      <Stack direction={'row'} align={'center'}>
+    <Link href={href} role={'group'}>
+      <Stack direction={'row'} p={2} align={'center'} rounded={'md'} _hover={{ bg: 'gray.900' }}>
         <Box>
           <Text
             transition={'all .3s ease'}
@@ -63,15 +56,17 @@ export interface NavItem {
   label: string
   subLabel?: string
   children?: Array<NavItem>
-  href?: string
+  href: string
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Home'
+    label: 'Home',
+    href: '/'
   },
   {
     label: 'Projetos',
+    href: '#',
     children: [
       {
         label: 'TattooPop',
@@ -92,7 +87,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Orçamento',
-    href: nextSocialNetwork().url
+    href: layout.nextSocialNetwork
   },
   {
     label: 'Blog',
@@ -100,17 +95,8 @@ const NAV_ITEMS: Array<NavItem> = [
   }
 ]
 
-type Props = {
-  navItems?: Array<NavItem>
-  logoSrc?: string
-  logoWidth?: number
-  logoHeight?: number
-  logoAlt?: string
-  logoSubtitle?: string
-  logoSubtitleColor?: string
-}
-
-const DesktopNav = ({ navItems = NAV_ITEMS }: Props) => {
+const DesktopNav = ({ navItems = NAV_ITEMS }) => {
+  const router = useRouter()
   const linkColor = 'white'
   const linkHoverColor = 'next-primary'
   const popoverContentBgColor = 'gray.800'
@@ -121,18 +107,19 @@ const DesktopNav = ({ navItems = NAV_ITEMS }: Props) => {
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
-              <Link
-                p={2}
-                href={navItem.href ?? '#'}
-                fontSize={'sm'}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: 'none',
-                  color: linkHoverColor
-                }}
-              >
-                {navItem.label}
+              <Link href={navItem.href ?? '#'}>
+                <Box
+                  p={2}
+                  fontSize={'sm'}
+                  fontWeight={500}
+                  color={router.pathname === navItem.href ? linkHoverColor : linkColor}
+                  _hover={{
+                    textDecoration: 'none',
+                    color: linkHoverColor
+                  }}
+                >
+                  {navItem.label}
+                </Box>
               </Link>
             </PopoverTrigger>
 
@@ -199,8 +186,8 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         >
           {children &&
             children.map(child => (
-              <Link key={child.label} py={2} href={child.href}>
-                {child.label}
+              <Link key={child.label} href={child.href}>
+                <Box py={2}>{child.label}</Box>
               </Link>
             ))}
         </Stack>
@@ -209,7 +196,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
   )
 }
 
-const MobileNav = ({ navItems = NAV_ITEMS }: Props) => {
+const MobileNav = ({ navItems = NAV_ITEMS }) => {
   return (
     <Stack bg={'gray.800'} p={4} display={{ md: 'none' }}>
       {navItems.map(navItem => (
@@ -219,14 +206,24 @@ const MobileNav = ({ navItems = NAV_ITEMS }: Props) => {
   )
 }
 
+type Props = {
+  navItems?: NavItem[]
+  logoSrc: string
+  logoWidth: number
+  logoHeight: number
+  logoAlt: string
+  logoSubtitle?: string
+  logoSubtitleColor: string
+}
+
 const NextHeader = ({
   navItems = NAV_ITEMS,
-  logoSrc = '/images/logos/logo_nextime.svg',
-  logoWidth = 146,
-  logoHeight = 45,
-  logoAlt = 'NeXTIME Logo',
+  logoSrc,
+  logoWidth,
+  logoHeight,
+  logoAlt,
   logoSubtitle,
-  logoSubtitleColor = 'next-primary'
+  logoSubtitleColor
 }: Props) => {
   const { isOpen, onToggle } = useDisclosure()
 
@@ -256,7 +253,7 @@ const NextHeader = ({
 
           <Stack flex={{ base: 1 }} justify={'flex-end'} direction={'row'} spacing={6}>
             <HStack spacing={{ base: 3, md: 6 }}>
-              <NextJSLink href={'https://www.instagram.com/nextimetec/'} target={'_blank'}>
+              <Link href={'https://www.instagram.com/nextimetec/'} target={'_blank'}>
                 <Icon
                   color="next-gray"
                   _hover={{ color: 'next-primary' }}
@@ -264,8 +261,8 @@ const NextHeader = ({
                   w={6}
                   h={6}
                 />
-              </NextJSLink>
-              <NextJSLink href={'https://www.facebook.com/nextimetecnologia'} target={'_blank'}>
+              </Link>
+              <Link href={'https://www.facebook.com/nextimetecnologia'} target={'_blank'}>
                 <Icon
                   color="next-gray"
                   _hover={{ color: 'next-primary' }}
@@ -273,8 +270,8 @@ const NextHeader = ({
                   w={6}
                   h={6}
                 />
-              </NextJSLink>
-              <NextJSLink href={'https://www.linkedin.com/company/nextimetec/'} target={'_blank'}>
+              </Link>
+              <Link href={'https://www.linkedin.com/company/nextimetec/'} target={'_blank'}>
                 <Icon
                   color="next-gray"
                   _hover={{ color: 'next-primary' }}
@@ -282,7 +279,7 @@ const NextHeader = ({
                   w={6}
                   h={6}
                 />
-              </NextJSLink>
+              </Link>
             </HStack>
           </Stack>
         </Flex>
