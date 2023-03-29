@@ -25,10 +25,10 @@ import {
 } from 'react-icons/fa'
 
 export type NextFooterProps = {
-  bg?: string | undefined
+  bg?: string
 }
 
-export function NextFooter({ bg = 'next-primary' }: NextFooterProps) {
+export function NextFooter({ bg = 'next-dark' }: NextFooterProps) {
   return (
     <footer>
       <Box bg={bg} pt={12} pb={12}>

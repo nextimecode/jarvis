@@ -8,7 +8,6 @@ const colors = {
   dark: '#17171B',
   'next-blue': {
     100: '#00DAE9',
-    200: '#4882F8',
     900: '#2D426D'
   },
   'next-red': {

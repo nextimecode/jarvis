@@ -32,7 +32,7 @@ export const layout = {
   logoHeight: 45,
   logoAlt: 'NeXTIME Logo',
   logoSubtitle: undefined,
-  bg: 'next-primary',
+  bg: 'next-dark',
   logoSubtitleColor: 'next-primary'
 }
 
