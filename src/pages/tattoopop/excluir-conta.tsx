@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Text, Box, Heading } from '@chakra-ui/react'
-import NextLayout from '../../components/templates/nextLayout'
+import { NextLayout } from '../../components/templates/NextLayout'
 import Image from 'next/image'
 
 const Termos = () => {

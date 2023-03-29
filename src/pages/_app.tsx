@@ -1,4 +1,5 @@
-import React from 'react'
+import SEO from '../../next-seo.config'
+import { DefaultSeo } from 'next-seo'
 import '@fontsource/open-sans/400.css'
 import '@fontsource/open-sans/500.css'
 import '@fontsource/open-sans/600.css'
@@ -13,6 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <ApolloProvider client={client}>
+        <DefaultSeo {...SEO} />
         <Component {...pageProps} />
       </ApolloProvider>
     </ChakraProvider>

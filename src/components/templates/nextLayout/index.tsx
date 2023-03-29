@@ -1,95 +1,114 @@
-import Head from 'next/head'
 import React, { PropsWithChildren } from 'react'
 import NextHeader, { NavItem } from '../../organisms/nextHeader'
-import NextFooter from '../../organisms/nextFooter'
+import { NextFooter } from '../../organisms/nextFooter'
 import { Box } from '@chakra-ui/react'
 import NextWhatsIcon from '../../atoms/nextWhatsIcon'
 import Link from 'next/link'
+import { NextSeo } from 'next-seo'
+import { layout } from '../../../data'
 
 type Props = {
   navItems?: Array<NavItem>
   title?: string
+  url?: string
   description?: string
   nextSocialNetwork?: string
   logoSrc?: string
+  logoWidth?: number
   logoHeight?: number
+  logoAlt?: string
   logoSubtitle?: string
   logoSubtitleColor?: string
   keywords?: Array<string>
   bg?: string
-  image?: string
+  siteName?: string
+  socialImageUrl?: string
 }
 
-const NextLayout = ({
+export function NextLayout({
   navItems,
   children,
-  title = 'NeXTIME',
-  description = 'Site da empresa NeXTIME, temos como visão: otimizar o tempo através do desenvolvimento de novas tecnologias, produtos inovadores, soluções criativas e educação. Possibilitando aos indivíduos gastarem suas energias realizando os seus sonhos.',
-  nextSocialNetwork = 'https://api.whatsapp.com/send?phone=553189217467&text=Ol%C3%A1,%20NeXTIME!%0AGostaria%20de%20solicitar%20um%20orçamento.',
-  logoSrc,
-  logoHeight,
-  logoSubtitle,
-  logoSubtitleColor,
-  bg = 'next-primary',
-  keywords = [
-    'site responsivo',
-    'site personalizado',
-    'site alto padrão',
-    'programador de sites',
-    'empresas de sites',
-    'elaboração de sites',
-    'designer para fazer site',
-    'design system',
-    'desenvolver ecommerce',
-    'desenvolver aplicativos'
-  ],
-  image = './images/social_image.png'
-}: PropsWithChildren<Props>) => {
+  title = layout.title,
+  url = layout.url,
+  description = layout.description,
+  nextSocialNetwork = layout.nextSocialNetwork,
+  logoSrc = layout.logoSrc,
+  logoWidth = layout.logoWidth,
+  logoHeight = layout.logoHeight,
+  logoAlt = layout.logoAlt,
+  logoSubtitle = layout.logoSubtitle,
+  logoSubtitleColor = layout.logoSubtitleColor,
+  bg = layout.bg,
+  keywords = layout.keywords,
+  siteName = layout.siteName,
+  socialImageUrl = layout.socialImageUrl
+}: PropsWithChildren<Props>) {
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords?.join(', ')} />
-        <link rel="icon" href="/favicon.ico" />
-        <meta property="og:url" content="https://www.nextshow.com.br/" />
-        <meta property="og:type" content="page" />
-        <meta property="og:title" content={title} />
-        <meta property="og:image" content={image} />
-        <meta property="og:description" content={description} />
-        <meta property="og:site_name" content="NeXTShow" />
-        <meta property="og:image" content={image} />
-        <meta property="og:image:secure_url" content={image} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="631" />
-        <meta property="og:image:alt" content="mentoria" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="article:author" content="NeXTIME" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta property="twitter:image:src" content={image} />
-        <meta
-          name="robots"
-          content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
-        />
-        <link rel="canonical" href="https://www.nextime.com.br/" />
-        <meta property="og:locale" content="pt_BR" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={image} />
-        <meta name="twitter:label1" content="Written by" />
-        <meta name="twitter:data1" content="NeXTMentor" />
-        <meta name="twitter:label2" content="Time to read" />
-        <meta name="twitter:data2" content="6 minutos" />
-      </Head>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          type: 'website',
+          locale: 'pt_BR',
+          url,
+          title,
+          description,
+          images: [
+            {
+              url: socialImageUrl,
+              width: 853,
+              height: 600,
+              alt: 'logo da empresa NeXTIME',
+              type: 'image/jpeg'
+            }
+          ],
+          siteName
+        }}
+        twitter={{
+          handle: '@phdduarte',
+          cardType: 'summary_large_image'
+        }}
+        additionalLinkTags={[
+          {
+            rel: 'icon',
+            href: `${url}/favicon.ico`
+          }
+        ]}
+        additionalMetaTags={[
+          {
+            name: 'application-name',
+            content: 'Nextime'
+          },
+          {
+            name: 'keywords',
+            content: keywords?.join(', ')
+          },
+          {
+            name: 'application-name',
+            content: 'Nextime'
+          }
+        ]}
+        robotsProps={{
+          nosnippet: true,
+          notranslate: true,
+          noimageindex: true,
+          noarchive: true,
+          maxSnippet: -1,
+          maxImagePreview: 'large',
+          maxVideoPreview: -1
+        }}
+      />
 
       <NextHeader
         navItems={navItems}
         logoSrc={logoSrc}
         logoHeight={logoHeight}
+        logoAlt={logoAlt}
         logoSubtitle={logoSubtitle}
         logoSubtitleColor={logoSubtitleColor}
+        logoWidth={logoWidth}
       />
 
       <main>{children}</main>
@@ -103,5 +122,3 @@ const NextLayout = ({
     </>
   )
 }
-
-export default NextLayout

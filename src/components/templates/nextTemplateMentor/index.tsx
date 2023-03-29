@@ -4,7 +4,7 @@ import { NextFeatureProps } from '../../molecules/nextFeature'
 import NextCallToAction, { NextCallToActionProps } from '../../organisms/nextCallToAction'
 import NextFeatures from '../../organisms/nextFeatures'
 import NextHero, { NextHeroProps } from '../../organisms/nextHero'
-import NextLayout from '../nextLayout'
+import { NextLayout } from '../NextLayout'
 import { FaLinkedin, FaInstagram, FaGithubSquare, FaYoutube } from 'react-icons/fa'
 import Link from 'next/link'
 import NextCallToActionWithAnnotation from '../../organisms/nextCallToActionWithAnnotation'
@@ -52,7 +52,7 @@ const NextTemplateMentor = ({
         'como ser um programador',
         'como se tornar programador'
       ]}
-      image={'./images/mentor/social_image.png'}
+      socialImageUrl={'./images/mentor/social_image.png'}
     >
       {hasNextCallToActionWithAnnotation && <NextCallToActionWithAnnotation />}
       <NextHero

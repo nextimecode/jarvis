@@ -1,5 +1,4 @@
-import React from 'react'
-import NextTemplateHome from '../components/templates/nextTemplateHome'
+import { NextTemplateHome } from '../components/templates/NextTemplateHome'
 import {
   nextHeroItem,
   nextFeatureItems,
@@ -8,7 +7,7 @@ import {
   nextTeamItems
 } from '../data'
 
-const NextHome = () => {
+export default function NextHome() {
   return (
     <NextTemplateHome
       nextHeroItem={nextHeroItem}
@@ -19,5 +18,3 @@ const NextHome = () => {
     />
   )
 }
-
-export default NextHome

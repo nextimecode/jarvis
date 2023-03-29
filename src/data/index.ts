@@ -1,10 +1,39 @@
 import { NextCallToActionProps } from '../components/organisms/nextCallToAction'
 import { NextFeatureProps } from '../components/molecules/nextFeature'
 
-export const nextSocialNetwork = (numberPhone = '553189217467') => {
-  return {
-    url: `https://api.whatsapp.com/send?phone=${numberPhone}&text=Ol%C3%A1,%20NeXTIME!%0AGostaria%20de%20solicitar%20um%20orçamento.`
-  }
+const url = process.env.SITE_URL || 'https://www.nextshow.com.br'
+
+export const layout = {
+  title:
+    'NeXTIME | Maximize seu tempo com tecnologia e torne-se a mudança que deseja ver no mundo.',
+  url,
+  description:
+    'Site da empresa NeXTIME, temos como visão: otimizar o tempo através do desenvolvimento de novas tecnologias, produtos inovadores, soluções criativas e educação. Possibilitando aos indivíduos gastarem suas energias realizando os seus sonhos.',
+  keywords: [
+    'site responsivo',
+    'site personalizado',
+    'site alto padrão',
+    'programador de sites',
+    'empresas de sites',
+    'elaboração de sites',
+    'designer para fazer site',
+    'design system',
+    'desenvolver ecommerce',
+    'desenvolver aplicativos'
+  ],
+  siteName: 'NeXTIME',
+  socialTitle:
+    'NeXTIME | Maximize seu tempo com tecnologia e torne-se a mudança que deseja ver no mundo.',
+  socialImageUrl: `${url}/images/image_page.jpg`,
+  nextSocialNetwork:
+    'https://api.whatsapp.com/send?phone=5511972436305&text=Ol%C3%A1,%20NeXTIME!%0AGostaria%20de%20solicitar%20um%20orçamento..',
+  logoSrc: '/images/logos/logo_nextime.svg',
+  logoWidth: 146,
+  logoHeight: 45,
+  logoAlt: 'NeXTIME Logo',
+  logoSubtitle: undefined,
+  bg: 'next-primary',
+  logoSubtitleColor: 'next-primary'
 }
 
 export const nextHeroItem = {
@@ -12,7 +41,7 @@ export const nextHeroItem = {
   title: 'Transforme suas ideias em negócios de sucesso',
   text: 'Tenha nosso time ao seu lado para fazer seus planos virarem realidade. Foque onde precisa enquanto nossos especialistas cuidam de tudo para o seu negócio evoluir como você sempre quis.',
   textButton: 'Quero revolucionar minha empresa',
-  url: nextSocialNetwork().url
+  url: layout.nextSocialNetwork
 }
 
 export const nextCallToActionItems = [
@@ -22,7 +51,7 @@ export const nextCallToActionItems = [
     text: 'Na NeXTIME, temos a solução completa para você se conectar com quem mais importa: seus clientes. Faça todo mundo levar sua empresa na palma da mão e ter acesso ao melhor que você oferece com poucos cliques.',
     image: '/images/home/tattoo_pop.png',
     textButton: 'Quero meu próprio app',
-    url: nextSocialNetwork().url,
+    url: layout.nextSocialNetwork,
     width: 600,
     height: 630,
     directionMd: 'row-reverse'
@@ -32,7 +61,7 @@ export const nextCallToActionItems = [
     title: 'Tenha um site inovador e veja sua empresa decolar',
     text: 'Conte com nossos especialistas NeXTIME para criar tudo utilizando as ferramentas mais modernas. Desenvolvemos páginas otimizadas que carregam em poucas frações de segundo e não te fazem perder clientes.',
     textButton: 'Quero meu site mais moderno',
-    url: nextSocialNetwork().url,
+    url: layout.nextSocialNetwork,
     width: 595,
     height: 528,
     image: '/images/home/optar.png'
@@ -42,7 +71,7 @@ export const nextCallToActionItems = [
     title: 'Faça sua empresa ser vista e conquiste fãs para sua marca',
     text: 'Tenha a ajuda dos experts NeXTIME para criar campanhas completas para sua marca. Esteja presente em todas as plataformas e redes sociais para ganhar uma legião de clientes.',
     image: '/images/home/instagram.png',
-    url: nextSocialNetwork().url,
+    url: layout.nextSocialNetwork,
     width: 450,
     height: 480,
     textButton: 'Quero que minha empresa seja vista',

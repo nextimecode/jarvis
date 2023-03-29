@@ -1,5 +1,5 @@
-import NextArticleList from '../../components/organisms/nextArticleList'
-import NextLayout from '../../components/templates/nextLayout'
+import { NextArticleList } from '../../components/organisms/NextArticleList'
+import { NextLayout } from '../../components/templates/NextLayout'
 import { useGetPostsQuery } from '../../graphql/generated'
 
 export default function Blog() {

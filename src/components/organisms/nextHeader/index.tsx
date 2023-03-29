@@ -19,7 +19,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
-import { nextSocialNetwork } from '../../../data'
+import { layout } from '../../../data'
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
@@ -68,7 +68,8 @@ export interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Home'
+    label: 'Home',
+    href: '/'
   },
   {
     label: 'Projetos',
@@ -92,7 +93,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Orçamento',
-    href: nextSocialNetwork().url
+    href: layout.nextSocialNetwork
   },
   {
     label: 'Blog',
@@ -100,17 +101,7 @@ const NAV_ITEMS: Array<NavItem> = [
   }
 ]
 
-type Props = {
-  navItems?: Array<NavItem>
-  logoSrc?: string
-  logoWidth?: number
-  logoHeight?: number
-  logoAlt?: string
-  logoSubtitle?: string
-  logoSubtitleColor?: string
-}
-
-const DesktopNav = ({ navItems = NAV_ITEMS }: Props) => {
+const DesktopNav = ({ navItems = NAV_ITEMS }) => {
   const linkColor = 'white'
   const linkHoverColor = 'next-primary'
   const popoverContentBgColor = 'gray.800'
@@ -209,7 +200,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
   )
 }
 
-const MobileNav = ({ navItems = NAV_ITEMS }: Props) => {
+const MobileNav = ({ navItems = NAV_ITEMS }) => {
   return (
     <Stack bg={'gray.800'} p={4} display={{ md: 'none' }}>
       {navItems.map(navItem => (
@@ -219,14 +210,24 @@ const MobileNav = ({ navItems = NAV_ITEMS }: Props) => {
   )
 }
 
+type Props = {
+  navItems?: NavItem[]
+  logoSrc: string
+  logoWidth: number
+  logoHeight: number
+  logoAlt: string
+  logoSubtitle?: string
+  logoSubtitleColor: string
+}
+
 const NextHeader = ({
   navItems = NAV_ITEMS,
-  logoSrc = '/images/logos/logo_nextime.svg',
-  logoWidth = 146,
-  logoHeight = 45,
-  logoAlt = 'NeXTIME Logo',
+  logoSrc,
+  logoWidth,
+  logoHeight,
+  logoAlt,
   logoSubtitle,
-  logoSubtitleColor = 'next-primary'
+  logoSubtitleColor
 }: Props) => {
   const { isOpen, onToggle } = useDisclosure()
 

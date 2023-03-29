@@ -55,7 +55,7 @@ interface NextArticleListProps {
   posts: any
 }
 
-const NextArticleList = ({ posts }: NextArticleListProps) => {
+export const NextArticleList = ({ posts }: NextArticleListProps) => {
   const bgGradient = useColorModeValue(
     'radial(orange.600 1px, transparent 1px)',
     'radial(orange.300 1px, transparent 1px)'
@@ -119,10 +119,10 @@ const NextArticleList = ({ posts }: NextArticleListProps) => {
               {post?.excerpt}
             </Text>
             <BlogAuthor
-              image={post?.author.picture?.url}
-              name={post?.author.name}
+              image={post?.author?.picture?.url}
+              name={post?.author?.name}
               date={new Date(post?.date)}
-              title={post?.author.title}
+              title={post?.author?.title}
             />
           </Box>
         </Box>
@@ -130,5 +130,3 @@ const NextArticleList = ({ posts }: NextArticleListProps) => {
     </Container>
   )
 }
-
-export default NextArticleList

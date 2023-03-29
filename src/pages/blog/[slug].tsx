@@ -1,9 +1,9 @@
-import NextLayout from '../../components/templates/nextLayout'
+import { NextLayout } from '../../components/templates/NextLayout'
 import { useGetPostsQuery } from '../../graphql/generated'
 import { useRouter } from 'next/router'
 import { Container, Heading, Text } from '@chakra-ui/react'
 import Image from 'next/image'
-import { BlogAuthor, BlogTags } from '../../components/organisms/nextArticleList'
+import { BlogAuthor, BlogTags } from '../../components/organisms/NextArticleList'
 import { Prose } from '@nikolovlazar/chakra-ui-prose'
 
 export default function Blog() {
@@ -22,7 +22,7 @@ export default function Blog() {
       title={post?.title}
       description={description}
       keywords={post?.seo?.keywords}
-      image={image?.url}
+      socialImageUrl={image?.url}
     >
       <Container maxW="container.md" pb={6}>
         {image && image.width && image.height && (
