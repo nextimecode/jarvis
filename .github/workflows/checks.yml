@@ -1,11 +1,8 @@
-name: Run tests
+name: Run lint and typecheck
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  - pull_request
 jobs:
-  tests:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -41,6 +38,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run tests
-        run: pnpm run test
+      - name: Run lint
+        run: pnpm run lint
+
+      - name: Run typecheck
+        run: pnpm run typecheck
 

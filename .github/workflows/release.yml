@@ -14,8 +14,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "18.x"
-      - run: npm install -g yarn
-      - run: yarn install --frozen-lockfile
+      - run: npm install -g pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run lint
+      - run: pnpm audit
+      - run: pnpm run test
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
