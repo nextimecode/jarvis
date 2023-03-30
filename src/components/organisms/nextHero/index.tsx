@@ -80,6 +80,7 @@ const NextHero = ({
               width={width}
               height={height}
               priority
+              placeholder="blur"
             />
           </Flex>
           <Box display={{ base: 'block', md: 'none' }} pt={6} pb={12}>

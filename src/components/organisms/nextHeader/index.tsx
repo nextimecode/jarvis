@@ -278,6 +278,7 @@ const NextHeader = ({
               alt={logoAlt}
               width={logoWidth}
               height={logoHeight}
+              placeholder="blur"
             />
             {logoSubtitle && (
               <Text

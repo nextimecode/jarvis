@@ -52,6 +52,7 @@ export function BlogAuthor(props: BlogAuthorProps) {
             alt={`Avatar of ${props.name}`}
             width={props.image.width as number}
             height={props.image.height as number}
+            placeholder="blur"
           />
         </Box>
       )}
@@ -109,6 +110,7 @@ export const NextArticleList = ({ posts }: { posts: Post[] }) => {
                       alt={`Imagem do blog ${post?.title}`}
                       width={post.coverImage.width as number}
                       height={post.coverImage.height as number}
+                      placeholder="blur"
                     />
                   </Box>
                 </Link>

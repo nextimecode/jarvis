@@ -55,7 +55,13 @@ const NextTeamCard = ({
         cursor={'pointer'}
       >
         <Stack textAlign="left">
-          <Image alt={name} src={avatar} width={width} height={height} />
+          <Image
+            alt={name}
+            src={avatar}
+            width={width}
+            height={height}
+            placeholder="blur"
+          />
           <Text fontSize="xl" fontWeight={600}>
             {name}
           </Text>
@@ -66,7 +72,13 @@ const NextTeamCard = ({
         <ModalOverlay />
         <ModalContent bg="dark">
           <ModalHeader>
-            <Image alt={name} src={avatar} width={width} height={height} />
+            <Image
+              alt={name}
+              src={avatar}
+              width={width}
+              height={height}
+              placeholder="blur"
+            />
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>

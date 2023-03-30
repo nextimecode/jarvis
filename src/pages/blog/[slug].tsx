@@ -52,6 +52,8 @@ export default function Blog() {
             height={image.height}
             alt={post?.title}
             src={image.url}
+            placeholder="blur"
+            priority
           />
         )}
         <Heading pt={6}>{post?.title}</Heading>

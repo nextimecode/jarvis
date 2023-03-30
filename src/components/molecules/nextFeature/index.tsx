@@ -36,7 +36,13 @@ const NextFeature = ({
         </Flex>
       )}
       {image && (
-        <Image alt={String(title)} src={image} width={width} height={height} />
+        <Image
+          alt={String(title)}
+          src={image}
+          width={width}
+          height={height}
+          placeholder="blur"
+        />
       )}
       {title && <Text fontWeight={600}>{title}</Text>}
       {text && <Text color={'next-blue.100'}>{text}</Text>}
