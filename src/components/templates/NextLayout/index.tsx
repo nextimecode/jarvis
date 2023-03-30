@@ -60,7 +60,7 @@ export function NextLayout({
               url: socialImageUrl,
               width: 853,
               height: 600,
-              alt: 'logo da empresa NeXTIME',
+              alt: logoAlt,
               type: 'image/jpeg',
             },
           ],
@@ -70,35 +70,12 @@ export function NextLayout({
           handle: '@phdduarte',
           cardType: 'summary_large_image',
         }}
-        additionalLinkTags={[
-          {
-            rel: 'icon',
-            href: `${url}/favicon.ico`,
-          },
-        ]}
         additionalMetaTags={[
-          {
-            name: 'application-name',
-            content: 'Nextime',
-          },
           {
             name: 'keywords',
             content: keywords?.join(', '),
           },
-          {
-            name: 'application-name',
-            content: 'Nextime',
-          },
         ]}
-        robotsProps={{
-          nosnippet: true,
-          notranslate: true,
-          noimageindex: true,
-          noarchive: true,
-          maxSnippet: -1,
-          maxImagePreview: 'large',
-          maxVideoPreview: -1,
-        }}
       />
 
       <NextHeader
@@ -122,7 +99,11 @@ export function NextLayout({
         bottom="20px"
         right="20px"
       >
-        <Link href={nextSocialNetwork} target={'_blank'}>
+        <Link
+          href={nextSocialNetwork}
+          target={'_blank'}
+          aria-label="Faça um orçamento pelo whatsapp"
+        >
           <NextWhatsIcon />
         </Link>
       </Box>

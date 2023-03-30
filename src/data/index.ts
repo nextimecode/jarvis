@@ -1,7 +1,7 @@
 import { NextCallToActionProps } from '../components/organisms/nextCallToAction'
 import { NextFeatureProps } from '../components/molecules/nextFeature'
 
-const url = process.env.SITE_URL || 'https://www.nextshow.com.br'
+const url = process.env.SITE_URL || 'https://www.nextime.com.br'
 
 export const layout = {
   title:
