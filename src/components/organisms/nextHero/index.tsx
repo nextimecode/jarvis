@@ -28,7 +28,7 @@ const NextHero = ({
   url,
   image = '/images/home/code_hero.png',
   width = 450,
-  height = 450,
+  height = 434,
   alt = 'Imagem Hero',
 }: NextHeroProps) => {
   return (

@@ -53,7 +53,7 @@ export const nextCallToActionItems = [
     textButton: 'Quero meu próprio app',
     url: layout.nextSocialNetwork,
     width: 600,
-    height: 630,
+    height: 642,
     directionMd: 'row-reverse',
   },
   {
@@ -63,7 +63,7 @@ export const nextCallToActionItems = [
     textButton: 'Quero meu site mais moderno',
     url: layout.nextSocialNetwork,
     width: 595,
-    height: 528,
+    height: 515,
     image: '/images/home/optar.png',
   },
   {
@@ -73,7 +73,7 @@ export const nextCallToActionItems = [
     image: '/images/home/instagram.png',
     url: layout.nextSocialNetwork,
     width: 450,
-    height: 480,
+    height: 417,
     textButton: 'Quero que minha empresa seja vista',
     directionMd: 'row-reverse',
   },
