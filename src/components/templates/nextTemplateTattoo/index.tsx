@@ -56,6 +56,7 @@ const NextTemplateMentorTattoo = ({
       <Container maxW="container.md" py={6}>
         <Box
           as="iframe"
+          title="Video do youtube"
           src="https://www.youtube.com/embed/pa80P9FVLF0"
           width="100%"
           sx={{

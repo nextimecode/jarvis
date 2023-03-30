@@ -1,78 +1,136 @@
+import { GetStaticPaths, GetStaticProps } from 'next'
 import { NextLayout } from '../../components/templates/NextLayout'
-import { Asset, useGetPostsQuery } from '../../graphql/generated'
-import { useRouter } from 'next/router'
-import {
-  Box,
-  Center,
-  Container,
-  Heading,
-  Spinner,
-  Text,
-} from '@chakra-ui/react'
+import { Asset, Post } from '../../graphql/generated'
+import { client } from '../../lib/apollo'
+import { Box, Container, Heading, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 import {
   BlogAuthor,
   BlogTags,
 } from '../../components/organisms/NextArticleList'
 import { Prose } from '@nikolovlazar/chakra-ui-prose'
+import { layout } from '../../data/'
+import { gql } from 'graphql-tag'
 
-export default function Blog() {
-  const { query } = useRouter()
-  const { data, loading } = useGetPostsQuery()
+export const getStaticPaths: GetStaticPaths = async () => {
+  const GET_SLUGS_POSTS_QUERY = gql`
+    query GetSlugsPosts {
+      posts {
+        slug
+      }
+    }
+  `
+  const { data } = await client.query({
+    query: GET_SLUGS_POSTS_QUERY,
+  })
 
-  const posts = data?.posts
-  const post = posts?.find((post) => post.slug === query.slug)
-  const date = new Date(post?.date)
-  const image = post?.coverImage
-  const author = post?.author
-  const description = post?.excerpt ? post.excerpt : undefined
+  const paths = data.posts.map((post: Post) => ({
+    params: { slug: post.slug },
+  }))
+
+  return {
+    paths,
+    fallback: 'blocking', // Ou 'true' se você deseja usar o Incremental Static Regeneration
+  }
+}
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const GET_POSTS_QUERY = gql`
+    query GetPost($slug: String!) {
+      posts(orderBy: createdAt_DESC, where: { slug: $slug }) {
+        id
+        author {
+          id
+          name
+          title
+          picture {
+            url
+            height
+            width
+          }
+        }
+        createdAt
+        date
+        excerpt
+        slug
+        stage
+        tags
+        title
+        updatedAt
+        coverImage {
+          id
+          url
+          height
+          width
+        }
+        content {
+          html
+        }
+        seo {
+          keywords
+          id
+        }
+      }
+    }
+  `
+
+  const slug = context.params?.slug
+  const { data } = await client.query({
+    query: GET_POSTS_QUERY,
+    variables: { slug },
+  })
+  return {
+    props: data?.posts[0],
+    revalidate: 60 * 60 * 1, // 1 hora
+  }
+}
+
+export default function Blog({
+  date,
+  coverImage,
+  title,
+  seo,
+  content,
+  author,
+  tags,
+}: Post) {
+  const dateBlog = new Date(date)
 
   return (
     <NextLayout
-      title={post?.title}
-      description={description}
-      keywords={post?.seo?.keywords}
-      socialImageUrl={image?.url}
+      title={title}
+      description={seo?.description as string}
+      keywords={seo?.keywords}
+      socialImageUrl={coverImage?.url ?? layout.socialImageUrl}
     >
       <Container maxW="container.md" pb={6}>
-        {loading && (
-          <Center height={'50vh'}>
-            <Spinner
-              thickness="4px"
-              speed="0.65s"
-              emptyColor="gray.200"
-              color="blue.500"
-              size="xl"
-            />
-          </Center>
-        )}
-        {image && image.width && image.height && (
+        {coverImage && coverImage.width && coverImage.height && (
           <Image
-            width={image.width}
-            height={image.height}
-            alt={post?.title}
-            src={image.url}
+            width={coverImage.width}
+            height={coverImage.height}
+            alt={title}
+            src={coverImage.url}
             priority
           />
         )}
-        <Heading pt={6}>{post?.title}</Heading>
-        <Text textAlign={'center'}>{date.toLocaleDateString()}</Text>
+        <Heading pt={6}>{title}</Heading>
+        <Text textAlign={'center'}>{dateBlog.toLocaleDateString()}</Text>
         <Prose
           dangerouslySetInnerHTML={{
-            __html: String(post?.content.html),
+            __html: String(content?.html),
           }}
         ></Prose>
         {author && author.picture && (
           <BlogAuthor
             image={author.picture as Asset}
             name={author.name}
-            date={new Date(post?.date)}
+            date={dateBlog}
             title={author.title as string}
           />
         )}
-        {post && (
+        {tags && (
           <Box pt={6} pb={2}>
-            <BlogTags tags={post.tags} />
+            <BlogTags tags={tags} />
           </Box>
         )}
       </Container>

@@ -123,6 +123,9 @@ devDependencies:
   '@graphql-codegen/typescript-react-apollo':
     specifier: ^3.3.7
     version: 3.3.7(graphql-tag@2.12.6)(graphql@16.6.0)
+  '@graphql-eslint/eslint-plugin':
+    specifier: ^3.18.0
+    version: 3.18.0(@babel/core@7.21.3)(@types/node@18.15.11)(graphql@16.6.0)
   '@jridgewell/sourcemap-codec':
     specifier: ^1.4.14
     version: 1.4.14
@@ -3105,6 +3108,33 @@ packages:
       - supports-color
     dev: true
 
+  /@graphql-eslint/eslint-plugin@3.18.0(@babel/core@7.21.3)(@types/node@18.15.11)(graphql@16.6.0):
+    resolution: {integrity: sha512-riEEfRycc0+pWxcEWqHi8woRxzg1xZqAfh9DRACJUR7bTN8dmc1N04i7+pvW4sevClUFYC2wuL1Vtr+DwzXLUg==}
+    peerDependencies:
+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    dependencies:
+      '@babel/code-frame': 7.18.6
+      '@graphql-tools/code-file-loader': 7.3.21(@babel/core@7.21.3)(graphql@16.6.0)
+      '@graphql-tools/graphql-tag-pluck': 7.5.0(@babel/core@7.21.3)(graphql@16.6.0)
+      '@graphql-tools/utils': 9.2.1(graphql@16.6.0)
+      chalk: 4.1.2
+      debug: 4.3.4
+      fast-glob: 3.2.12
+      graphql: 16.6.0
+      graphql-config: 4.5.0(@types/node@18.15.11)(graphql@16.6.0)
+      graphql-depth-limit: 1.1.0(graphql@16.6.0)
+      lodash.lowercase: 4.3.0
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@types/node'
+      - bufferutil
+      - cosmiconfig-toml-loader
+      - encoding
+      - supports-color
+      - utf-8-validate
+    dev: true
+
   /@graphql-tools/apollo-engine-loader@7.3.26(graphql@16.6.0):
     resolution: {integrity: sha512-h1vfhdJFjnCYn9b5EY1Z91JTF0KB3hHVJNQIsiUV2mpQXZdeOXQoaWeYEKaiI5R6kwBw5PP9B0fv3jfUIG8LyQ==}
     peerDependencies:
@@ -5039,7 +5069,7 @@ packages:
   /@vue/compiler-core@3.2.47:
     resolution: {integrity: sha512-p4D7FDnQb7+YJmO2iPEv0SQNeNzcbHdGByJDsT4lynf63AFkOTFN07HsiRSvjGo0QrxR/o3d0hUyNCUnBU2Tig==}
     dependencies:
-      '@babel/parser': 7.16.4
+      '@babel/parser': 7.21.3
       '@vue/shared': 3.2.47
       estree-walker: 2.0.2
       source-map: 0.6.1
@@ -5077,7 +5107,7 @@ packages:
   /@vue/reactivity-transform@3.2.47:
     resolution: {integrity: sha512-m8lGXw8rdnPVVIdIFhf0LeQ/ixyHkH5plYuS83yop5n7ggVJU+z5v0zecwEnX7fa7HNLBhh2qngJJkxpwEEmYA==}
     dependencies:
-      '@babel/parser': 7.16.4
+      '@babel/parser': 7.21.3
       '@vue/compiler-core': 3.2.47
       '@vue/shared': 3.2.47
       estree-walker: 2.0.2
@@ -8023,6 +8053,16 @@ packages:
       - utf-8-validate
     dev: true
 
+  /graphql-depth-limit@1.1.0(graphql@16.6.0):
+    resolution: {integrity: sha512-+3B2BaG8qQ8E18kzk9yiSdAa75i/hnnOwgSeAxVJctGQPvmeiLtqKOYF6HETCyRjiF7Xfsyal0HbLlxCQkgkrw==}
+    engines: {node: '>=6.0.0'}
+    peerDependencies:
+      graphql: '*'
+    dependencies:
+      arrify: 1.0.1
+      graphql: 16.6.0
+    dev: true
+
   /graphql-request@5.2.0(graphql@16.6.0):
     resolution: {integrity: sha512-pLhKIvnMyBERL0dtFI3medKqWOz/RhHdcgbZ+hMMIb32mEPa5MJSzS4AuXxfI4sRAu6JVVk5tvXuGfCWl9JYWQ==}
     peerDependencies:
@@ -9631,6 +9671,10 @@ packages:
 
   /lodash.kebabcase@4.1.1:
     resolution: {integrity: sha512-N8XRTIMMqqDgSy4VLKPnJ/+hpGZN+PHQiJnSenYqPaVV/NCqEogTnAdZLQiGKhxX+JCs8waWq2t1XHWKOmlY8g==}
+    dev: true
+
+  /lodash.lowercase@4.3.0:
+    resolution: {integrity: sha512-UcvP1IZYyDKyEL64mmrwoA1AbFu5ahojhTtkOUr1K9dbuxzS9ev8i4TxMMGCqRC9TE8uDaSoufNAXxRPNTseVA==}
     dev: true
 
   /lodash.map@4.6.0:

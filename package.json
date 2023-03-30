@@ -67,6 +67,7 @@
     "@graphql-codegen/typescript": "^3.0.2",
     "@graphql-codegen/typescript-operations": "^3.0.2",
     "@graphql-codegen/typescript-react-apollo": "^3.3.7",
+    "@graphql-eslint/eslint-plugin": "^3.18.0",
     "@jridgewell/sourcemap-codec": "^1.4.14",
     "@next/env": "^13.2.4",
     "@rocketseat/eslint-config": "^1.2.0",
