@@ -74,7 +74,13 @@ const NextHero = ({
             </Stack>
           </Flex>
           <Flex flex={1}>
-            <Image alt={alt} src={image} width={width} height={height} />
+            <Image
+              alt={alt}
+              src={image}
+              width={width}
+              height={height}
+              priority
+            />
           </Flex>
           <Box display={{ base: 'block', md: 'none' }} pt={6} pb={12}>
             <Link href={url}>
