@@ -18,7 +18,6 @@ const Termos = () => {
           src={'/images/delete1.PNG'}
           width={282}
           height={609}
-          placeholder="blur"
         />
         <Text my={6}>
           2 - Clique em{' '}
@@ -32,7 +31,6 @@ const Termos = () => {
           src={'/images/delete2.PNG'}
           width={282}
           height={609}
-          placeholder="blur"
         />
       </Container>
     </NextLayout>

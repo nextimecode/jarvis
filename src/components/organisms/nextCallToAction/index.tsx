@@ -61,13 +61,7 @@ const NextCallToAction = ({
           </Stack>
         </Flex>
         <Flex py={2} maxW={'30rem'} flex={1}>
-          <Image
-            alt={title}
-            src={image}
-            width={width}
-            height={height}
-            placeholder="blur"
-          />
+          <Image alt={title} src={image} width={width} height={height} />
         </Flex>
         <Box display={{ base: 'block', md: 'none' }}>
           <Link href={url} aria-label={`Clique e ${textButton}`}>

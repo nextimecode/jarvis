@@ -109,7 +109,6 @@ export function NextFooter({ bg = 'next-dark' }: NextFooterProps) {
                       alt="NeXTIME Logo"
                       width={146}
                       height={46}
-                      placeholder="blur"
                     />
                   </Box>
                   <Link
@@ -149,7 +148,6 @@ export function NextFooter({ bg = 'next-dark' }: NextFooterProps) {
                 alt="NeXTIME Logo"
                 width={462}
                 height={482}
-                placeholder="blur"
               />
             </Box>
           </GridItem>
