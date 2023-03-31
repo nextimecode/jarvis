@@ -13,7 +13,7 @@ import {
   ModalBody,
   ModalFooter,
   Icon,
-  Flex
+  Flex,
 } from '@chakra-ui/react'
 import Image from 'next/image'
 import { FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa'
@@ -39,7 +39,7 @@ const NextTeamCard = ({
   instagram,
   youtube,
   width = 86,
-  height = 86
+  height = 86,
 }: NextTeamCardProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
@@ -82,21 +82,33 @@ const NextTeamCard = ({
             <Flex>
               {linkedin && (
                 <Box p="4">
-                  <Link href={linkedin} target={'_blank'}>
+                  <Link
+                    href={linkedin}
+                    target={'_blank'}
+                    aria-label="Acesse nosso linkedin"
+                  >
                     <Icon color="next-primary" as={FaLinkedinIn} w={8} h={8} />
                   </Link>
                 </Box>
               )}
               {instagram && (
                 <Box p="4">
-                  <Link href={instagram} target={'_blank'}>
+                  <Link
+                    href={instagram}
+                    target={'_blank'}
+                    aria-label="Acesse nosso instagram"
+                  >
                     <Icon color="next-primary" as={FaInstagram} w={8} h={8} />
                   </Link>
                 </Box>
               )}
               {youtube && (
                 <Box p="4">
-                  <Link href={youtube} target={'_blank'}>
+                  <Link
+                    href={youtube}
+                    target={'_blank'}
+                    aria-label="Acesse nosso youtube"
+                  >
                     <Icon color="next-primary" as={FaYoutube} w={8} h={8} />
                   </Link>
                 </Box>

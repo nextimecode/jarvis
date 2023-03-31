@@ -4,9 +4,9 @@ const styles = {
       fontFamily: 'body',
       color: 'whiteAlpha.900',
       bg: 'dark',
-      lineHeight: 'base'
-    }
-  })
+      lineHeight: 'base',
+    },
+  }),
 }
 
 export default styles

@@ -12,7 +12,7 @@ import {
   HStack,
   Icon,
   SimpleGrid,
-  Text
+  Text,
 } from '@chakra-ui/react'
 
 import {
@@ -21,14 +21,14 @@ import {
   FaWhatsapp,
   FaMailBulk,
   FaYoutube,
-  FaFacebookMessenger
+  FaFacebookMessenger,
 } from 'react-icons/fa'
 
 export type NextFooterProps = {
-  bg?: string | undefined
+  bg?: string
 }
 
-export function NextFooter({ bg = 'next-primary' }: NextFooterProps) {
+export function NextFooter({ bg = 'next-dark' }: NextFooterProps) {
   return (
     <footer>
       <Box bg={bg} pt={12} pb={12}>
@@ -43,6 +43,7 @@ export function NextFooter({ bg = 'next-primary' }: NextFooterProps) {
                       'mailto:contato@nextime.com.br?subject=Orçamento para NeXTIME&body=Olá,%20NeXTIME'
                     }
                     target={'_blank'}
+                    aria-label="Envie um email para a gente"
                   >
                     <Icon
                       color="white"
@@ -52,7 +53,11 @@ export function NextFooter({ bg = 'next-primary' }: NextFooterProps) {
                       h={16}
                     />
                   </Link>
-                  <Link href={layout.nextSocialNetwork} target={'_blank'}>
+                  <Link
+                    href={layout.nextSocialNetwork}
+                    target={'_blank'}
+                    aria-label="Nosso whatsapp"
+                  >
                     <Icon
                       color="white"
                       _hover={{ color: 'next-dark' }}
@@ -61,7 +66,11 @@ export function NextFooter({ bg = 'next-primary' }: NextFooterProps) {
                       h={16}
                     />
                   </Link>
-                  <Link href={'https://m.me/102621504903865'} target={'_blank'}>
+                  <Link
+                    href={'https://m.me/102621504903865'}
+                    target={'_blank'}
+                    aria-label="Entre em contato pelo facebook"
+                  >
                     <Icon
                       color="white"
                       _hover={{ color: 'next-dark' }}
@@ -70,7 +79,11 @@ export function NextFooter({ bg = 'next-primary' }: NextFooterProps) {
                       h={16}
                     />
                   </Link>
-                  <Link href={'https://www.instagram.com/nextimetec/'} target={'_blank'}>
+                  <Link
+                    href={'https://www.instagram.com/nextimetec/'}
+                    target={'_blank'}
+                    aria-label="Veja nosso instagram"
+                  >
                     <Icon
                       color="white"
                       _hover={{ color: 'next-dark' }}
@@ -98,7 +111,11 @@ export function NextFooter({ bg = 'next-primary' }: NextFooterProps) {
                       height={46}
                     />
                   </Box>
-                  <Link href={'https://www.linkedin.com/company/nextimetec/'} target={'_blank'}>
+                  <Link
+                    href={'https://www.linkedin.com/company/nextimetec/'}
+                    target={'_blank'}
+                    aria-label="Acesse nosso linkedin"
+                  >
                     <Icon
                       color="white"
                       _hover={{ color: 'next-dark' }}
@@ -107,7 +124,11 @@ export function NextFooter({ bg = 'next-primary' }: NextFooterProps) {
                       h={8}
                     />
                   </Link>
-                  <Link href={'https://www.youtube.com/watch?v=-TqTAxrOxaM'} target={'_blank'}>
+                  <Link
+                    href={'https://www.youtube.com/watch?v=-TqTAxrOxaM'}
+                    target={'_blank'}
+                    aria-label="Acesse nosso youtube"
+                  >
                     <Icon
                       color="white"
                       _hover={{ color: 'next-dark' }}

@@ -29,11 +29,14 @@ const NextCallToAction = ({
   height,
   textButton = '< Faça um orçamento />',
   directionMd = 'row',
-  directionBase = 'column'
+  directionBase = 'column',
 }: NextCallToActionProps) => {
   return (
     <Container id={id} bg={bg} maxW="container.lg" pb={[12, 8]}>
-      <Stack align={'center'} direction={{ base: directionBase, md: directionMd }}>
+      <Stack
+        align={'center'}
+        direction={{ base: directionBase, md: directionMd }}
+      >
         <Flex flex={1} align={'center'} justify={'center'}>
           <Stack spacing={6} w={'full'} maxW={'lg'}>
             <Text
@@ -43,11 +46,15 @@ const NextCallToAction = ({
             >
               {title}
             </Text>
-            <Text fontSize={{ base: 'md', lg: 'lg' }} color={'white'} whiteSpace={'pre-wrap'}>
+            <Text
+              fontSize={{ base: 'md', lg: 'lg' }}
+              color={'white'}
+              whiteSpace={'pre-wrap'}
+            >
               {text}
             </Text>
             <Box display={{ base: 'none', md: 'block' }}>
-              <Link href={url}>
+              <Link href={url} aria-label={`Clique e ${textButton}`}>
                 <NextButton variant="outline">{textButton}</NextButton>
               </Link>
             </Box>
@@ -57,7 +64,7 @@ const NextCallToAction = ({
           <Image alt={title} src={image} width={width} height={height} />
         </Flex>
         <Box display={{ base: 'block', md: 'none' }}>
-          <Link href={url}>
+          <Link href={url} aria-label={`Clique e ${textButton}`}>
             <NextButton variant="outline">{textButton}</NextButton>
           </Link>
         </Box>

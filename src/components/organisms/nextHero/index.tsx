@@ -28,17 +28,25 @@ const NextHero = ({
   url,
   image = '/images/home/code_hero.png',
   width = 450,
-  height = 450,
-  alt = 'Imagem Hero'
+  height = 434,
+  alt = 'Imagem Hero',
 }: NextHeroProps) => {
   return (
     <header>
       <Container id={id} bg={bg} maxW="container.lg">
-        <Stack minH={'70vh'} align={'center'} direction={{ base: 'column', md: 'row-reverse' }}>
+        <Stack
+          minH={'70vh'}
+          align={'center'}
+          direction={{ base: 'column', md: 'row-reverse' }}
+        >
           <Flex flex={1} align={'center'} justify={'center'}>
             <Stack spacing={6} w={'full'} maxW={'lg'}>
               {words && (
-                <Text pt={4} color={'next-gray'} textAlign={{ base: 'center', md: 'left' }}>
+                <Text
+                  pt={4}
+                  color={'next-gray'}
+                  textAlign={{ base: 'center', md: 'left' }}
+                >
                   {words}
                 </Text>
               )}
@@ -47,7 +55,11 @@ const NextHero = ({
                   {title}
                 </Text>
               </Heading>
-              <Text fontSize={{ base: 'md', lg: 'lg' }} color={'white'} whiteSpace={'pre-wrap'}>
+              <Text
+                fontSize={{ base: 'md', lg: 'lg' }}
+                color={'white'}
+                whiteSpace={'pre-wrap'}
+              >
                 {text}
               </Text>
               <Stack
@@ -62,7 +74,13 @@ const NextHero = ({
             </Stack>
           </Flex>
           <Flex flex={1}>
-            <Image alt={alt} src={image} width={width} height={height} />
+            <Image
+              alt={alt}
+              src={image}
+              width={width}
+              height={height}
+              priority
+            />
           </Flex>
           <Box display={{ base: 'block', md: 'none' }} pt={6} pb={12}>
             <Link href={url}>

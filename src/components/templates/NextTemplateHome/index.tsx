@@ -1,6 +1,8 @@
 import React from 'react'
 import { NextFeatureProps } from '../../molecules/nextFeature'
-import NextCallToAction, { NextCallToActionProps } from '../../organisms/nextCallToAction'
+import NextCallToAction, {
+  NextCallToActionProps,
+} from '../../organisms/nextCallToAction'
 import NextFeatures from '../../organisms/nextFeatures'
 import NextHero, { NextHeroProps } from '../../organisms/nextHero'
 import { NextLayout } from '../NextLayout'
@@ -16,7 +18,7 @@ export type NextTemplateHomeProps = {
 export const NextTemplateHome = ({
   nextHeroItem,
   nextCallToActionItems,
-  nextTechnologyItems
+  nextTechnologyItems,
 }: NextTemplateHomeProps) => {
   return (
     <NextLayout>

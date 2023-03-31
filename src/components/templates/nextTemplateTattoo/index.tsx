@@ -1,6 +1,8 @@
 import React from 'react'
 import { NextFeatureProps } from '../../molecules/nextFeature'
-import NextCallToAction, { NextCallToActionProps } from '../../organisms/nextCallToAction'
+import NextCallToAction, {
+  NextCallToActionProps,
+} from '../../organisms/nextCallToAction'
 import NextHero, { NextHeroProps } from '../../organisms/nextHero'
 import { NextLayout } from '../NextLayout'
 import NextCallToActionWithAnnotation from '../../organisms/nextCallToActionWithAnnotation'
@@ -26,7 +28,7 @@ const NextTemplateMentorTattoo = ({
   nextCallToActionItems,
   hasNextCallToActionWithAnnotation,
   nextFeatureItems,
-  bg
+  bg,
 }: NextTemplateMentorTattooProps) => {
   return (
     <NextLayout
@@ -41,16 +43,24 @@ const NextTemplateMentorTattoo = ({
       logoSubtitle="Tattoo"
       logoSubtitleColor="next-blue.100"
       bg={bg}
-      keywords={['Tattoo', 'tatuagem', 'tatuadores', 'tatuador', 'aplicativo', 'app']}
+      keywords={[
+        'Tattoo',
+        'tatuagem',
+        'tatuadores',
+        'tatuador',
+        'aplicativo',
+        'app',
+      ]}
     >
       {hasNextCallToActionWithAnnotation && <NextCallToActionWithAnnotation />}
       <Container maxW="container.md" py={6}>
         <Box
           as="iframe"
+          title="Video do youtube"
           src="https://www.youtube.com/embed/pa80P9FVLF0"
           width="100%"
           sx={{
-            aspectRatio: '16/9'
+            aspectRatio: '16/9',
           }}
         />
       </Container>

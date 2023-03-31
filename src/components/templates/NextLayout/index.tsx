@@ -41,7 +41,7 @@ export function NextLayout({
   bg = layout.bg,
   keywords = layout.keywords,
   siteName = layout.siteName,
-  socialImageUrl = layout.socialImageUrl
+  socialImageUrl = layout.socialImageUrl,
 }: PropsWithChildren<Props>) {
   return (
     <>
@@ -60,45 +60,22 @@ export function NextLayout({
               url: socialImageUrl,
               width: 853,
               height: 600,
-              alt: 'logo da empresa NeXTIME',
-              type: 'image/jpeg'
-            }
+              alt: title,
+              type: 'image/jpeg',
+            },
           ],
-          siteName
+          siteName,
         }}
         twitter={{
           handle: '@phdduarte',
-          cardType: 'summary_large_image'
+          cardType: 'summary_large_image',
         }}
-        additionalLinkTags={[
-          {
-            rel: 'icon',
-            href: `${url}/favicon.ico`
-          }
-        ]}
         additionalMetaTags={[
           {
-            name: 'application-name',
-            content: 'Nextime'
-          },
-          {
             name: 'keywords',
-            content: keywords?.join(', ')
+            content: keywords?.join(', '),
           },
-          {
-            name: 'application-name',
-            content: 'Nextime'
-          }
         ]}
-        robotsProps={{
-          nosnippet: true,
-          notranslate: true,
-          noimageindex: true,
-          noarchive: true,
-          maxSnippet: -1,
-          maxImagePreview: 'large',
-          maxVideoPreview: -1
-        }}
       />
 
       <NextHeader
@@ -114,8 +91,19 @@ export function NextLayout({
       <main>{children}</main>
 
       <NextFooter bg={bg} />
-      <Box position="fixed" width="60px" height="60px" zIndex={100} bottom="20px" right="20px">
-        <Link href={nextSocialNetwork} target={'_blank'}>
+      <Box
+        position="fixed"
+        width="60px"
+        height="60px"
+        zIndex={100}
+        bottom="20px"
+        right="20px"
+      >
+        <Link
+          href={nextSocialNetwork}
+          target={'_blank'}
+          aria-label="Faça um orçamento pelo whatsapp"
+        >
           <NextWhatsIcon />
         </Link>
       </Box>

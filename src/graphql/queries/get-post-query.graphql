@@ -1,0 +1,37 @@
+query GetPost($slug: String!) {
+  posts(orderBy: createdAt_DESC, where: {slug: $slug}) {
+    id
+    author {
+      id
+      name
+      title
+      picture {
+        url
+        height
+        width
+      }
+    }
+    createdAt
+    date
+    excerpt
+    slug
+    stage
+    tags
+    title
+    updatedAt
+    coverImage {
+      id
+      url
+      height
+      width
+    }
+    content {
+      html
+    }
+    seo {
+      keywords
+      id
+    }
+  }
+}
+

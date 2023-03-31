@@ -8,14 +8,13 @@ const colors = {
   dark: '#17171B',
   'next-blue': {
     100: '#00DAE9',
-    200: '#4882F8',
-    900: '#2D426D'
+    900: '#2D426D',
   },
   'next-red': {
     200: '#EB4A68',
     300: '#FF747C',
-    400: '#EE468E'
-  }
+    400: '#EE468E',
+  },
 }
 
 export default colors

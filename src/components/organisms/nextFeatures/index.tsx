@@ -13,7 +13,7 @@ const NextFeatures = ({
   id,
   items,
   numberGrid = 3,
-  title = 'Usamos as melhores tecnologias do mercado'
+  title = 'Usamos as melhores tecnologias do mercado',
 }: NextFeaturesProps) => {
   return (
     <Container id={id} maxW="container.lg" pt={[2, 16]} pb={[16, 28]}>

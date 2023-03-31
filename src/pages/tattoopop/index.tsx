@@ -4,7 +4,7 @@ import {
   nextFeatureItems,
   nextCallToActionItems,
   nextSocialNetwork,
-  NAV_ITEMS
+  NAV_ITEMS,
 } from '../../data/tattoopop'
 
 const TattooPop = () => {

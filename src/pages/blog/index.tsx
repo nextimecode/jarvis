@@ -1,18 +1,66 @@
-import { Center, Spinner } from '@chakra-ui/react'
+import { GetStaticProps } from 'next'
 import { NextArticleList } from '../../components/organisms/NextArticleList'
 import { NextLayout } from '../../components/templates/NextLayout'
-import { useGetPostsQuery, Post } from '../../graphql/generated'
+import { Post } from '../../graphql/generated'
+import { client } from '../../lib/apollo'
+import { gql } from 'graphql-tag'
+import { layout } from '../../data/'
 
-export default function Blog() {
-  const { data, loading } = useGetPostsQuery()
-  const posts = data?.posts
+export const getStaticProps: GetStaticProps = async (context) => {
+  const GET_POSTS_QUERY = gql`
+    query GetPosts {
+      posts(orderBy: createdAt_DESC) {
+        id
+        slug
+        date
+        tags
+        excerpt
+        author {
+          id
+          name
+          picture {
+            id
+            url
+          }
+          title
+        }
+        coverImage {
+          url
+        }
+      }
+    }
+  `
+
+  const slug = context.params?.slug
+  const { data } = await client.query({
+    query: GET_POSTS_QUERY,
+    variables: { slug },
+  })
+  return {
+    props: data,
+    revalidate: 60 * 60 * 1, // 1 hora
+  }
+}
+
+export default function Blog({ posts }: { posts: Post[] }) {
   return (
-    <NextLayout>
-      {loading && (
-        <Center height={'50vh'}>
-          <Spinner thickness="4px" speed="0.65s" emptyColor="gray.200" color="blue.500" size="xl" />
-        </Center>
-      )}
+    <NextLayout
+      title="Blog NeXTIME | Tecnologia, Inovação e Dicas"
+      description="Descubra o blog da NeXTIME, onde compartilhamos insights sobre tecnologias inovadoras e soluções que economizam tempo, melhoram a vida e impulsionam a mudança no mundo."
+      keywords={[
+        'nextime',
+        'tecnologia',
+        'blog',
+        'economizar tempo',
+        'dicas',
+        'produtividade',
+        'software',
+        'soluções',
+        'desenvolvimento',
+        'educação',
+      ]}
+      url={`${layout.url}/blog/`}
+    >
       {posts && <NextArticleList posts={posts as Post[]} />}
     </NextLayout>
   )
