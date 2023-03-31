@@ -30,6 +30,7 @@ export interface NavItem {
   label: string
   subLabel?: string
   children?: Array<NavItem>
+  target?: string
   href: string
 }
 
@@ -50,14 +51,21 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: 'NeXTshow',
         subLabel: 'Game que você aposta nos participantes dos realities shows.',
-        href: 'http://nextshow.com.br/',
+        target: '_blank',
+        href: 'https://nextshow.com.br/',
       },
       {
-        label: 'Mentoria',
-        subLabel: 'Obtenha orientação e aconselhamento de um professor.',
-        href: '/mentor',
+        label: 'OptarRh',
+        subLabel:
+          'Solução para um desempenho de melhor qualidade e opções inteligentes que hoje são indispensáveis para enfrentar os desafios de um mercado do trabalho em contínua evolução.',
+        target: '_blank',
+        href: 'https://app.optarrh.com.br/',
       },
     ],
+  },
+  {
+    label: 'Mentoria',
+    href: '/mentor',
   },
   {
     label: 'Orçamento',
@@ -69,9 +77,9 @@ const NAV_ITEMS: Array<NavItem> = [
   },
 ]
 
-const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+const DesktopSubNav = ({ label, href, subLabel, target }: NavItem) => {
   return (
-    <Link href={href} role={'group'} aria-label="Saiba mais">
+    <Link href={href} target={target} role={'group'} aria-label="Saiba mais">
       <Stack
         direction={'row'}
         p={2}

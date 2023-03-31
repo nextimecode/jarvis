@@ -106,8 +106,8 @@ export default function Blog({
       <Container maxW="container.md" pb={6}>
         {coverImage && coverImage.width && coverImage.height && (
           <Image
-            width={coverImage.width}
-            height={coverImage.height}
+            width={736}
+            height={736}
             alt={title}
             src={coverImage.url}
             priority

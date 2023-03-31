@@ -28,8 +28,8 @@ export const layout = {
   nextSocialNetwork:
     'https://api.whatsapp.com/send?phone=5511972436305&text=Ol%C3%A1,%20NeXTIME!%0AGostaria%20de%20solicitar%20um%20orçamento..',
   logoSrc: '/images/logos/logo_nextime.svg',
-  logoWidth: 146,
-  logoHeight: 45,
+  logoWidth: 147,
+  logoHeight: 47,
   logoAlt: 'NeXTIME Logo',
   logoSubtitle: undefined,
   bg: 'next-dark',

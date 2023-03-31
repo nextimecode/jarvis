@@ -50,8 +50,8 @@ export function BlogAuthor(props: BlogAuthorProps) {
           <Image
             src={props.image.url}
             alt={`Avatar of ${props.name}`}
-            width={props.image.width as number}
-            height={props.image.height as number}
+            width={40}
+            height={40}
           />
         </Box>
       )}
