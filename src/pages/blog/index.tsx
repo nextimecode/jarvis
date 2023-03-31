@@ -4,6 +4,7 @@ import { NextLayout } from '../../components/templates/NextLayout'
 import { Post } from '../../graphql/generated'
 import { client } from '../../lib/apollo'
 import { gql } from 'graphql-tag'
+import { layout } from '../../data/'
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const GET_POSTS_QUERY = gql`
@@ -43,7 +44,23 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 export default function Blog({ posts }: { posts: Post[] }) {
   return (
-    <NextLayout>
+    <NextLayout
+      title="Blog NeXTIME | Tecnologia, Inovação e Dicas"
+      description="Descubra o blog da NeXTIME, onde compartilhamos insights sobre tecnologias inovadoras e soluções que economizam tempo, melhoram a vida e impulsionam a mudança no mundo."
+      keywords={[
+        'nextime',
+        'tecnologia',
+        'blog',
+        'economizar tempo',
+        'dicas',
+        'produtividade',
+        'software',
+        'soluções',
+        'desenvolvimento',
+        'educação',
+      ]}
+      url={`${layout.url}/blog/`}
+    >
       {posts && <NextArticleList posts={posts as Post[]} />}
     </NextLayout>
   )

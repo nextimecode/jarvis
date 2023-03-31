@@ -60,7 +60,7 @@ export function NextLayout({
               url: socialImageUrl,
               width: 853,
               height: 600,
-              alt: logoAlt,
+              alt: title,
               type: 'image/jpeg',
             },
           ],

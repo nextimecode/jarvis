@@ -67,6 +67,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
           html
         }
         seo {
+          description
           keywords
           id
         }
@@ -93,14 +94,16 @@ export default function Blog({
   content,
   author,
   tags,
+  slug,
 }: Post) {
   const dateBlog = new Date(date)
 
   return (
     <NextLayout
-      title={title}
+      title={`NeXTIME | ${title}`}
       description={seo?.description as string}
       keywords={seo?.keywords}
+      url={`${layout.url}/blog/${slug}`}
       socialImageUrl={coverImage?.url ?? layout.socialImageUrl}
     >
       <Container maxW="container.md" pb={6}>

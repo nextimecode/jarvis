@@ -24,7 +24,7 @@ export const layout = {
   siteName: 'NeXTIME',
   socialTitle:
     'NeXTIME | Maximize seu tempo com tecnologia e torne-se a mudança que deseja ver no mundo.',
-  socialImageUrl: `${url}/images/image_page.jpg`,
+  socialImageUrl: `${url}/images/social_image.jpg`,
   nextSocialNetwork:
     'https://api.whatsapp.com/send?phone=5511972436305&text=Ol%C3%A1,%20NeXTIME!%0AGostaria%20de%20solicitar%20um%20orçamento..',
   logoSrc: '/images/logos/logo_nextime.svg',
