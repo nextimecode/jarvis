@@ -15,6 +15,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         date
         tags
         excerpt
+        title
         author {
           id
           name
