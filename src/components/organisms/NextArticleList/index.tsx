@@ -73,7 +73,7 @@ export const NextArticleList = ({ posts }: { posts: Post[] }) => {
   return (
     <Container maxW={'7xl'} p="12">
       <Heading as="h1">Novidades</Heading>
-      {posts?.map((post) => (
+      {posts?.map((post, index) => (
         <Box
           key={post?.id}
           marginTop={{ base: '1', sm: '5' }}
@@ -107,8 +107,9 @@ export const NextArticleList = ({ posts }: { posts: Post[] }) => {
                       style={{ objectFit: 'contain' }}
                       src={post.coverImage.url}
                       alt={`Imagem do blog ${post?.title}`}
-                      width={post.coverImage.width as number}
-                      height={post.coverImage.height as number}
+                      width={498}
+                      height={498}
+                      priority={index === 0}
                     />
                   </Box>
                 </Link>
