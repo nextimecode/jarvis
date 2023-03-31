@@ -262,7 +262,7 @@ const NextHeader = ({
     <Box borderBottom={1} borderStyle={'solid'} borderColor={'gray.700'}>
       <Container maxW="container.lg">
         <Flex color={'gray.600'} minH={'70px'} align={'center'}>
-          <Flex flex={{ base: 1 }} display={{ base: 'flex', md: 'none' }}>
+          <Flex display={{ base: 'flex', md: 'none' }}>
             <IconButton
               onClick={onToggle}
               icon={
@@ -276,26 +276,28 @@ const NextHeader = ({
               aria-label={'Toggle Navigation'}
             />
           </Flex>
-          <Flex
-            flex={{ base: 1 }}
-            justify={{ base: 'center' }}
-            alignItems={'center'}
-          >
-            <Image
-              src={logoSrc}
-              alt={logoAlt}
-              width={logoWidth}
-              height={logoHeight}
-            />
-            {logoSubtitle && (
-              <Text
-                fontSize={{ base: 'lg', lg: 'xl' }}
-                color={logoSubtitleColor}
-              >
-                {logoSubtitle}
-              </Text>
-            )}
-          </Flex>
+          <Link href={'/'}>
+            <Flex
+              flex={{ base: 1 }}
+              justify={{ base: 'center' }}
+              alignItems={'center'}
+            >
+              <Image
+                src={logoSrc}
+                alt={logoAlt}
+                width={logoWidth}
+                height={logoHeight}
+              />
+              {logoSubtitle && (
+                <Text
+                  fontSize={{ base: 'lg', lg: 'xl' }}
+                  color={logoSubtitleColor}
+                >
+                  {logoSubtitle}
+                </Text>
+              )}
+            </Flex>
+          </Link>
           <Flex display={{ base: 'none', md: 'flex' }}>
             <DesktopNav navItems={navItems} />
           </Flex>
