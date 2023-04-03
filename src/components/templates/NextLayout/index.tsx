@@ -48,7 +48,6 @@ export function NextLayout({
       <NextSeo
         title={title}
         description={description}
-        canonical={url}
         openGraph={{
           type: 'website',
           locale: 'pt_BR',

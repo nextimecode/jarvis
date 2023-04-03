@@ -4,7 +4,6 @@ const { title, description, url, socialImageUrl, siteName, keywords } = layout
 const config: DefaultSeoProps = {
   title,
   description,
-  canonical: url,
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
