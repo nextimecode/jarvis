@@ -10,7 +10,7 @@ import { layout } from '../../../data'
 type Props = {
   navItems?: Array<NavItem>
   title?: string
-  url?: string
+  pathname?: string
   description?: string
   nextSocialNetwork?: string
   logoSrc?: string
@@ -29,7 +29,7 @@ export function NextLayout({
   navItems,
   children,
   title = layout.title,
-  url = layout.url,
+  pathname = layout.url,
   description = layout.description,
   nextSocialNetwork = layout.nextSocialNetwork,
   logoSrc = layout.logoSrc,
@@ -48,10 +48,11 @@ export function NextLayout({
       <NextSeo
         title={title}
         description={description}
+        canonical={`${layout.url}${pathname}`}
         openGraph={{
           type: 'website',
           locale: 'pt_BR',
-          url,
+          url: `${layout.url}${pathname}`,
           title,
           description,
           images: [

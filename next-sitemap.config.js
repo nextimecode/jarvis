@@ -1,12 +1,13 @@
-const url = 'https://www.nextime.com.br'
+// next-sitemap.config.js
+
+/** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || url,
+  siteUrl: 'https://www.nextime.com.br',
   generateRobotsTxt: true,
-  changefreq: 'daily',
-  priority: 0.7,
-  sitemapSize: 5000,
-  exclude: [],
+  exclude: ['/server-sitemap.xml'], // <= exclude here
   robotsTxtOptions: {
-    additionalSitemaps: [`${url}/sitemap.xml`, `${url}/server-sitemap-index.xml`]
-  }
+    additionalSitemaps: [
+      'https://www.nextime.com.br/server-sitemap.xml', // <==== Add here
+    ],
+  },
 }
