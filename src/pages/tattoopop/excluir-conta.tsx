@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Termos = () => {
   return (
-    <NextLayout>
+    <NextLayout pathname="/tattoopop/excluir-conta">
       <Container maxW={'container.lg'} my={8}>
         <Box>
           <Heading as="h1" pb={4}>

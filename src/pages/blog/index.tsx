@@ -4,7 +4,6 @@ import { NextLayout } from '../../components/templates/NextLayout'
 import { Post } from '../../graphql/generated'
 import { client } from '../../lib/apollo'
 import { gql } from 'graphql-tag'
-import { layout } from '../../data/'
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const GET_POSTS_QUERY = gql`
@@ -60,7 +59,7 @@ export default function Blog({ posts }: { posts: Post[] }) {
         'desenvolvimento',
         'educação',
       ]}
-      url={`${layout.url}/blog/`}
+      pathname="/blog"
     >
       {posts && <NextArticleList posts={posts as Post[]} />}
     </NextLayout>

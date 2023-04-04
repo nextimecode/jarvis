@@ -36,6 +36,7 @@ const NextTemplateMentorTattoo = ({
       description={
         'No app Tattoo Pop você encontra, além de inspirações para os mais diversos estilos de tatuagens, os melhores tatuadores da sua região. E se o tatuador for você? Bom, aqui você divulga seu trabalho e aumenta o seu alcance. Baixe agora o Tattoo Pop e participe da maior comunidade de tatuados e tatuadores do país! '
       }
+      pathname="/tattoopop"
       nextSocialNetwork={nextSocialNetwork}
       navItems={navItems}
       logoSrc={'/images/logos/next.svg'}
