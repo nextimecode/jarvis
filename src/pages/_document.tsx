@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html lang="pt-BR">
       <Head>
-        <Script
+        {/* <Script
           id="hotjar"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -20,7 +20,7 @@ export default function Document() {
               })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
             `,
           }}
-        />
+        /> */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-HN7P9PMXX2"
           strategy="afterInteractive"
