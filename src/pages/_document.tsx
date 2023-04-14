@@ -4,10 +4,7 @@ import { Head, Html, Main, NextScript } from 'next/document'
 export default function Document() {
   return (
     <Html lang="pt-BR">
-      <Head></Head>
-      <body>
-        <Main />
-        <NextScript />
+      <Head>
         <Script
           id="hotjar"
           strategy="lazyOnload"
@@ -37,6 +34,10 @@ export default function Document() {
           gtag('config', 'G-HN7P9PMXX2');
         `}
         </Script>
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
       </body>
     </Html>
   )
