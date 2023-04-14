@@ -7,7 +7,7 @@ export default function Document() {
       <Head>
         <Script
           id="hotjar"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(h,o,t,j,a,r){
