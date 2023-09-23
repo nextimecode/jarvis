@@ -97,7 +97,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'News',
-    href: '/nextnews',
+    href: '/news',
   },
 ]
 
