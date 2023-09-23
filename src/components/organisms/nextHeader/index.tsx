@@ -49,22 +49,46 @@ const NAV_ITEMS: Array<NavItem> = [
         href: '/tattoopop',
       },
       {
-        label: 'NeXTshow',
-        subLabel: 'Game que você aposta nos participantes dos realities shows.',
+        label: 'NextShow',
+        subLabel: 'Game dos realities shows.',
         target: '_blank',
         href: 'https://nextshow.com.br/',
       },
       {
+        label: 'Ei Milhas',
+        subLabel: 'Encontre sua passagem ideal.',
+        href: 'https://www.eimilhas.com.br/',
+      },
+      {
         label: 'OptarRh',
-        subLabel:
-          'Solução para um desempenho de melhor qualidade e opções inteligentes que hoje são indispensáveis para enfrentar os desafios de um mercado do trabalho em contínua evolução.',
+        subLabel: 'Solução para RH.',
         target: '_blank',
         href: 'https://app.optarrh.com.br/',
+      },
+      {
+        label: 'Allan Kardec',
+        subLabel: 'Museu Online do Espiritismo.',
+        href: 'https://www.allankardec.online/',
+      },
+      {
+        label: 'Treino Vini Dias',
+        subLabel: 'Ganhe massa e perca peso fácil a jato.',
+        href: 'https://www.treinovinidias.com/',
+      },
+      {
+        label: 'Odonto S.O.S',
+        subLabel: 'Urgências odontológicas.',
+        href: 'https://www.odontosos.com.br/',
+      },
+      {
+        label: 'Dr. Danilo Antunes',
+        subLabel: 'Clínica odontológica.',
+        href: 'https://www.daniloantunesimplantes.com.br/',
       },
     ],
   },
   {
-    label: 'Mentoria',
+    label: 'Mentor',
     href: '/mentor',
   },
   {
@@ -72,21 +96,15 @@ const NAV_ITEMS: Array<NavItem> = [
     href: layout.nextSocialNetwork,
   },
   {
-    label: 'Blog',
-    href: '/blog',
+    label: 'News',
+    href: '/news',
   },
 ]
 
 const DesktopSubNav = ({ label, href, subLabel, target }: NavItem) => {
   return (
     <Link href={href} target={target} role={'group'} aria-label="Saiba mais">
-      <Stack
-        direction={'row'}
-        p={2}
-        align={'center'}
-        rounded={'md'}
-        _hover={{ bg: 'gray.900' }}
-      >
+      <Stack direction={'row'} p={2} rounded={'md'} _hover={{ bg: 'gray.900' }}>
         <Box>
           <Text
             transition={'all .3s ease'}
@@ -96,7 +114,9 @@ const DesktopSubNav = ({ label, href, subLabel, target }: NavItem) => {
           >
             {label}
           </Text>
-          <Text fontSize={'sm'}>{subLabel}</Text>
+          <Text fontSize={'sm'} color="gray.500">
+            {subLabel}
+          </Text>
         </Box>
         <Flex
           transition={'all .3s ease'}
@@ -276,12 +296,12 @@ const NextHeader = ({
               aria-label={'Toggle Navigation'}
             />
           </Flex>
-          <Link href={'/'}>
-            <Flex
-              flex={{ base: 1 }}
-              justify={{ base: 'center' }}
-              alignItems={'center'}
-            >
+          <Flex
+            flex={{ base: 1 }}
+            justify={{ base: 'center' }}
+            alignItems={'center'}
+          >
+            <Link href={'/'}>
               <Image
                 src={logoSrc}
                 alt={logoAlt}
@@ -296,8 +316,8 @@ const NextHeader = ({
                   {logoSubtitle}
                 </Text>
               )}
-            </Flex>
-          </Link>
+            </Link>
+          </Flex>
           <Flex display={{ base: 'none', md: 'flex' }}>
             <DesktopNav navItems={navItems} />
           </Flex>
