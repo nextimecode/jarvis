@@ -116,10 +116,6 @@ export default function Blog({
                 alt={title}
                 src={coverImage.url}
                 priority
-                style={{
-                  objectFit: 'cover',
-                  objectPosition: 'center center',
-                }}
               />
             </Box>
           </Center>
