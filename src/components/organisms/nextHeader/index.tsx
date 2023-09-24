@@ -16,15 +16,11 @@ import {
   Container,
   HStack,
 } from '@chakra-ui/react'
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-} from '@chakra-ui/icons'
+import { HamburgerIcon, CloseIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
-import { layout } from '../../../data'
 import { useRouter } from 'next/router'
+import { NAV_ITEMS } from './NAV_ITEMS'
+import { MobileNav } from './MobileNav'
 
 export interface NavItem {
   label: string
@@ -33,73 +29,6 @@ export interface NavItem {
   target?: string
   href: string
 }
-
-const NAV_ITEMS: Array<NavItem> = [
-  {
-    label: 'Home',
-    href: '/',
-  },
-  {
-    label: 'Projetos',
-    href: '#',
-    children: [
-      {
-        label: 'TattooPop',
-        subLabel: 'Encontre os melhores tatuadores.',
-        href: '/tattoopop',
-      },
-      {
-        label: 'NextShow',
-        subLabel: 'Game dos realities shows.',
-        target: '_blank',
-        href: 'https://nextshow.com.br/',
-      },
-      {
-        label: 'Ei Milhas',
-        subLabel: 'Encontre sua passagem ideal.',
-        href: 'https://www.eimilhas.com.br/',
-      },
-      {
-        label: 'OptarRh',
-        subLabel: 'Solução para RH.',
-        target: '_blank',
-        href: 'https://app.optarrh.com.br/',
-      },
-      {
-        label: 'Allan Kardec',
-        subLabel: 'Museu Online do Espiritismo.',
-        href: 'https://www.allankardec.online/',
-      },
-      {
-        label: 'Treino Vini Dias',
-        subLabel: 'Ganhe massa e perca peso fácil a jato.',
-        href: 'https://www.treinovinidias.com/',
-      },
-      {
-        label: 'Odonto S.O.S',
-        subLabel: 'Urgências odontológicas.',
-        href: 'https://www.odontosos.com.br/',
-      },
-      {
-        label: 'Dr. Danilo Antunes',
-        subLabel: 'Clínica odontológica.',
-        href: 'https://www.daniloantunesimplantes.com.br/',
-      },
-    ],
-  },
-  {
-    label: 'Mentor',
-    href: '/mentor',
-  },
-  {
-    label: 'Orçamento',
-    href: layout.nextSocialNetwork,
-  },
-  {
-    label: 'News',
-    href: '/news',
-  },
-]
 
 const DesktopSubNav = ({ label, href, subLabel, target }: NavItem) => {
   return (
@@ -184,74 +113,6 @@ const DesktopNav = ({ navItems = NAV_ITEMS }) => {
             )}
           </Popover>
         </Box>
-      ))}
-    </Stack>
-  )
-}
-
-const MobileNavItem = ({ label, children, href }: NavItem) => {
-  const { isOpen, onToggle } = useDisclosure()
-
-  return (
-    <Stack spacing={4} onClick={children && onToggle}>
-      <Flex
-        py={2}
-        as={Link}
-        href={href ?? '#'}
-        justify={'space-between'}
-        align={'center'}
-        _hover={{
-          textDecoration: 'none',
-        }}
-      >
-        <Text
-          fontWeight={600}
-          color={'white'}
-          _hover={{ color: 'next-primary' }}
-        >
-          {label}
-        </Text>
-        {children && (
-          <Icon
-            as={ChevronDownIcon}
-            transition={'all .25s ease-in-out'}
-            transform={isOpen ? 'rotate(180deg)' : ''}
-            w={6}
-            h={6}
-          />
-        )}
-      </Flex>
-
-      <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
-        <Stack
-          mt={2}
-          pl={4}
-          borderLeft={1}
-          borderStyle={'solid'}
-          borderColor={'gray.700'}
-          align={'start'}
-        >
-          {children &&
-            children.map((child) => (
-              <Link
-                key={child.label}
-                href={child.href}
-                aria-label={child.label}
-              >
-                <Box py={2}>{child.label}</Box>
-              </Link>
-            ))}
-        </Stack>
-      </Collapse>
-    </Stack>
-  )
-}
-
-const MobileNav = ({ navItems = NAV_ITEMS }) => {
-  return (
-    <Stack bg={'gray.800'} p={4} display={{ md: 'none' }}>
-      {navItems.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
       ))}
     </Stack>
   )
