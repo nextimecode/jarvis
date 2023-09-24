@@ -45,8 +45,7 @@ export const NAV_ITEMS: Array<NavItem> = [
       },
       {
         label: 'Atriz Cynthia Senek',
-        subLabel:
-          'A mentoria artística de autoconhecimento que Cynthia desenvolve vem na contra-mão da grande parte do mercado artístico.',
+        subLabel: 'Mentoria artística de autoconhecimento.',
         href: 'https://www.cynthonizar.com/',
       },
       {
