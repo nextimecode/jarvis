@@ -22,7 +22,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
   const fields = posts.map((post: { slug: string; date: string }) => {
     return {
-      loc: `https://www.nextime.com.br/blog/${post.slug}`,
+      loc: `https://www.nextime.com.br/news/${post.slug}`,
     }
   })
 

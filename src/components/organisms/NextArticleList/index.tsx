@@ -97,16 +97,16 @@ export const NextArticleList = ({ posts }: { posts: Post[] }) => {
               >
                 <Link
                   href={{
-                    pathname: '/blog/[slug]',
+                    pathname: '/news/[slug]',
                     query: { slug: post?.slug },
                   }}
-                  aria-label="Leias sobre novidades na tecnologia em nosso blog"
+                  aria-label="Leias sobre novidades na tecnologia"
                 >
                   <Box borderRadius="lg">
                     <Image
                       style={{ objectFit: 'contain' }}
                       src={post.coverImage.url}
-                      alt={`Imagem do blog ${post?.title}`}
+                      alt={`Imagem da noticia ${post?.title}`}
                       width={498}
                       height={498}
                       priority={index === 0}
@@ -140,7 +140,7 @@ export const NextArticleList = ({ posts }: { posts: Post[] }) => {
             <Heading fontSize={['md', '4xl']} marginTop="1">
               <Link
                 href={{
-                  pathname: '/blog/[slug]',
+                  pathname: '/news/[slug]',
                   query: { slug: post.slug },
                 }}
                 aria-label={`Leias sobre ${post.title}`}

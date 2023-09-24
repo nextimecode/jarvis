@@ -45,8 +45,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
 export default function Blog({ posts }: { posts: Post[] }) {
   return (
     <NextLayout
-      title="Blog NeXTIME | Tecnologia, Inovação e Dicas"
-      description="Descubra o blog da NeXTIME, onde compartilhamos insights sobre tecnologias inovadoras e soluções que economizam tempo, melhoram a vida e impulsionam a mudança no mundo."
+      title="NextNews | Tecnologia, Inovação e Dicas"
+      description="Descubra o NextNews, onde compartilhamos insights sobre tecnologias inovadoras e soluções que economizam tempo, melhoram a vida e impulsionam a mudança no mundo."
       keywords={[
         'nextime',
         'tecnologia',
@@ -58,8 +58,10 @@ export default function Blog({ posts }: { posts: Post[] }) {
         'soluções',
         'desenvolvimento',
         'educação',
+        'nextnews',
+        'next news',
       ]}
-      pathname="/blog"
+      pathname="/news"
     >
       {posts && <NextArticleList posts={posts as Post[]} />}
     </NextLayout>

@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { NextLayout } from '../../components/templates/NextLayout'
 import { Asset, Post } from '../../graphql/generated'
 import { client } from '../../lib/apollo'
-import { Box, Container, Heading, Text } from '@chakra-ui/react'
+import { Box, Center, Container, Heading, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 import {
   BlogAuthor,
@@ -103,18 +103,22 @@ export default function Blog({
       title={`NeXTIME | ${title}`}
       description={seo?.description as string}
       keywords={seo?.keywords}
-      pathname={`/blog/${slug}`}
+      pathname={`/news/${slug}`}
       socialImageUrl={coverImage?.url ?? layout.socialImageUrl}
     >
       <Container maxW="container.md" pb={6}>
         {coverImage && coverImage.width && coverImage.height && (
-          <Image
-            width={736}
-            height={736}
-            alt={title}
-            src={coverImage.url}
-            priority
-          />
+          <Center>
+            <Box width={736} height={350} overflow={'hidden'}>
+              <Image
+                width={736}
+                height={736}
+                alt={title}
+                src={coverImage.url}
+                priority
+              />
+            </Box>
+          </Center>
         )}
         <Heading pt={6}>{title}</Heading>
         <Text textAlign={'center'}>{dateBlog.toLocaleDateString()}</Text>
