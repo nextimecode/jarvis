@@ -103,7 +103,7 @@ export default function Blog({
       title={`NeXTIME | ${title}`}
       description={seo?.description as string}
       keywords={seo?.keywords}
-      pathname={`/blog/${slug}`}
+      pathname={`/news/${slug}`}
       socialImageUrl={coverImage?.url ?? layout.socialImageUrl}
     >
       <Container maxW="container.md" pb={6}>
