@@ -39,6 +39,23 @@ export const NAV_ITEMS: Array<NavItem> = [
         href: 'https://app.optarrh.com.br/',
       },
       {
+        label: 'Bora Pro Giro',
+        subLabel: 'Preservando a cultura, projetamos o futuro.',
+        href: 'https://www.boraprogiro.com.br/',
+      },
+      {
+        label: 'Atriz Cynthia Senek',
+        subLabel:
+          'A mentoria artística de autoconhecimento que Cynthia desenvolve vem na contra-mão da grande parte do mercado artístico.',
+        href: 'https://www.cynthonizar.com/',
+      },
+      {
+        label: 'Circuito Cidades',
+        subLabel:
+          'O Circuito Cidades é um evento esportivo de cooperação intermunicipal.',
+        href: 'https://www.circuitocidades.com.br/',
+      },
+      {
         label: 'Allan Kardec',
         subLabel: 'Museu Online do Espiritismo.',
         href: 'https://www.allankardec.online/',
