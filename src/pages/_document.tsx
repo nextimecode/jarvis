@@ -21,10 +21,10 @@ export default function Document() {
             `,
           }}
         /> */}
-        <Script
+        {/* <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-HN7P9PMXX2"
           strategy="afterInteractive"
-        />
+        /> */}
         <Script id="google-analytics" strategy="afterInteractive">
           {`
           window.dataLayer = window.dataLayer || [];

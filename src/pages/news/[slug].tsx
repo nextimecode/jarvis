@@ -2,8 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { NextLayout } from '../../components/templates/NextLayout'
 import { Asset, Post } from '../../graphql/generated'
 import { client } from '../../lib/apollo'
-import { Box, Center, Container, Heading, Text } from '@chakra-ui/react'
-import Image from 'next/image'
+import { Box, Container, Heading } from '@chakra-ui/react'
 import {
   BlogAuthor,
   BlogTags,
@@ -30,7 +29,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: 'blocking', // Ou 'true' se você deseja usar o Incremental Static Regeneration
+    fallback: 'blocking',
   }
 }
 
@@ -82,7 +81,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   })
   return {
     props: data?.posts[0],
-    revalidate: 60 * 60 * 1, // 1 hora
+    revalidate: 60 * 60 * 1,
   }
 }
 
@@ -107,26 +106,20 @@ export default function Blog({
       socialImageUrl={coverImage?.url ?? layout.socialImageUrl}
     >
       <Container maxW="container.md" pb={6}>
-        {coverImage && coverImage.width && coverImage.height && (
+        {/* {coverImage && coverImage.width && coverImage.height && (
           <Center>
             <Box width={736} height={350} overflow={'hidden'}>
               <Image
-                width={736}
-                height={736}
+                width={coverImage.width}
+                height={coverImage.height}
                 alt={title}
                 src={coverImage.url}
                 priority
               />
             </Box>
           </Center>
-        )}
+        )} */}
         <Heading pt={6}>{title}</Heading>
-        <Text textAlign={'center'}>{dateBlog.toLocaleDateString()}</Text>
-        <Prose
-          dangerouslySetInnerHTML={{
-            __html: String(content?.html),
-          }}
-        ></Prose>
         {author && author.picture && (
           <BlogAuthor
             image={author.picture as Asset}
@@ -140,6 +133,12 @@ export default function Blog({
             <BlogTags tags={tags} />
           </Box>
         )}
+        {/* <Text textAlign={'center'}>{dateBlog.toLocaleDateString()}</Text> */}
+        <Prose
+          dangerouslySetInnerHTML={{
+            __html: String(content?.html),
+          }}
+        ></Prose>
       </Container>
     </NextLayout>
   )
